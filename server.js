@@ -30,7 +30,7 @@ nunjucks.configure(appViews, {
 })
 
 // Middleware to serve static assets
-app.use('/public', express.static(path.join(__dirname, '/public')))
+app.use('/public', express.static(path.join(__dirname, '/export_elements/static/export_elements')))
 app.use('/public', express.static(path.join(__dirname, '/node_modules/govuk_template_jinja/assets')))
 app.use('/public', express.static(path.join(__dirname, '/node_modules/govuk_frontend_toolkit')))
 
