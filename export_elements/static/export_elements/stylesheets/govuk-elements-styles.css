@@ -543,7 +543,7 @@ p,
   color: #6f777b; }
 
 .link {
-  color: #005ea5;
+  color: #006ccc;
   text-decoration: underline; }
 
 .link:visited {
@@ -553,7 +553,7 @@ p,
   color: #2b8cc4; }
 
 .link:active {
-  color: #005ea5; }
+  color: #006ccc; }
 
 .link-back {
   display: -moz-inline-stack;
@@ -1054,7 +1054,7 @@ details {
   clear: both; }
   details summary {
     display: inline-block;
-    color: #005ea5;
+    color: #006ccc;
     cursor: pointer;
     position: relative;
     margin-bottom: 0.26316em; }
@@ -1275,7 +1275,7 @@ option:active,
 option:checked,
 select:focus::-ms-value {
   color: #fff;
-  background-color: #005ea5; }
+  background-color: #006ccc; }
 
 .multiple-choice {
   display: block;
@@ -1541,7 +1541,7 @@ input[type=number] {
     letter-spacing: 1px;
     text-decoration: none;
     color: #fff;
-    background-color: #005ea5; }
+    background-color: #006ccc; }
     @media (min-width: 641px) {
       .phase-banner .phase-tag {
         font-size: 16px;
@@ -1588,7 +1588,7 @@ input[type=number] {
     letter-spacing: 1px;
     text-decoration: none;
     color: #fff;
-    background-color: #005ea5; }
+    background-color: #006ccc; }
     @media (min-width: 641px) {
       .phase-banner-alpha .phase-tag,
       .phase-banner-beta .phase-tag {
@@ -1613,7 +1613,7 @@ input[type=number] {
   letter-spacing: 1px;
   text-decoration: none;
   color: #fff;
-  background-color: #005ea5; }
+  background-color: #006ccc; }
   @media (min-width: 641px) {
     .phase-tag {
       font-size: 16px;

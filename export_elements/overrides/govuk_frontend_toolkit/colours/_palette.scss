@@ -1,3 +1,9 @@
 @import 'node_modules/govuk_frontend_toolkit/stylesheets/colours/_palette.scss';
 
-$button-colour: #006ccc;
+$govuk-blue: #006ccc;
+$button-colour: $govuk-blue;
+$link-colour: $govuk-blue;
+$discovery-colour: $govuk-blue;
+$alpha-colour: $govuk-blue;
+$beta-colour: $govuk-blue;
+$mainstream-brand: $govuk-blue;
