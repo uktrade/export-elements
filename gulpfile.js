@@ -16,7 +16,7 @@ const sass = require('gulp-sass')
 // ---------------------------------------
 
 gulp.task('clean', () => {
-  return del(paths.public)
+  return del('export_elements/static/export_elements')
 })
 
 // Styles build task ---------------------
@@ -32,10 +32,10 @@ gulp.task('styles', () => {
       ],
       importer: require('./sass-importer.js'),
     }).on('error', sass.logError))
-    .pipe(gulp.dest(paths.publicCss))
+    .pipe(gulp.dest('export_elements/static/export_elements/stylesheets'))
     .pipe(rename({ suffix: '.min' }))
     .pipe(cssnano())
-    .pipe(gulp.dest(paths.publicCss))
+    .pipe(gulp.dest('export_elements/static/export_elements/stylesheets'))
 })
 
 // Images build task ---------------------
@@ -44,7 +44,7 @@ gulp.task('styles', () => {
 
 gulp.task('images', () => {
   return gulp.src('node_modules/govuk-elements/assets/images/**/*')
-    .pipe(gulp.dest(paths.publicImg))
+    .pipe(gulp.dest('export_elements/static/export_elements/images'))
 })
 
 // Scripts build task ---------------------
@@ -52,7 +52,7 @@ gulp.task('images', () => {
 // ---------------------------------------
 gulp.task('scripts', () => {
   return gulp.src('node_modules/govuk-elements/assets/javascripts/**/*.js')
-    .pipe(gulp.dest(paths.publicJs))
+    .pipe(gulp.dest('export_elements/static/export_elements/javascripts'))
 })
 
 // Build task ----------------------------
@@ -83,7 +83,7 @@ gulp.task('server', () => {
 // ---------------------------------------
 
 gulp.task('watch', () => {
-  return gulp.watch('./src/**/*.scss', ['styles'])
+  return gulp.watch('./export_elements/**/*.scss', ['styles'])
 })
 
 // Develop task --------------------------
