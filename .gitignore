@@ -1,3 +1,4 @@
 export_elements/static/export_elements
 !export_elements/static/export_elements/stylesheets/govuk-elements-styles.*
 node_modules
+public
