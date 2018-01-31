@@ -38,6 +38,12 @@ gulp.task('styles', () => {
     .pipe(gulp.dest('export_elements/static/export_elements/stylesheets'))
 })
 
+gulp.task('header-footer:sass', () => {
+  return gulp.src('export_elements/header-footer/**/*.scss')
+    .pipe(sass().on('error', sass.logError))
+    .pipe(gulp.dest('export_elements/static/export_elements/stylesheets'));
+});
+
 // Images build task ---------------------
 // Copies images to /public/images
 // ---------------------------------------
@@ -60,7 +66,7 @@ gulp.task('scripts', () => {
 // ---------------------------------------
 
 gulp.task('build', cb => {
-  runsequence('clean', ['styles', 'images', 'scripts'], cb)
+  runsequence('clean', ['styles', 'images', 'scripts', 'header-footer:sass'], cb)
 })
 
 // Server task --------------------------
@@ -83,8 +89,8 @@ gulp.task('server', () => {
 // ---------------------------------------
 
 gulp.task('watch', () => {
-  return gulp.watch('./export_elements/**/*.scss', ['styles'])
-})
+  return gulp.watch('./export_elements/**/*.scss', ['styles', 'header-footer:sass']);
+});
 
 // Develop task --------------------------
 // Runs copy-assets task and sets up watches.
