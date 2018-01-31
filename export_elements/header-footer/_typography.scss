@@ -1,0 +1,10 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,700");
+
+#header, #footer {
+  font-family: 'Roboto';
+  font-weight: 400;
+  font-size: 15px;
+  color: $light-grey;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

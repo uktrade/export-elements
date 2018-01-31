@@ -1,0 +1,57 @@
+
+// Layout
+
+#header, #footer {
+
+  .column-fifth {
+    padding: 0 15px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+  .column-sixth {
+    padding: 0 15px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+  .container {
+    width: auto;
+    overflow: auto;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0;
+  }
+
+  &:before, &:after {
+    display: none;
+  }
+
+  @media (max-width: 1260px) {
+    .container {
+      margin: 0 30px;
+    }
+    .links-list.container {
+      margin: 0;
+    }
+  }
+
+  @media (min-width: 641px) {
+    .column-fifth {
+      float: left;
+      width: calc(100% / 5);
+    }
+    .column-sixth {
+      float: left;
+      width: calc(100% / 6);
+    }
+  }
+
+  @media (max-width: 420px) {
+    .container {
+      margin: 0 20px;
+    }
+  }
+}
