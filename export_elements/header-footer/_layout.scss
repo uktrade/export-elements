@@ -4,6 +4,8 @@
 #header, #footer {
 
   .column-fifth {
+    float: left;
+    width: calc(100% / 5);
     padding: 0 15px;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -11,6 +13,8 @@
   }
 
   .column-sixth {
+    float: left;
+    width: calc(100% / 6);
     padding: 0 15px;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -38,14 +42,21 @@
     }
   }
 
-  @media (min-width: 641px) {
+  @media (max-width: 767px) {
+    .container {
+      margin: 0 15px;
+    }
+    .column-third {
+      width: 100%
+    }
+    .column-quarter {
+      width: 100%
+    }
     .column-fifth {
-      float: left;
-      width: calc(100% / 5);
+      width: 100%
     }
     .column-sixth {
-      float: left;
-      width: calc(100% / 6);
+      width: 100%
     }
   }
 
@@ -53,5 +64,11 @@
     .container {
       margin: 0 20px;
     }
+  }
+}
+
+@media (max-width: 767px) {
+  #header-menu .container {
+    margin: 0;
   }
 }

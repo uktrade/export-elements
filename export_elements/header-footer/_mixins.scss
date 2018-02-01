@@ -1,0 +1,50 @@
+
+@mixin chevron($rotate, $colour) {
+  box-sizing: initial;
+  -ms-transform: rotate($rotate);
+  /* IE 9 */
+  -webkit-transform: rotate($rotate);
+  transform: rotate($rotate);
+  content: "";
+  border-style: solid;
+  display: inline-block;
+  height: 5px;
+  width: 5px;
+  position: relative;
+  vertical-align: top;
+  top: 1px;
+  border-color: $colour;
+  border-width: 0 2px 2px 0;
+  margin: 2px 0 0 10px;
+}
+
+@mixin great-red-trim() {
+  background-color: $great-red;
+  content: '';
+  height: 4px;
+  left: 0;
+  top: 0;
+}
+
+@mixin plus-icon() {
+  @include font-med-normal
+  content: '+';
+  font-size: 35px;
+  height: 30px;
+  width: 30px;
+  left: auto;
+  position: absolute;
+  right: 30px;
+  top: calc(100% / 3);
+}
+
+@mixin minus-icon() {
+  background-color: transparent;
+  @include font-med-normal
+  content: '_';
+  font-size: 40px;
+  top: 23%;
+  left: auto;
+  right: 40px;
+  width: auto;
+}
