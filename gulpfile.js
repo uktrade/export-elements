@@ -48,30 +48,39 @@ gulp.task('clean', () => {
   return del('export_elements/static/export_elements')
 })
 
-// Styles build task ---------------------
+// GovUK styles build task ---------------
 // Compiles CSS from Sass
 // Output both a minified and non-minified version into /public/stylesheets/
 // ---------------------------------------
 
-gulp.task('styles', () => {
+gulp.task('styles:govuk', () => {
   return gulp.src('node_modules/govuk-elements/assets/sass/**/*.scss')
     .pipe(sass({
       includePaths: [
-        'node_modules/govuk_frontend_toolkit/stylesheets',
+        'node_modules/govuk_frontend_toolkit/stylesheets'
       ],
-      importer: require('./sass-importer.js'),
+      importer: require('./sass-importer.js')
     }).on('error', sass.logError))
     .pipe(gulp.dest('export_elements/static/export_elements/stylesheets'))
     .pipe(rename({ suffix: '.min' }))
     .pipe(cssnano())
-    .pipe(gulp.dest('export_elements/static/export_elements/stylesheets'))
-})
-
-gulp.task('header-footer:sass', () => {
-  return gulp.src('export_elements/header-footer/**/*.scss')
-    .pipe(sass().on('error', sass.logError))
     .pipe(gulp.dest('export_elements/static/export_elements/stylesheets'));
 });
+
+// Export-elements-specific component styling
+
+gulp.task('styles:components', () => {
+  return gulp.src('export_elements/overrides/sass/**/*.scss')
+    .pipe(sass().on('error', sass.logError))
+    .pipe(gulp.dest('export_elements/static/export_elements/stylesheets'))
+    .pipe(rename({ suffix: '.min' }))
+    .pipe(cssnano())
+    .pipe(gulp.dest('export_elements/static/export_elements/stylesheets'));
+});
+
+// Compile all styles
+
+gulp.task('styles', ['styles:govuk', 'styles:components']);
 
 // Images build task ---------------------
 // Copies images to /public/images
@@ -95,7 +104,7 @@ gulp.task('scripts', () => {
 // ---------------------------------------
 
 gulp.task('build', cb => {
-  runsequence('clean', ['styles', 'images', 'scripts', 'header-footer:sass'], cb)
+  runsequence('clean', ['styles', 'images', 'scripts'], cb)
 })
 
 // Server task --------------------------
@@ -118,7 +127,7 @@ gulp.task('server', () => {
 // ---------------------------------------
 
 gulp.task('watch', () => {
-  return gulp.watch('./export_elements/**/*.scss', ['styles', 'header-footer:sass']);
+  return gulp.watch('./export_elements/**/*.scss', ['styles']);
 });
 
 // Develop task --------------------------
