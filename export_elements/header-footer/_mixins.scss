@@ -5,7 +5,7 @@
   /* IE 9 */
   -webkit-transform: rotate($rotate);
   transform: rotate($rotate);
-  content: "";
+  content: '';
   border-style: solid;
   display: inline-block;
   height: 5px;
@@ -18,7 +18,7 @@
   margin: 2px 0 0 10px;
 }
 
-@mixin great-red-trim() {
+@mixin great-red-trim {
   background-color: $great-red;
   content: '';
   height: 4px;
@@ -26,7 +26,7 @@
   top: 0;
 }
 
-@mixin plus-icon() {
+@mixin plus-icon {
   @include font-med-normal
   content: '+';
   font-size: 35px;
@@ -38,9 +38,9 @@
   top: calc(100% / 3);
 }
 
-@mixin minus-icon() {
-  background-color: transparent;
+@mixin minus-icon {
   @include font-med-normal
+  background-color: transparent;
   content: '_';
   font-size: 40px;
   top: 23%;

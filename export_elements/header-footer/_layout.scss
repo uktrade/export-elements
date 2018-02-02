@@ -1,7 +1,8 @@
 
 // Layout
 
-#header, #footer {
+#header,
+#footer {
 
   .column-fifth {
     float: left;
@@ -29,7 +30,8 @@
     padding: 0;
   }
 
-  &:before, &:after {
+  &:before,
+  &:after {
     display: none;
   }
 
@@ -37,6 +39,7 @@
     .container {
       margin: 0 30px;
     }
+
     .links-list.container {
       margin: 0;
     }
@@ -46,18 +49,14 @@
     .container {
       margin: 0 15px;
     }
-    .column-third {
-      width: 100%
-    }
-    .column-quarter {
-      width: 100%
-    }
-    .column-fifth {
-      width: 100%
-    }
-    .column-sixth {
-      width: 100%
-    }
+
+    .column-third { width: 100%; }
+
+    .column-quarter { width: 100%; }
+
+    .column-fifth { width: 100%; }
+
+    .column-sixth { width: 100%; }
   }
 
   @media (max-width: 420px) {

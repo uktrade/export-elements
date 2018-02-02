@@ -1,42 +1,43 @@
-@import url("https://fonts.googleapis.com/css?family=Roboto:400,700");
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700');
 
 @mixin font-large-normal {
-  font-family: "Roboto", arial, helvetica, sans-serif;
+  font-family: 'Roboto', arial, helvetica, sans-serif;
   font-size: 19px;
   font-weight: 400;
 }
 
 @mixin font-large-bold {
-  font-family: "Roboto", arial, helvetica, sans-serif;
+  font-family: 'Roboto', arial, helvetica, sans-serif;
   font-size: 19px;
   font-weight: 700;
 }
 
 @mixin font-med-normal {
-  font-family: "Roboto", arial, helvetica, sans-serif;
+  font-family: 'Roboto', arial, helvetica, sans-serif;
   font-size: 15px;
   font-weight: 400;
 }
 
 @mixin font-med-bold {
-  font-family: "Roboto", arial, helvetica, sans-serif;
+  font-family: 'Roboto', arial, helvetica, sans-serif;
   font-size: 15px;
   font-weight: 700;
 }
 
 @mixin font-small-normal {
-  font-family: "Roboto", arial, helvetica, sans-serif;
+  font-family: 'Roboto', arial, helvetica, sans-serif;
   font-size: 12px;
   font-weight: 400;
 }
 
 @mixin font-small-bold {
-  font-family: "Roboto", arial, helvetica, sans-serif;
+  font-family: 'Roboto', arial, helvetica, sans-serif;
   font-size: 12px;
   font-weight: 700;
 }
 
-#header, #footer {
+#header,
+#footer {
   @include font-med-normal
   color: $light-grey;
   -webkit-font-smoothing: antialiased;

@@ -2,14 +2,3 @@
 // govuk template
 
 @import 'elements/govuk-template-base';
-
-// Extra columns classes
-
-.column-fifth,
-.column-one-fifth {
-  @include grid-column(1 / 5);
-}
-.column-sixth,
-.column-one-sixth {
-  @include grid-column(1 / 6);
-}

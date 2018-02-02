@@ -7,7 +7,7 @@
   background-color: $great-blue;
 
   .links-list a {
-    color: #fff;
+    color: $white;
     text-decoration: none;
   }
 
@@ -19,7 +19,7 @@
     &:before {
       background-color: transparent;
       border-left: $mid-grey solid 1px;
-      content: "\00a0";
+      content: '\00a0';
       display: block;
       height: 110px;
       position: absolute;
@@ -82,10 +82,6 @@
     outline: none;
   }
 
-  a.links-list-heading:focus {
-    outline: none;
-  }
-
   .links-list-heading:after {
     @include chevron(45deg, $mid-blue)
   }
@@ -127,7 +123,6 @@
       font-size: 19px;
       font-weight: 600;
       line-height: 1.58em;
-      margin: 0 0 0.5em 0;
       border-bottom: $mid-grey solid 1px;
       color: $stone;
       cursor: default;
@@ -139,6 +134,10 @@
       &:hover {
         background-color: transparent;
       }
+    }
+
+    a.links-list-heading:focus {
+      outline: none;
     }
 
     li {
@@ -190,12 +189,13 @@
       }
 
       li:last-child a {
-        border-bottom: none;
+        border-bottom: 0;
       }
 
     }
 
-    .links-list-heading:after, .links-list-heading.active:after {
+    .links-list-heading:after,
+    .links-list-heading.active:after {
       display: none;
     }
 
@@ -217,7 +217,7 @@
     }
 
     .ExpanderControl.active {
-      border-bottom: none;
+      border-bottom: 0;
       padding-bottom: 10px;
     }
 
@@ -241,7 +241,7 @@
     border-radius: 0;
     color: $white;
     display: block;
-    padding: 5px 10px 5px 10px;
+    padding: 5px 10px;
     margin-right: 15px;
     position: absolute;
     transition: none;
@@ -263,7 +263,7 @@
     span:before {
       background-color: $white;
       clear: right;
-      content: "";
+      content: '';
       float: right;
       height: 2px;
       margin: 0 0 8px 10px;

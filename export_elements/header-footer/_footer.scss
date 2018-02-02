@@ -114,10 +114,8 @@
     }
 
     .links-list-heading {
-      font-size: 15px;
-      font-weight: 400;
+      @include font-med-bold
       line-height: 1.47em;
-      font-weight: 600;
     }
 
     .site-links {
