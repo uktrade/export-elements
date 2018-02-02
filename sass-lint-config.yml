@@ -14,7 +14,7 @@ rules:
   no-css-comments: 0
   leading-zero: 0
   pseudo-element: 0
-  shorthand-values: 2
+  shorthand-values: 1
   class-name-format: 0
   border-zero: 2
   no-url-protocols: 0
