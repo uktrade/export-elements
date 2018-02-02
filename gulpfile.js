@@ -10,6 +10,35 @@ const nodemon = require('gulp-nodemon')
 const rename = require('gulp-rename')
 const runsequence = require('run-sequence')
 const sass = require('gulp-sass')
+const sassLint = require('gulp-sass-lint');
+
+// Sass lint -----------------------------
+
+gulp.task('lint:sass', function () {
+  return gulp.src('export_elements/**/*.scss')
+    .pipe(sassLint({
+      options: {
+        formatter: 'stylish',
+        'merge-default-rules': true
+      },
+      configFile: 'sass-lint-config.yml'
+    }))
+    .pipe(sassLint.format())
+    .pipe(sassLint.failOnError());
+});
+
+
+// Run tests -----------------------------
+
+gulp.task('test', () => {
+  runsequence(['lint:sass'], cb => {
+    if (cb) {
+      gutil.log(gutil.colors.red('!!!!!!!! Tests failed !!!!!!!!'));
+    } else {
+      gutil.log(gutil.colors.green('**** Tests finished with no errors ****'));
+    }
+  });
+});
 
 // Clean task ----------------------------
 // Deletes the /public directory
@@ -118,6 +147,9 @@ gulp.task('default', () => {
   )
   gutil.log(cyan('develop'
     ) + ': performs an initial build then sets up watches.'
+  )
+  gutil.log(cyan('test'
+) + ': runs tests/lint.'
   )
 
   gutil.log(green('----------'))
