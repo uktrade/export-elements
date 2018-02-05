@@ -993,7 +993,7 @@ ol {
   padding-left: 20px; }
 
 .list.list-bullet {
-  margin: 0 0 1em 0;
+  margin: 0 0 1em;
   list-style: none;
   padding-left: 0; }
   .list.list-bullet.list-bullet li {
@@ -1003,7 +1003,7 @@ ol {
   .list.list-bullet.list-bullet li::before {
     background-color: #dfd5c5;
     border-radius: 4px;
-    content: "";
+    content: '';
     display: inline-block;
     height: 8px;
     left: 0;
@@ -1293,7 +1293,7 @@ textarea.form-control {
 option:active,
 option:checked,
 select:focus::-ms-value {
-  color: #fff;
+  color: #ffffff;
   background-color: #006ccc; }
 
 .multiple-choice {
@@ -1559,7 +1559,7 @@ input[type=number] {
     text-transform: uppercase;
     letter-spacing: 1px;
     text-decoration: none;
-    color: #fff;
+    color: #ffffff;
     background-color: #006ccc; }
     @media (min-width: 641px) {
       .phase-banner .phase-tag {
@@ -1606,7 +1606,7 @@ input[type=number] {
     text-transform: uppercase;
     letter-spacing: 1px;
     text-decoration: none;
-    color: #fff;
+    color: #ffffff;
     background-color: #006ccc; }
     @media (min-width: 641px) {
       .phase-banner-alpha .phase-tag,
@@ -1631,7 +1631,7 @@ input[type=number] {
   text-transform: uppercase;
   letter-spacing: 1px;
   text-decoration: none;
-  color: #fff;
+  color: #ffffff;
   background-color: #006ccc; }
   @media (min-width: 641px) {
     .phase-tag {
@@ -1641,7 +1641,7 @@ input[type=number] {
 .govuk-box-highlight {
   margin: 1em 0;
   padding: 2em 1em;
-  color: #fff;
+  color: #ffffff;
   background: #28a197;
   text-align: center; }
 

@@ -1,0 +1,120 @@
+
+// Header
+
+#header-bar {
+  @include font-med-normal
+  line-height: 1.47em;
+  color: $white;
+  overflow: hidden;
+  height: 110px;
+  position: relative;
+}
+
+#header {
+  min-height: 110px;
+  background: $great-blue;
+
+  .account-links {
+    float: right;
+    padding: 7px 0;
+
+    a {
+      color: $white;
+    }
+
+    li {
+      float: left;
+      font-weight: bold;
+      margin-left: 5px;
+
+      &:after {
+        content: '|';
+      }
+
+      &:last-child {
+        content: '';
+        margin-right: 5px;
+
+        &:after {
+          content: '';
+        }
+      }
+    }
+  }
+
+  .navigation {
+    font-weight: 700;
+    color: $white;
+    text-decoration: none;
+  }
+
+  #skip-link {
+    background-color: $great-blue;
+    color: $white;
+    display: inline-block;
+    padding: 15px;
+    overflow: hidden;
+    position: absolute;
+    text-indent: -1000px;
+    z-index: -1;
+
+    &:focus {
+      background-color: $focus-yellow;
+      color: $dark-blue;
+      left: 0;
+      text-indent: 0;
+      top: 0;
+      z-index: 1;
+    }
+  }
+}
+
+#header-dit-logo img {
+  max-width: 158px;
+  width: 100%;
+  margin: 20px 0 15px;
+}
+
+#header-menu {
+  a {
+    color: $white;
+    display: block;
+    position: relative;
+    text-decoration: none;
+    font-weight: 700;
+    padding: 15px;
+    padding-bottom: 21px;
+
+    &:hover {
+      background: $mid-blue;
+    }
+
+    &:hover:before {
+      @include great-red-trim
+      width: 100%;
+      position: absolute;
+    }
+  }
+
+  li {
+    display: inline-block;
+  }
+
+  .container {
+    overflow: visible;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  #header-menu a:hover:before {
+    background: $mid-blue;
+  }
+
+  #menu .ExpanderControl.active:before {
+    @include minus-icon
+  }
+
+  #menu .ExpanderControl:hover:before {
+    @include plus-icon
+  }
+}

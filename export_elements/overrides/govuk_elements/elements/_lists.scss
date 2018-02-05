@@ -1,12 +1,13 @@
-@import '!elements/_lists.scss';
+@import '!elements/lists';
+@import '../../sass/partials/colours';
 
 .list.list-bullet {
-   margin: 0 0 1em 0;
-   list-style: none;
+  margin: 0 0 1em;
+  list-style: none;
 
-   padding-left: 0;
+  padding-left: 0;
 
-   &.list-bullet{
+  &.list-bullet {
     li {
       position: relative;
       list-style: none;
@@ -14,14 +15,14 @@
     }
 
     li::before {
-      background-color: #dfd5c5;
+      background-color: $stone;
       border-radius: 4px;
-      content: "";
+      content: '';
       display: inline-block;
       height: 8px;
       left: 0;
       position: absolute;
-      top: 0.65em;
+      top: 0.5em;
       width: 8px;
     }
   }
