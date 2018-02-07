@@ -1,0 +1,13 @@
+@import '!elements/elements-typography';
+@import '../../sass/partials/colours';
+
+.heading-hero-domestic {
+  font-family: 'Overpass', arial, helvetica, sans-serif;
+  font-size: 48px;
+  display: inline-block;
+  font-weight: 700;
+  color: $white;
+  background: $great-red;
+  text-transform: uppercase;
+  padding: 0 15px;
+}
