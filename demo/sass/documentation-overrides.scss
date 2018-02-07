@@ -1,0 +1,19 @@
+
+@import '../../export_elements/sass/partials/typography';
+@import 'partials/header-footer';
+
+body {
+  font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial;
+}
+
+.heading-page-title {
+  font-family: 'Overpass', 'Roboto', 'Helvetica Neue', Helvetica, Arial;
+}
+
+.breadcrumbs {
+  padding: 15px 0;
+  border-bottom: 3px solid $stone;
+  ol li {
+    font-size: 15px;
+  }
+}
