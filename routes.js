@@ -12,7 +12,7 @@ module.exports = {
     // Layout
     app.get('/layout', function (req, res) {
       var pageName = 'Layout';
-      res.render('guide_layout', { 'page_name': pageName });
+      res.render('guides/layout', { 'page_name': pageName });
     });
 
     // Example page: Grid layout
