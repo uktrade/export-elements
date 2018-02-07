@@ -6,10 +6,6 @@ body {
   font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial;
 }
 
-.heading-page-title {
-  font-family: 'Overpass', 'Roboto', 'Helvetica Neue', Helvetica, Arial;
-}
-
 .breadcrumbs {
   padding: 15px 0;
   border-bottom: 3px solid $stone;
@@ -24,5 +20,15 @@ body {
   &:before {
     background: $stone;
     content: 'Example';
+  }
+}
+
+.heading-xlarge:first-child {
+  @include bold-brand-48
+}
+
+#content {
+  .heading-secondary {
+    display: none;
   }
 }
