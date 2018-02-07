@@ -1,3 +1,6 @@
+
+// Great-specific typography mixins
+
 @import url('https://fonts.googleapis.com/css?family=Roboto:400,700');
 @import url('https://fonts.googleapis.com/css?family=Overpass:400,700');
 
@@ -35,4 +38,25 @@
   font-family: 'Roboto', arial, helvetica, sans-serif;
   font-size: 12px;
   font-weight: 700;
+}
+
+@mixin brand-48($line-height: (50 / 48), $line-height-640: (35 / 32), $tabular-numbers: false, $font-weight: 400) {
+  $font-size: 48px;
+  $font-size-640: 32px;
+  $font-size-print: 18pt;
+  @include _core-font-generator($font-size, $font-size-640, $font-size-print, $line-height, $line-height-640, $tabular-numbers, $font-weight);
+  font-family: $brand-font;
+}
+
+@mixin quote-24($line-height: (30 / 24), $line-height-640: (24 / 20), $tabular-numbers: false, $font-weight: 400) {
+  $font-size: 24px;
+  $font-size-640: 18px;
+  $font-size-print: 16pt;
+  @include _core-font-generator($font-size, $font-size-640, $font-size-print, $line-height, $line-height-640, $tabular-numbers, $font-weight);
+  font-family: $quote-font;
+  font-style: italic;
+}
+
+@mixin bold-brand-48($line-height: (50 / 48), $line-height-640: (35 / 32), $tabular-numbers: false) {
+  @include brand-48($line-height, $line-height-640, $tabular-numbers: $tabular-numbers, $font-weight: 700);
 }

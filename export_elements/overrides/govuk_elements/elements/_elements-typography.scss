@@ -1,13 +1,31 @@
 @import '!elements/elements-typography';
 @import '../../sass/partials/colours';
+@import '../../sass/partials/typography';
 
 .heading-hero-domestic {
-  font-family: 'Overpass', arial, helvetica, sans-serif;
-  font-size: 48px;
+  @include bold-brand-48();
   display: inline-block;
-  font-weight: 700;
   color: $white;
   background: $great-red;
   text-transform: uppercase;
-  padding: 0 15px;
+  padding: 10px 15px;
+
+  margin-top: em(15, 32);
+  margin-bottom: em(30, 32);
+
+  @include media(tablet) {
+    margin-top: em(30, 48);
+    margin-bottom: em(60, 48);
+  }
+}
+
+.quote-l {
+  @include quote-24
+  margin-top: em(5, 16);
+  margin-bottom: em(20, 16);
+
+  @include media(tablet) {
+    margin-top: em(5);
+    margin-bottom: em(20);
+  }
 }
