@@ -17,3 +17,12 @@ body {
     font-size: 15px;
   }
 }
+
+.example {
+  border-color: $stone;
+
+  &:before {
+    background: $stone;
+    content: 'Example';
+  }
+}
