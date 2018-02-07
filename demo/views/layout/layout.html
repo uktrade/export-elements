@@ -1,0 +1,23 @@
+{% extends "govuk_template.html" %}
+
+{% block head %}
+  {% include "includes/elements_tracking_head.html" %}
+  {% include "includes/elements_stylesheets.html" %}
+  {% include "includes/elements_documentation_styles.html" %}
+  {% include "includes/vendor/prism.html" %}
+{% endblock %}
+
+{% block content %}
+<div class="site-wrapper">
+  {% include "partials/breadcrumbs.html" %}
+  {% block main_content %}{% endblock %}
+</div>
+{% endblock %}
+
+{% block cookie_message %}
+  <p>{{cookieText | safe }}</p>
+{% endblock %}
+
+{% block body_end %}
+  {% include "includes/scripts.html" %}
+{% endblock %}

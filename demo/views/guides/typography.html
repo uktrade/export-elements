@@ -1,4 +1,4 @@
-{% extends "guide_typography.html" %}
+{% extends "layout/layout.html" %}
 
 {% block page_title %}Typography — Export elements{% endblock %}
 
@@ -59,14 +59,14 @@
   </ul>
 
 <div class="example">
-  {% include "snippets/typography_hero_heading.html" %}
+  {% include "great_snippets/typography_hero_heading.html" %}
   {% include "snippets/typography_headings.html" %}
 </div>
 
 <pre>
 <code class="language-markup">
 {% filter escape %}
-{% include "snippets/typography_hero_heading.html" %}
+{% include "great_snippets/typography_hero_heading.html" %}
 {% include "snippets/typography_headings.html" %}
 {% endfilter %}
 </code>
@@ -83,14 +83,14 @@
 
 <div class="example">
   <div class="text">
-    {% include "snippets/typography_lead_paragraph.html" %}
+    {% include "great_snippets/typography_lead_paragraph.html" %}
   </div>
 </div>
 
 <pre>
 <code class="language-markup">
   {% filter escape %}
-    {% include "snippets/typography_lead_paragraph.html" %}
+    {% include "great_snippets/typography_lead_paragraph.html" %}
   {% endfilter %}
 </code>
 </pre>
@@ -100,7 +100,7 @@
   </h3>
 
   <ul class="list list-bullet text">
-    <li>use GDS Transport Website Light</li>
+    <li>use Roboto Regular</li>
     <li>avoid using bold and italics</li>
     <li>use 19px for body copy &ndash; 16px for smaller screens</li>
     <li>use smaller sizes only if there’s a user need (eg 16px, 14px, 12px)</li>
@@ -117,6 +117,28 @@
 <code class="language-markup">
   {% filter escape %}
     {% include "snippets/typography_paragraphs.html" %}
+  {% endfilter %}
+</code>
+</pre>
+
+  <h3 class="heading-medium" id="typography-intro-text-quotes">
+    Introductory text, quotes and pull-outs
+  </h3>
+
+  <ul class="list list-bullet text">
+    <li>Use Georgia in a supporting role for introductory text, pull-outs and quotes</li>
+  </ul>
+
+<div class="example">
+  <div class="text">
+    {% include "great_snippets/typography_quotes.html" %}
+  </div>
+</div>
+
+<pre>
+<code class="language-markup">
+  {% filter escape %}
+    {% include "great_snippets/typography_quotes.html" %}
   {% endfilter %}
 </code>
 </pre>
@@ -147,7 +169,6 @@
 
   <ul class="list list-bullet text">
     <li>list items start with a lowercase letter and have no full stop at the end</li>
-    <li>see the style guide to check how to <a href="https://www.gov.uk/guidance/style-guide/a-to-z-of-gov-uk-style#steps">punctuate numbered lists</a></li>
   </ul>
 
 <div class="example">
@@ -169,36 +190,14 @@
 
 <div class="example">
   <div class="text">
-    {% include "snippets/typography_inset_text.html" %}
+    {% include "great_snippets/typography_inset_text.html" %}
   </div>
 </div>
 
 <pre>
 <code class="language-markup">
   {% filter escape %}
-    {% include "snippets/typography_inset_text.html" %}
-  {% endfilter %}
-</code>
-</pre>
-
-  <h3 class="heading-medium" id="typography-warning-text">Warning text</h3>
-  <p class="text">
-    Use bold text with an exclamation icon to warn people about something important, for example if there are legal consequences like a fine or prison sentence.
-  </p>
-  <p class="text">
-    Use this sparingly. And remember that the hidden text (here: 'Warning') might need to be rewritten to be appropriate for your case.
-  </p>
-
-<div class="example">
-  <div class="text">
-    {% include "snippets/typography_warning_text.html" %}
-  </div>
-</div>
-
-<pre>
-<code class="language-markup">
-  {% filter escape %}
-    {% include "snippets/typography_warning_text.html" %}
+    {% include "great_snippets/typography_inset_text.html" %}
   {% endfilter %}
 </code>
 </pre>
