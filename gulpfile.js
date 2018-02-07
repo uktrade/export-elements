@@ -45,8 +45,8 @@ gulp.task('test', () => {
 // ---------------------------------------
 
 gulp.task('clean', () => {
-  return del('export_elements/static/export_elements')
-})
+  return del('export_elements/static/export_elements');
+});
 
 // GovUK styles build task ---------------
 // Compiles CSS from Sass
@@ -78,34 +78,53 @@ gulp.task('styles:components', () => {
     .pipe(gulp.dest('export_elements/static/export_elements/stylesheets'));
 });
 
+// Documentation style overrides
+
+gulp.task('styles:docs', () => {
+  return gulp.src('demo/sass/**/*.scss')
+    .pipe(sass().on('error', sass.logError))
+    .pipe(gulp.dest('export_elements/static/export_elements/stylesheets'))
+    .pipe(rename({ suffix: '.min' }))
+    .pipe(cssnano())
+    .pipe(gulp.dest('export_elements/static/export_elements/stylesheets'));
+});
+
 // Compile all styles
 
-gulp.task('styles', ['styles:govuk', 'styles:components']);
+gulp.task('styles', ['styles:govuk', 'styles:components', 'styles:docs']);
 
 // Images build task ---------------------
 // Copies images to /public/images
 // ---------------------------------------
 
+// gulp.task('images', () => {
+//   return gulp.src('node_modules/govuk-elements/assets/images/**/*')
+//     .pipe(gulp.dest('public/images'));
+// });
+
 gulp.task('images', () => {
-  return gulp.src('node_modules/govuk-elements/assets/images/**/*')
-    .pipe(gulp.dest('export_elements/static/export_elements/images'))
-})
+  return gulp.src([
+    'node_modules/govuk-elements/assets/images/**/*',
+    'demo/static/images/**/*'
+  ])
+    .pipe(gulp.dest('export_elements/static/export_elements/images'));
+});
 
 // Scripts build task ---------------------
 // Copies JavaScript to /public/javascripts
 // ---------------------------------------
 gulp.task('scripts', () => {
   return gulp.src('node_modules/govuk-elements/assets/javascripts/**/*.js')
-    .pipe(gulp.dest('export_elements/static/export_elements/javascripts'))
-})
+    .pipe(gulp.dest('export_elements/static/export_elements/javascripts'));
+});
 
 // Build task ----------------------------
 // Runs tasks that copy assets to the public directory.
 // ---------------------------------------
 
 gulp.task('build', cb => {
-  runsequence('clean', ['styles', 'images', 'scripts'], cb)
-})
+  runsequence('clean', ['styles', 'images', 'scripts'], cb);
+});
 
 // Server task --------------------------
 // Configures nodemon
@@ -119,15 +138,18 @@ gulp.task('server', () => {
       paths.assets + '*',
       paths.nodeModules + '*'
     ]
-  })
-})
+  });
+});
 
 // Watch task ----------------------------
 // When a file is changed, re-run the build task.
 // ---------------------------------------
 
 gulp.task('watch', () => {
-  return gulp.watch('./export_elements/**/*.scss', ['styles']);
+  return gulp.watch([
+    './export_elements/**/*.scss',
+    './demo/sass/**/*.scss'
+  ], ['styles']);
 });
 
 // Develop task --------------------------
@@ -136,30 +158,27 @@ gulp.task('watch', () => {
 gulp.task('develop', cb => {
   runsequence('build',
               'watch',
-              'server', cb)
-})
+              'server', cb);
+});
 
 // Default task --------------------------
 // Lists out available tasks.
 // ---------------------------------------
 
 gulp.task('default', () => {
-  const cyan = gutil.colors.cyan
-  const green = gutil.colors.green
+  const cyan = gutil.colors.cyan;
+  const green = gutil.colors.green;
 
-  gutil.log(green('----------'))
+  gutil.log(green('----------'));
 
-  gutil.log(('The following main ') + cyan('tasks') + (' are available:'))
+  gutil.log(('The following main ') + cyan('tasks') + (' are available:'));
 
-  gutil.log(cyan('build'
-    ) + ': copies assets to the public directory.'
-  )
-  gutil.log(cyan('develop'
-    ) + ': performs an initial build then sets up watches.'
-  )
-  gutil.log(cyan('test'
-) + ': runs tests/lint.'
-  )
+  gutil.log(cyan('build') + ': copies assets to the public directory.'
+  );
+  gutil.log(cyan('develop') + ': performs an initial build then sets up watches.'
+  );
+  gutil.log(cyan('test') + ': runs tests/lint.'
+);
 
-  gutil.log(green('----------'))
-})
+  gutil.log(green('----------'));
+});
