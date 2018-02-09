@@ -5,10 +5,10 @@ a {
   -webkit-tap-highlight-color: $tap-highlight; }
 
 a:focus {
-  outline: 3px solid $focus-yellow;
+  outline: 3px solid $focus-colour;
   background: none;
 }
 
 a:active {
-  background-color: $focus-yellow;
+  background-color: $focus-colour;
 }
