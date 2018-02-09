@@ -4,11 +4,6 @@ module.exports = {
       res.render('pages/index', { 'asset_path': assetPath });
     });
 
-    // Redirect snippets page to the index page
-    app.get('/snippets', function (req, res) {
-      res.redirect('/');
-    });
-
     // Layout
     app.get('/layout', function (req, res) {
       var pageName = 'Layout';
@@ -23,11 +18,6 @@ module.exports = {
       res.render('examples/example_grid_layout', { 'section': section, 'section_name': sectionName, 'page_name': pageName });
     });
 
-    // Redirect examples from /examples/ to /section/example-name-of-example
-    app.get('/examples/grid-layout', function (req, res) {
-      res.redirect('/layout/example-grid-layout');
-    });
-
     // Typography
     app.get('/typography', function (req, res) {
       var pageName = 'Typography';
@@ -39,12 +29,7 @@ module.exports = {
       var section = 'typography';
       var sectionName = 'Typography';
       var pageName = 'Example: Typography';
-      res.render('examples/example_typography', { 'section': section, 'section_name': sectionName, 'page_name': pageName });
-    });
-
-    // Redirect examples from /examples/ to /section/example-name-of-example
-    app.get('/examples/typography', function (req, res) {
-      res.redirect('/typography/example-typography');
+      res.render('examples/typography', { 'section': section, 'section_name': sectionName, 'page_name': pageName });
     });
 
     // Example page: Progressive disclosure
@@ -53,11 +38,6 @@ module.exports = {
       var sectionName = 'Typography';
       var pageName = 'Example: Details summary';
       res.render('examples/example_details_summary', { 'section': section, 'section_name': sectionName, 'page_name': pageName });
-    });
-
-    // Redirect examples from /patterns/ to /section/example-name-of-example
-    app.get('/patterns/details-summary', function (req, res) {
-      res.redirect('/typography/example-details-summary');
     });
 
     // Colour
