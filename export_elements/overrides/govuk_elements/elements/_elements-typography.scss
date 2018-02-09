@@ -2,7 +2,7 @@
 @import '../../sass/partials/colours';
 
 a {
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0.3); }
+  -webkit-tap-highlight-color: $tap-highlight; }
 
 a:focus {
   outline: 3px solid $focus-yellow;
