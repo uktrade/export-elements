@@ -645,6 +645,16 @@ hr {
   display: block;
   line-height: 1; }
 
+a {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0.3); }
+
+a:focus {
+  outline: 3px solid #ffbf47;
+  background: none; }
+
+a:active {
+  background-color: #ffbf47; }
+
 .button {
   background-color: #006ccc;
   position: relative;
@@ -666,7 +676,7 @@ hr {
   text-decoration: none;
   -webkit-font-smoothing: antialiased;
   cursor: pointer;
-  color: #fff;
+  color: #ffffff;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -693,7 +703,7 @@ hr {
       -moz-box-shadow: 0 2px 0 #004480;
       box-shadow: 0 2px 0 #004480; }
   .button:link, .button:link:focus, .button:hover, .button:focus, .button:visited {
-    color: #fff; }
+    color: #ffffff; }
   .button:before {
     content: "";
     height: 110%;
@@ -954,8 +964,8 @@ hr {
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   border-radius: 50%;
-  background: #0b0c0c;
-  color: #fff;
+  background: #000000;
+  color: #ffffff;
   font-family: "ntatabularnumbers", "Roboto", arial, helvetica, verdana;
   font-size: 12px;
   font-weight: bold;
@@ -1008,7 +1018,7 @@ ol {
     height: 8px;
     left: 0;
     position: absolute;
-    top: 0.65em;
+    top: 0.5em;
     width: 8px; }
 
 table {

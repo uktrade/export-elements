@@ -1,0 +1,14 @@
+@import '!elements/elements-typography';
+@import '../../sass/partials/colours';
+
+a {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0.3); }
+
+a:focus {
+  outline: 3px solid $focus-yellow;
+  background: none;
+}
+
+a:active {
+  background-color: $focus-yellow;
+}
