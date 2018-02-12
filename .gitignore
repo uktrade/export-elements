@@ -1,5 +1,6 @@
 export_elements/static/export_elements
 !export_elements/static/export_elements/stylesheets/govuk-elements-styles.min.css
 !export_elements/static/export_elements/stylesheets/govuk-elements-styles.css
+!export_elements/static/export_elements/stylesheets/components
 node_modules
 public
