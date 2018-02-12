@@ -189,11 +189,13 @@
 #menu {
   float: right;
   margin-top: -54px;
+  height: 54px;
   background-color: #1e1348; }
   #menu .links-list a {
     color: #ffffff;
     text-decoration: none; }
   #menu .links-list-item {
+    position: relative;
     padding: 30px;
     min-height: 170px;
     background-color: #00549f; }
@@ -205,7 +207,8 @@
       height: 110px;
       position: absolute;
       width: 0;
-      margin-left: -31px; }
+      margin-left: -1px;
+      margin-top: 20px; }
     #menu .links-list-item a {
       padding: 0;
       font-size: 19px;
@@ -324,6 +327,7 @@
       display: none; }
     #menu .links-list-item {
       min-height: auto;
+      position: static;
       padding-bottom: 0; }
       #menu .links-list-item p {
         display: none; }
@@ -546,3 +550,9 @@
 
 #header ul li {
   position: static; }
+
+#header li, #footer li {
+  padding: 0;
+  margin: 0; }
+  #header li:before, #footer li:before {
+    background: none; }
