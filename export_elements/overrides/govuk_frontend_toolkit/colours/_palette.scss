@@ -1,4 +1,5 @@
 @import '!colours/palette';
+@import '../../../sass/partials/colours';
 
 $govuk-blue: #006ccc;
 $button-colour: $govuk-blue;
@@ -7,3 +8,4 @@ $discovery-colour: $govuk-blue;
 $alpha-colour: $govuk-blue;
 $beta-colour: $govuk-blue;
 $mainstream-brand: $govuk-blue;
+$focus-colour: $focus-yellow;

@@ -83,7 +83,7 @@
     .link-group {
       margin: 30px 0;
       position: relative;
-      width: calc((100% / 2) - 31px);
+      width: 50%;
 
       &:nth-child(even) {
         border-left: $lightened-great-blue solid 1px;
