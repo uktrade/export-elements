@@ -543,3 +543,6 @@
   #footer-eig-logo {
     height: auto;
     width: 100%; } }
+
+#header ul li {
+  position: static; }
