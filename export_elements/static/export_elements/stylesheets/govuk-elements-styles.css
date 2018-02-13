@@ -689,6 +689,16 @@ hr {
       margin-top: 0.26316em;
       margin-bottom: 1.05263em; } }
 
+a {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0.3); }
+
+a:focus {
+  outline: 3px solid #ffbf47;
+  background: none; }
+
+a:active {
+  background-color: #ffbf47; }
+
 .button {
   background-color: #006ccc;
   position: relative;

@@ -1,5 +1,7 @@
 @import '!elements/elements-typography';
+
 @import '../../sass/partials/typography';
+@import '../../sass/partials/colours';
 
 @import url('https://fonts.googleapis.com/css?family=Roboto:400,700');
 @import url('https://fonts.googleapis.com/css?family=Overpass:400,700');
@@ -30,4 +32,16 @@
     margin-top: em(5);
     margin-bottom: em(20);
   }
+}
+
+a {
+  -webkit-tap-highlight-color: $tap-highlight; }
+
+a:focus {
+  outline: 3px solid $focus-colour;
+  background: none;
+}
+
+a:active {
+  background-color: $focus-colour;
 }
