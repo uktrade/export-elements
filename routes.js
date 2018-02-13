@@ -43,13 +43,13 @@ module.exports = {
     // Colour
     app.get('/colour', function (req, res) {
       var pageName = 'Colour';
-      res.render('guide_colour', { 'page_name': pageName });
+      res.render('guides/colour', { 'page_name': pageName });
     });
 
     // Icons and images
     app.get('/icons-images', function (req, res) {
       var pageName = 'Icons and images';
-      res.render('guide_icons_images', { 'page_name': pageName });
+      res.render('guides/icons_images', { 'page_name': pageName });
     });
 
     // Example page: Icons
@@ -63,19 +63,19 @@ module.exports = {
     // Data
     app.get('/data', function (req, res) {
       var pageName = 'Data';
-      res.render('guide_data', { 'page_name': pageName });
+      res.render('guides/data', { 'page_name': pageName });
     });
 
     // Buttons
     app.get('/buttons', function (req, res) {
       var pageName = 'Buttons';
-      res.render('guide_buttons', { 'page_name': pageName });
+      res.render('guides/buttons', { 'page_name': pageName });
     });
 
     // Forms
     app.get('/form-elements', function (req, res) {
       var pageName = 'Form elements';
-      res.render('guide_form_elements', { 'page_name': pageName });
+      res.render('guides/form_elements', { 'page_name': pageName });
     });
 
     // Example page: Basic form
@@ -128,7 +128,7 @@ module.exports = {
     // Errors and validation
     app.get('/errors', function (req, res) {
       var pageName = 'Errors and validation';
-      res.render('guide_errors', { 'page_name': pageName });
+      res.render('guides/errors', { 'page_name': pageName });
     });
 
     // Example page: Form validation

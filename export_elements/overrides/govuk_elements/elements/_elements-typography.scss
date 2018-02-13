@@ -1,6 +1,8 @@
 @import '!elements/elements-typography';
-@import '../../sass/partials/colours';
 @import '../../sass/partials/typography';
+
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700');
+@import url('https://fonts.googleapis.com/css?family=Overpass:400,700');
 
 .heading-hero-domestic {
   @include bold-brand-48();

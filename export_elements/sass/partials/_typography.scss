@@ -1,14 +1,10 @@
 @import '../../../node_modules/govuk_frontend_toolkit/stylesheets/typography';
-@import '../../../node_modules/govuk_frontend_toolkit/stylesheets/typography';
 
 // Great specific fonts
 $brand-font: 'Overpass','Roboto', arial, helvetica, verdana;
 $quote-font: 'Georgia', serif;
 
 // Great-specific typography mixins
-
-@import url('https://fonts.googleapis.com/css?family=Roboto:400,700');
-@import url('https://fonts.googleapis.com/css?family=Overpass:400,700');
 
 @mixin font-large-normal {
   font-family: 'Roboto', arial, helvetica, sans-serif;
