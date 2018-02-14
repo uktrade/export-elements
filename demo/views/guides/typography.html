@@ -1,0 +1,250 @@
+{% extends "govuk_template.html" %}
+
+{% block page_title %}Typography — Export elements{% endblock %}
+
+{% block main_content %}
+
+<main id="content" role="main">
+
+  <h1 class="heading-xlarge heading-page-title">
+    Typography
+  </h1>
+
+  <div class="text">
+    <p class="lede">
+      For great.gov.uk domains, always use Roboto, Overpass and Georgia typefaces.
+    </p>
+  </div>
+
+  <h2 class="heading-small heading-contents">Contents:</h2>
+  <div class="grid-row">
+    <div class="column-two-thirds">
+      <ul class="list list-contents">
+        <li><a href="#typography-font">Font</a></li>
+        <li><a href="#typography-headings">Headings</a></li>
+        <li><a href="#typography-lead-paragraph">Lead paragraph</a></li>
+        <li><a href="#typography-body-copy">Body copy</a></li>
+        <li><a href="#typography-links">Links</a></li>
+        <li><a href="#typography-lists">Lists</a></li>
+        <li><a href="#typography-inset-text">Inset text</a></li>
+        <li><a href="#typography-warning-text">Warning text</a></li>
+        <li><a href="#typography-hidden-text">Hidden text (progressive disclosure)</a></li>
+        <li><a href="#examples">Examples</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <h3 class="heading-medium" id="typography-font">Font</h3>
+  <div class="text">
+    <p>
+      Use the Overpass Bold font  for the main headline of page. It’s a font matching Interstate, the font selected for GREAT campaign.
+    </p>
+    <p>
+      Use Roboto for anything else.
+    </p>
+    <p>
+      Use Georgia in a supporting role for introductory text, pull-outs and quotes.
+    </p>
+  </div>
+
+  <h3 class="heading-medium" id="typography-headings">
+    Headings
+  </h3>
+
+  <ul class="list list-bullet text">
+    <li>use Overpass Bold for the main heading</li>
+    <li>use Roboto Bold for other headings</li>
+    <li>use sentence case for headings</li>
+    <li>use headings consistently to create a clear hierarchy</li>
+  </ul>
+
+<div class="example">
+  {% include "great_snippets/typography_hero_heading.html" %}
+  {% include "snippets/typography_headings.html" %}
+</div>
+
+<pre>
+<code class="language-markup">
+{% filter escape %}
+{% include "great_snippets/typography_hero_heading.html" %}
+{% include "snippets/typography_headings.html" %}
+{% endfilter %}
+</code>
+</pre>
+
+  <h3 class="heading-medium" id="typography-lead-paragraph">
+    Lead paragraph
+  </h3>
+
+  <ul class="list list-bullet">
+    <li>use 24px for a lead paragraph</li>
+    <li>there should only be one lead paragraph per page</li>
+  </ul>
+
+<div class="example">
+  <div class="text">
+    {% include "great_snippets/typography_lead_paragraph.html" %}
+  </div>
+</div>
+
+<pre>
+<code class="language-markup">
+  {% filter escape %}
+    {% include "great_snippets/typography_lead_paragraph.html" %}
+  {% endfilter %}
+</code>
+</pre>
+
+  <h3 class="heading-medium" id="typography-body-copy">
+    Body copy
+  </h3>
+
+  <ul class="list list-bullet text">
+    <li>use Roboto Regular</li>
+    <li>avoid using bold and italics</li>
+    <li>use 19px for body copy &ndash; 16px for smaller screens</li>
+    <li>use smaller sizes only if there’s a user need (eg 16px, 14px, 12px)</li>
+    <li>make sure lines of text don’t exceed 75 characters, as they become harder to read beyond that point</li>
+  </ul>
+
+<div class="example">
+  <div class="text">
+    {% include "snippets/typography_paragraphs.html" %}
+  </div>
+</div>
+
+<pre>
+<code class="language-markup">
+  {% filter escape %}
+    {% include "snippets/typography_paragraphs.html" %}
+  {% endfilter %}
+</code>
+</pre>
+
+  <h3 class="heading-medium" id="typography-intro-text-quotes">
+    Introductory text, quotes and pull-outs
+  </h3>
+
+  <ul class="list list-bullet text">
+    <li>Use Georgia in a supporting role for introductory text, pull-outs and quotes</li>
+  </ul>
+
+<div class="example">
+  <div class="text">
+    {% include "great_snippets/typography_quotes.html" %}
+  </div>
+</div>
+
+<pre>
+<code class="language-markup">
+  {% filter escape %}
+    {% include "great_snippets/typography_quotes.html" %}
+  {% endfilter %}
+</code>
+</pre>
+
+  <h3 class="heading-medium" id="typography-links">Links</h3>
+
+  <ul class="list list-bullet text">
+    <li>links within body copy should be blue and underlined</li>
+    <li>links without surrounding text should not have a full stop at the end</li>
+    <li>link colours can be found in the <a href="/colour">colour palette</a></li>
+  </ul>
+
+  <div class="example">
+    <div class="text">
+      {% include "snippets/typography_links.html" %}
+    </div>
+  </div>
+
+<pre>
+<code class="language-markup">
+  {% filter escape %}
+    {% include "snippets/typography_links.html" %}
+  {% endfilter %}
+</code>
+</pre>
+
+  <h3 class="heading-medium" id="typography-lists">Lists</h3>
+
+  <ul class="list list-bullet text">
+    <li>list items start with a lowercase letter and have no full stop at the end</li>
+  </ul>
+
+<div class="example">
+  {% include "snippets/typography_lists.html" %}
+</div>
+
+<pre>
+<code class="language-markup">
+  {% filter escape %}
+    {% include "snippets/typography_lists.html" %}
+  {% endfilter %}
+</code>
+</pre>
+
+  <h3 class="heading-medium" id="typography-inset-text">Inset text</h3>
+  <p class="text">
+    Use bordered inset text to draw attention to important content on the page.
+  </p>
+
+<div class="example">
+  <div class="text">
+    {% include "great_snippets/typography_inset_text.html" %}
+  </div>
+</div>
+
+<pre>
+<code class="language-markup">
+  {% filter escape %}
+    {% include "great_snippets/typography_inset_text.html" %}
+  {% endfilter %}
+</code>
+</pre>
+
+  <h3 class="heading-medium" id="typography-hidden-text">Hidden text (progressive disclosure)</h3>
+  <p class="text">
+    Use this to make your page easier to scan,
+    only showing contextual information when required.
+  </p>
+  <p class="text">
+    Click on "Help with nationality" to see how this works.
+  </p>
+
+<div class="example">
+  {% include "snippets/typography_progressive_disclosure.html" %}
+</div>
+
+<pre>
+<code class="language-markup">
+  {% filter escape %}
+    {% include "snippets/typography_progressive_disclosure.html" %}
+  {% endfilter %}
+</code>
+</pre>
+
+  <div class="panel panel-border-wide text">
+    <p>
+      If you’re using the HTML5 details and summary elements, you’ll need a polyfill for <a href="http://caniuse.com/#feat=details" rel="external">not-so-modern browsers</a>.
+    </p>
+    <p>
+      You’ll need to ensure that your markup matches the example above.
+      <a href="https://github.com/alphagov/govuk_frontend_toolkit/blob/master/javascripts/govuk/details.polyfill.js" rel="external">GOV.UK elements uses this polyfill from GOV.UK frontend toolkit</a>.
+    </p>
+    <p>
+      <a href="/typography/example-details-summary/">Take a look at example page</a> which demonstrates conditionally revealing information, using the HTML5 details and summary elements.
+    </p>
+  </div>
+
+
+  <h3 class="heading-medium" id="examples">Examples</h3>
+  <ul class="list list-bullet">
+    <li>
+      <a href="/typography/example-typography/">
+        an example typography page
+      </a>
+    </li>
+  </ul>
+
+</main><!-- / #content -->
+{% endblock %}

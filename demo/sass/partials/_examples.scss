@@ -1,0 +1,21 @@
+
+// Example boxes
+
+@import '../../export_elements/sass/partials/colours';
+
+.example {
+  border-color: $stone;
+
+  &:before {
+    background: $stone;
+    content: 'Example';
+  }
+}
+
+:not(pre) > code[class*="language-"], pre[class*="language-"] {
+  background: $stone-20;
+}
+
+pre[class*="language-"] {
+  border: 1px solid $stone-90;
+}

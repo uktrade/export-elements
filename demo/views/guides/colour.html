@@ -1,0 +1,282 @@
+{% extends "govuk_template.html" %}
+
+{% block page_title %}Colour — Export elements{% endblock %}
+
+{% block main_content %}
+
+<main id="content" role="main">
+
+  <h1 class="heading-xlarge">
+    <span class="heading-secondary">GOV.UK elements</span>
+    Colour
+  </h1>
+
+  <p class="lede text">
+    Always use the great.gov.uk colour palette.
+  </p>
+
+  <h2 class="heading-small heading-contents">Contents:</h2>
+  <div class="grid-row">
+    <div class="column-two-thirds">
+      <ul class="list list-contents">
+        <li><a href="#colour-contrast">Colour contrast</a></li>
+        <li><a href="#colour-sass-variables">Sass variables</a></li>
+        <li><a href="#colour-core">Core colours</a></li>
+        <li><a href="#colour-support">Supporting colours</a></li>
+        <li><a href="#colour-extended">Extended palette</a></li>
+        <li><a href="#colour-stone-tints">Tints of stone</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <h3 class="heading-medium" id="colour-contrast">Colour contrast</h3>
+  <p class="text">
+    The colour contrast ratio for text and interactive elements should be at least 4.5:1 <a href="http://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html" rel="external">as recommended by the W3C</a>. Test your service to meet this standard.
+  </p>
+
+  <h3 class="heading-medium"  id="colour-sass-variables">Sass variables</h3>
+  <p class="text">
+    Use Sass variables in case colour values need to be updated &ndash; find these in the GOV.UK frontend toolkit <a href="https://github.com/alphagov/govuk_frontend_toolkit/blob/master/stylesheets/_colours.scss" rel="external">colours.scss</a> file. Great.gov.uk overrides can be found in the export-elements <a href="https://github.com/uktrade/export-elements/blob/master/export_elements/sass/partials/_colours.scss">colours.scss</a> file.
+  </p>
+
+  <h3 class="heading-medium" id="colour-core">Core colours</h3>
+  <ul class="list list-bullet text">
+    <li>GREAT Red should only be used for the GREAT logo.</li>
+    <li>GREAT Blue is used for type where possible, if not black can be used.</li>
+    <li>Flag Red is used for red lines and can be used in type.</li>
+    <li>Stone has been introduced for use as a pale background colour on pages and tables.</li></li>
+  </ul>
+
+  <div class="example">
+
+    <div class="swatch-wrapper">
+      <div class="swatch swatch-great-blue"></div>
+      <ul>
+        <li>GREAT blue</li>
+        <li><b>#1e1348</b></li>
+        <li>$great-blue</li>
+      </ul>
+    </div>
+
+    <div class="swatch-wrapper">
+      <div class="swatch swatch-flag-red"></div>
+      <ul>
+        <li>Flag red</li>
+        <li><b>#b00d23</b></li>
+        <li>$flag-red</li>
+      </ul>
+    </div>
+
+    <div class="swatch-wrapper">
+      <div class="swatch swatch-stone"></div>
+      <ul>
+        <li>Stone</li>
+        <li><b>#dfd5c5</b></li>
+        <li>$stone</li>
+      </ul>
+    </div>
+
+    <div class="swatch-wrapper">
+      <div class="swatch swatch-white"></div>
+      <ul>
+        <li>White</li>
+        <li><b>#ffffff</b></li>
+        <li>$white</li>
+      </ul>
+    </div>
+
+    <div class="swatch-wrapper">
+      <div class="swatch swatch-great-red"></div>
+      <ul>
+        <li>GREAT red</li>
+        <li><b>#e41f13</b></li>
+        <li>$great-red</li>
+      </ul>
+    </div>
+
+  </div>
+
+  <h3 class="heading-medium" id="colour-support">Supporting colours</h3>
+
+  <div class="example">
+
+    <div class="swatch-wrapper">
+      <div class="swatch swatch-black"></div>
+      <ul>
+        <li>Black</li>
+        <li><b>#000000</b></li>
+        <li>$black</li>
+      </ul>
+
+      <div class="swatch swatch-mid-blue"></div>
+      <ul>
+        <li>Mid blue</li>
+        <li><b>#00549f</b></li>
+        <li>$mid-blue</li>
+      </ul>
+
+    </div>
+
+    <div class="swatch-wrapper">
+      <div class="swatch swatch-grey"></div>
+      <ul>
+        <li>Grey</li>
+        <li><b>#333333</b></li>
+        <li>$grey</li>
+      </ul>
+    </div>
+
+    <div class="swatch-wrapper">
+      <div class="swatch swatch-mid-grey"></div>
+      <ul>
+        <li>Mid grey</li>
+        <li><b>#999999</b></li>
+        <li>$mid-grey</li>
+      </ul>
+    </div>
+
+    <div class="swatch-wrapper">
+      <div class="swatch swatch-light-grey"></div>
+      <ul>
+        <li>Light grey</li>
+        <li><b>#d8d8d8</b></li>
+        <li>$light-grey</li>
+      </ul>
+    </div>
+
+    <div class="swatch-wrapper">
+      <div class="swatch swatch-dark-navy"></div>
+      <ul>
+        <li>Dark navy</li>
+        <li><b>#160d37</b></li>
+        <li>$dark-navy</li>
+      </ul>
+    </div>
+
+  </div>
+
+  <h3 class="heading-medium" id="colour-extended">Extended palette</h3>
+  <p class="text">
+    Use for link and focus states.
+  </p>
+
+  <div class="example">
+
+    <div class="swatch-wrapper">
+      <div class="swatch swatch-active-blue"></div>
+      <ul>
+        <li>Active blue</li>
+        <li><b>#006ccc</b></li>
+        <li>$active-blue</li>
+      </ul>
+    </div>
+
+    <div class="swatch-wrapper">
+      <div class="swatch swatch-aqua"></div>
+      <ul>
+        <li>Aqua</li>
+        <li><b>#007ea3</b></li>
+        <li>$aqua</li>
+      </ul>
+    </div>
+
+    <div class="swatch-wrapper">
+      <div class="swatch swatch-focus-yellow"></div>
+      <ul>
+        <li>Focus yellow</li>
+        <li><b>#ffbf47</b></li>
+        <li>$focus-yellow <br>$focus-colour</li>
+      </ul>
+    </div>
+
+    <div class="swatch-wrapper">
+      <div class="swatch swatch-purple"></div>
+      <ul>
+        <li>Purple</li>
+        <li><b>#4f0b7b</b></li>
+        <li>$purple</li>
+      </ul>
+    </div>
+
+  </div>
+
+  <h3 class="heading-medium" id="colour-stone-tints">Tints of stone</h3>
+  <div class="example">
+
+    <div class="swatch-wrapper">
+      <div class="swatch swatch-stone-90"></div>
+      <ul>
+        <li>Stone 90%</li>
+        <li><b>#E2D9CB</b></li>
+        <li>$stone-90</li>
+      </ul>
+
+      <div class="swatch swatch-stone-40"></div>
+      <ul>
+        <li>Stone 40%</li>
+        <li><b>#F2EEE8</b></li>
+        <li>$stone-40</li>
+      </ul>
+    </div>
+
+    <div class="swatch-wrapper">
+      <div class="swatch swatch-stone-80"></div>
+      <ul>
+        <li>Stone 80%</li>
+        <li><b>#E5DDD1</b></li>
+        <li>$stone-80</li>
+      </ul>
+
+      <div class="swatch swatch-stone-30"></div>
+      <ul>
+        <li>Stone 30%</li>
+        <li><b>#F5F2ED</b></li>
+        <li>$stone-30</li>
+      </ul>
+    </div>
+
+    <div class="swatch-wrapper">
+      <div class="swatch swatch-stone-70"></div>
+      <ul>
+        <li>Stone 70%</li>
+        <li><b>#E9E2D6</b></li>
+        <li>$stone-70</li>
+      </ul>
+
+      <div class="swatch swatch-stone-20"></div>
+      <ul>
+        <li>Stone 20%</li>
+        <li><b>#FCFBF9</b></li>
+        <li>$stone-20</li>
+      </ul>
+    </div>
+
+    <div class="swatch-wrapper">
+      <div class="swatch swatch-stone-60"></div>
+      <ul>
+        <li>Stone 60%</li>
+        <li><b>#ECE6DC</b></li>
+        <li>$stone-60</li>
+      </ul>
+
+      <div class="swatch swatch-stone-10"></div>
+      <ul>
+        <li>Stone 10%</li>
+        <li><b>#FDFDFC</b></li>
+        <li>$stone-10</li>
+      </ul>
+    </div>
+
+    <div class="swatch-wrapper">
+      <div class="swatch swatch-stone-50"></div>
+      <ul>
+        <li>Stone 50%</li>
+        <li><b>#EFEAE2</b></li>
+        <li>$stone-50</li>
+      </ul>
+    </div>
+
+  </div>
+
+  </main><!-- / #content -->
+  {% endblock %}

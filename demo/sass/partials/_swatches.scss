@@ -1,0 +1,56 @@
+
+// Swatches
+
+@import '../../export_elements/sass/partials/colours';
+
+.swatch {
+  border-radius: 0;
+}
+
+// Left-aligned swatch used on the forms page
+
+.swatch-wrapper.swatch-wrapper-left-aligned {
+  width: auto;
+
+  ul {
+    float: left;
+    padding-left: 10px;
+
+    li {
+      text-align: left;
+    }
+  }
+
+  .swatch {
+    float: left;
+  }
+}
+
+// GREAT swatch colours
+
+.swatch-great-blue   { background: $great-blue }
+.swatch-flag-red     { background: $flag-red }
+.swatch-great-red    { background: $great-red }
+.swatch-stone        { background: $stone }
+.swatch-grey         { background: $grey }
+.swatch-mid-grey     { background: $mid-grey }
+.swatch-light-grey   { background: $light-grey }
+.swatch-dark-navy    { background: $dark-navy }
+.swatch-mid-blue     { background: $mid-blue }
+.swatch-active-blue  { background: $active-blue }
+.swatch-aqua         { background: $aqua }
+.swatch-focus-yellow { background: $focus-yellow }
+.swatch-purple       { background: $purple }
+
+// Stone tints
+
+.swatch-stone    { background: $stone }
+.swatch-stone-90 { background: $stone-90 }
+.swatch-stone-80 { background: $stone-80 }
+.swatch-stone-70 { background: $stone-70 }
+.swatch-stone-60 { background: $stone-60 }
+.swatch-stone-50 { background: $stone-50 }
+.swatch-stone-40 { background: $stone-40 }
+.swatch-stone-30 { background: $stone-30 }
+.swatch-stone-20 { background: $stone-20 }
+.swatch-stone-10 { background: $stone-10 }

@@ -1,0 +1,24 @@
+
+// Typography
+
+@import '../../export_elements/sass/partials/typography';
+@import '../../export_elements/sass/partials/colours';
+
+body {
+  font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial;
+}
+
+// Style the page headings without having
+// to change classes in the templates
+
+.heading-xlarge:first-child {
+  @include bold-brand-48
+}
+
+// Hide the 'GOVUK elements' subheading
+
+#content {
+  .heading-secondary {
+    display: none;
+  }
+}

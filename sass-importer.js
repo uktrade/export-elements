@@ -1,5 +1,5 @@
 const path = require('path');
-const fs = require('fs')
+const fs = require('fs');
 const resolve = require('@csstools/sass-import-resolve');
 
 
@@ -7,7 +7,7 @@ const overridePath = path.join(__dirname, 'export_elements/overrides/');
 const listDirectories = source =>
   fs.readdirSync(source)
     .map(name => path.join(source, name))
-    .filter(name => fs.lstatSync(source).isDirectory())
+    .filter(name => fs.lstatSync(source).isDirectory());
 
 
 module.exports = function(url, prev, done) {
@@ -25,9 +25,7 @@ module.exports = function(url, prev, done) {
       .then(success)
       .catch(() => {})
     )
-  )
+  );
 
   Promise.race(promises).then(done);
 };
-
-

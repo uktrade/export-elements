@@ -1,0 +1,13 @@
+{% if section or page_name %}
+<div class="breadcrumbs">
+  <ol>
+    <li><a href="/">Home</a></li>
+    {% if section %}
+    <li><a href="/{{ section }}/">{% if section_name %} {{ section_name }} {% endif %}</a></li>
+    {% endif %}
+    {% if page_name %}
+    <li aria-current="page">{{ page_name }}</li>
+    {% endif %}
+  </ol>
+</div>
+{% endif %}
