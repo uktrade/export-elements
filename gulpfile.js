@@ -70,7 +70,7 @@ gulp.task('styles:govuk', () => {
 // Export-elements-specific component styling
 
 gulp.task('styles:components', () => {
-  return gulp.src('export_elements/sass/**/*.scss')
+  return gulp.src('export_elements/sass/components/elements-components.scss')
     .pipe(sass().on('error', sass.logError))
     .pipe(gulp.dest('export_elements/static/export_elements/stylesheets'))
     .pipe(rename({ suffix: '.min' }))

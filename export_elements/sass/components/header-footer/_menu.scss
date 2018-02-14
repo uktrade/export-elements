@@ -4,6 +4,7 @@
 #menu {
   float: right;
   margin-top: -54px;
+  height: 54px;
   background-color: $great-blue;
 
   .links-list a {
@@ -12,6 +13,7 @@
   }
 
   .links-list-item {
+    position: relative;
     padding: 30px;
     min-height: 170px;
     background-color: $mid-blue;
@@ -25,6 +27,7 @@
       position: absolute;
       width: 0;
       margin-left: -31px;
+      margin-top: 0;
     }
 
     a {
@@ -156,6 +159,7 @@
 
     .links-list-item {
       min-height: auto;
+      position: static;
       padding-bottom: 0;
 
       p {

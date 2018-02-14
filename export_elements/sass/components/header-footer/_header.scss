@@ -14,6 +14,24 @@
   min-height: 110px;
   background: $great-blue;
 
+  ul li {
+    position: static;
+
+    &:before {
+      left: auto;
+      top: auto;
+    }
+  }
+
+  li {
+    padding: 0;
+    margin: 0;
+
+    &:before {
+      background: none;
+    }
+  }
+
   .account-links {
     float: right;
     padding: 7px 0;
