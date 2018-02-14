@@ -1,5 +1,15 @@
 
+// Overrides for the GOVUK header/footer
+
 @import '../../export_elements/sass/partials/colours';
+
+.breadcrumbs {
+  padding: 15px 0;
+  border-bottom: 3px solid $stone;
+  ol li {
+    font-size: 15px;
+  }
+}
 
 #global-header {
   background: $great-blue;

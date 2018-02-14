@@ -1,50 +1,13 @@
 
-@import '../../export_elements/sass/partials/typography';
+// Swatches
+
 @import '../../export_elements/sass/partials/colours';
-@import 'partials/header-footer';
 
-body {
-  font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial;
+.swatch {
+  border-radius: 0;
 }
 
-.breadcrumbs {
-  padding: 15px 0;
-  border-bottom: 3px solid $stone;
-  ol li {
-    font-size: 15px;
-  }
-}
-
-.example {
-  border-color: $stone;
-
-  &:before {
-    background: $stone;
-    content: 'Example';
-  }
-}
-
-:not(pre) > code[class*="language-"], pre[class*="language-"] {
-  background: $stone-20;
-}
-
-pre[class*="language-"] {
-  border: 1px solid $stone-90;
-}
-
-.heading-large:first-child {
-  @include bold-brand-48
-}
-
-.heading-xlarge:first-child {
-  @include bold-brand-48
-}
-
-#content {
-  .heading-secondary {
-    display: none;
-  }
-}
+// Left-aligned swatch used on the forms page
 
 .swatch-wrapper.swatch-wrapper-left-aligned {
   width: auto;
@@ -63,11 +26,8 @@ pre[class*="language-"] {
   }
 }
 
-.swatch {
-  border-radius: 0;
-}
-
 // GREAT swatch colours
+
 .swatch-great-blue   { background: $great-blue }
 .swatch-flag-red     { background: $flag-red }
 .swatch-great-red    { background: $great-red }
@@ -83,6 +43,7 @@ pre[class*="language-"] {
 .swatch-purple       { background: $purple }
 
 // Stone tints
+
 .swatch-stone    { background: $stone }
 .swatch-stone-90 { background: $stone-90 }
 .swatch-stone-80 { background: $stone-80 }

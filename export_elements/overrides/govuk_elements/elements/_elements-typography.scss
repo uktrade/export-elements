@@ -6,23 +6,6 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:400,700');
 @import url('https://fonts.googleapis.com/css?family=Overpass:400,700');
 
-.heading-hero-domestic {
-  @include bold-brand-48();
-  display: inline-block;
-  color: $white;
-  background: $great-red;
-  text-transform: uppercase;
-  padding: 10px 15px;
-
-  margin-top: em(15, 32);
-  margin-bottom: em(30, 32);
-
-  @include media(tablet) {
-    margin-top: em(30, 48);
-    margin-bottom: em(60, 48);
-  }
-}
-
 .quote-l {
   @include quote-24
   margin-top: em(5, 16);

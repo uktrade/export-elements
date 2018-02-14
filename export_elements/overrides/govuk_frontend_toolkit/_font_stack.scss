@@ -7,8 +7,8 @@ $helvetica-regular: 'HelveticaNeue', 'Helvetica Neue', 'Arial', 'Helvetica', san
 
 // Allow font stack to be overridden
 // Not all apps using toolkit use New Transport
-$toolkit-font-stack: 'Roboto', arial, helvetica, verdana !default;
-$toolkit-font-stack-tabular: 'Roboto', arial, helvetica, verdana !default;
+$toolkit-font-stack: $nta-light !default;
+$toolkit-font-stack-tabular: $nta-light-tabular !default;
 
 // Font reset for print
 $print-reset: sans-serif;
