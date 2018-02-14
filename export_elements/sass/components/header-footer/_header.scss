@@ -16,6 +16,11 @@
 
   ul li {
     position: static;
+
+    &:before {
+      left: auto;
+      top: auto;
+    }
   }
 
   li {
