@@ -4,6 +4,12 @@
 #footer {
   li {
     line-height: 30px;
+    padding: 0;
+    margin: 0;
+
+    &:before {
+      background: none;
+    }
   }
 
   nav.container {

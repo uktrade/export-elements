@@ -92,6 +92,13 @@
 #header {
   min-height: 110px;
   background: #1e1348; }
+  #header ul li {
+    position: static; }
+  #header li {
+    padding: 0;
+    margin: 0; }
+    #header li:before {
+      background: none; }
   #header .account-links {
     float: right;
     padding: 7px 0; }
@@ -431,7 +438,11 @@
     transition: background-color 0.1s; } }
 
 #footer li {
-  line-height: 30px; }
+  line-height: 30px;
+  padding: 0;
+  margin: 0; }
+  #footer li:before {
+    background: none; }
 
 #footer nav.container {
   padding-top: 45px;
