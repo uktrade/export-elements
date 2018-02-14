@@ -4,6 +4,12 @@
 #footer {
   li {
     line-height: 30px;
+    padding: 0;
+    margin: 0;
+
+    &:before {
+      background: none;
+    }
   }
 
   nav.container {
@@ -14,6 +20,7 @@
   .link-group {
     width: 25%;
     float: left;
+    box-sizing: border-box;
   }
 
   .links-list-heading {
@@ -83,7 +90,7 @@
     .link-group {
       margin: 30px 0;
       position: relative;
-      width: calc((100% / 2) - 31px);
+      width: 50%;
 
       &:nth-child(even) {
         border-left: $lightened-great-blue solid 1px;
