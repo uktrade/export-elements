@@ -1,6 +1,15 @@
 @import '!elements/layout';
 @import '../../sass/partials/spacings';
 
+// Remove max-width and margins from #content
+// as we use .container for this instead
+
+#content {
+  max-width: none;
+  padding: 30px 0;
+  margin: 0;
+}
+
 // Additional great.gov.uk styles
 
 .container {
@@ -14,4 +23,8 @@
   @media (max-width: 420px) {
     margin: 0 20px; // Special figure intentionally outside of standard.
   }
+}
+
+section {
+  padding-bottom: 90px;
 }
