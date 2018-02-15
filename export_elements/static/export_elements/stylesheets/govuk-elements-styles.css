@@ -258,6 +258,11 @@ legend {
       float: left;
       width: 100%; } }
 
+#content {
+  max-width: none;
+  padding: 30px 0;
+  margin: 0; }
+
 .container {
   max-width: 1200px;
   margin: 0 auto; }
@@ -267,6 +272,9 @@ legend {
   @media (max-width: 420px) {
     .container {
       margin: 0 20px; } }
+
+section {
+  padding-bottom: 90px; }
 
 main {
   font-family: "Roboto", arial, helvetica, verdana;
