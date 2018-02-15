@@ -1,6 +1,10 @@
 
 // Header menu
 
+@import '../../partials/colours';
+@import '../../partials/spacings';
+@import '../../partials/mixins';
+
 #menu {
   float: right;
   margin-top: -54px;
@@ -14,7 +18,7 @@
 
   .links-list-item {
     position: relative;
-    padding: 30px;
+    padding: $spacing-3;
     min-height: 170px;
     background-color: $mid-blue;
 
@@ -34,7 +38,7 @@
       padding: 0;
       font-size: 19px;
       font-weight: 400;
-      min-height: 45px;
+      min-height: $spacing-2;
 
       &:before {
         background: none;
@@ -132,7 +136,7 @@
       display: block;
       margin: 0;
       outline: none;
-      padding: 30px;
+      padding: $spacing-3;
 
       &:hover {
         background-color: transparent;
@@ -171,12 +175,6 @@
       background-color: transparent;
       display: block;
       color: $stone;
-
-      a {
-        margin: 0 30px;
-        padding: 20px 0;
-        height: auto;
-      }
 
       li {
         display: block;
@@ -222,7 +220,7 @@
 
     .ExpanderControl.active {
       border-bottom: 0;
-      padding-bottom: 10px;
+      padding-bottom: $spacing-4;
     }
 
     .ExpanderControl:before {
@@ -246,14 +244,14 @@
     color: $white;
     display: block;
     padding: 5px 10px;
-    margin-right: 15px;
+    margin-right: $spacing-4;
     position: absolute;
     transition: none;
     right: 0;
     top: 40px;
 
     &:focus {
-      outline-color: $focus-yellow;
+      @include focus
     }
 
     span {

@@ -1,0 +1,115 @@
+
+// General mixins
+// ----------------
+
+@import 'colours';
+
+@mixin great-red-trim {
+  background-color: $great-red;
+  content: '';
+  height: 4px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+@mixin focus {
+  outline: $focus-yellow solid 3px;
+}
+
+@mixin separator($colour) {
+  background-color: $colour;
+  content: '';
+  display: inline-block;
+  height: 1em;
+  margin: 0 0.5em 0 0.3em;
+  width: 1px;
+  vertical-align: middle;
+}
+
+@mixin rotate($deg) {
+  -ms-transform: rotate(#{$deg + 'deg'}); /* IE 9 */
+  -webkit-transform: rotate(#{$deg + 'deg'});
+  transform: rotate(#{$deg + 'deg'});
+}
+
+// BUTTONS
+@mixin button($colour-1, $colour-2) {
+  background-color: $colour-1;
+  border-color: $colour-1;
+  color: $white;
+
+  &:hover {
+    background-color: $colour-2;
+    border-color: $colour-2;
+    color: $white;
+  }
+}
+
+@mixin button-disabled($colour-1, $colour-2) {
+  background-color: $colour-1;
+  border-color: $colour-1;
+  color: $colour-2;
+  cursor: default;
+
+  &:hover {
+    background-color: $colour-1;
+    border-color: $colour-1;
+    color: $colour-2;
+  }
+}
+
+@mixin button-ghost($colour-1, $colour-2) {
+  background-color: $colour-2;
+  border-color: $colour-1;
+  color: $colour-1;
+
+  &:focus {
+    border-color: $colour-2;
+  }
+
+  &:hover {
+    background-color: $colour-1;
+    border-color: $colour-1;
+    color: $colour-2;
+  }
+}
+
+// CHEVRONS
+@mixin down-chevron-1($colour) {
+  @include chevron(5);
+  border-color: $colour;
+  border-width: 0 2px 2px 0;
+  top: 1px;
+}
+
+@mixin left-chevron-1($colour) {
+  @include chevron(15);
+  border-color: $colour;
+  border-width: 0 0 2px 2px;
+  top: 0;
+}
+
+@mixin right-chevron-1($colour) {
+  @include chevron(15);
+  border-color: $colour;
+  border-width: 2px 2px 0 0;
+  top: 0;
+}
+
+@mixin right-chevron-2($colour) {
+  @include chevron(5);
+  vertical-align: middle;
+  border-color: $colour;
+  border-width: 2px 2px 0 0;
+  margin: 0 5px;
+  top: 0;
+}
+
+@mixin up-chevron-1($colour) {
+  @include chevron(5);
+  border-color: $colour;
+  border-width: 2px 0 0 2px;
+  top: 5px;
+}

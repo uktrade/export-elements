@@ -6,7 +6,7 @@
 input[type='file'] {
   background: $stone-40;
   border: 1px solid $stone;
-  padding: 15px;
+  padding: $spacing-4;
 }
 
 select.form-control {
