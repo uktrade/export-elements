@@ -5,10 +5,14 @@
 @import '../../partials/spacings';
 @import '../../partials/mixins';
 
-#menu {
-  float: right;
+#header-menu {
   margin-top: -54px;
   height: 54px;
+  position: relative;
+}
+
+#menu {
+  float: right;
   background-color: $great-blue;
 
   .links-list a {

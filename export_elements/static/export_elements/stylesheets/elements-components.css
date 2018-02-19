@@ -197,10 +197,13 @@
     right: 30px;
     top: calc(100% / 3); } }
 
-#menu {
-  float: right;
+#header-menu {
   margin-top: -54px;
   height: 54px;
+  position: relative; }
+
+#menu {
+  float: right;
   background-color: #1e1348; }
   #menu .links-list a {
     color: #ffffff;
