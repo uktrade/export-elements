@@ -170,32 +170,7 @@
 
 @media screen and (max-width: 767px) {
   #header-menu a:hover:before {
-    background: #00549f; }
-  #header {
-    padding-bottom: 58px; }
-  #menu .ExpanderControl.active:before {
-    font-family: 'Roboto', arial, helvetica, sans-serif;
-    font-size: 15px;
-    font-weight: 400;
-    background-color: transparent;
-    content: '_';
-    font-size: 40px;
-    top: 23%;
-    left: auto;
-    right: 40px;
-    width: auto; }
-  #menu .ExpanderControl:hover:before {
-    font-family: 'Roboto', arial, helvetica, sans-serif;
-    font-size: 15px;
-    font-weight: 400;
-    content: '+';
-    font-size: 35px;
-    height: 30px;
-    width: 30px;
-    left: auto;
-    position: absolute;
-    right: 30px;
-    top: calc(100% / 3); } }
+    background: #00549f; } }
 
 #header-menu {
   margin-top: -54px;
@@ -304,6 +279,9 @@
     width: 100%; }
 
 @media screen and (max-width: 767px) {
+  #header-menu {
+    height: auto;
+    margin-bottom: 54px; }
   #menu.collapsed {
     height: 0;
     overflow: hidden;
@@ -419,7 +397,7 @@
     position: absolute;
     transition: none;
     right: 0;
-    top: 40px; }
+    top: -10px; }
     #menu-activator:focus {
       outline: #ffbf47 solid 3px; }
     #menu-activator span {

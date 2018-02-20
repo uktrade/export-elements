@@ -113,6 +113,11 @@
 
 
 @media screen and (max-width: 767px) {
+  #header-menu {
+    height: auto;
+    margin-bottom: 54px;
+  }
+
   #menu.collapsed {
     height: 0;
     overflow: hidden;
@@ -252,7 +257,7 @@
     position: absolute;
     transition: none;
     right: 0;
-    top: 40px;
+    top: -10px;
 
     &:focus {
       @include focus

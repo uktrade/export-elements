@@ -127,16 +127,4 @@
   #header-menu a:hover:before {
     background: $mid-blue;
   }
-
-  #header {
-    padding-bottom: 58px;
-  }
-
-  #menu .ExpanderControl.active:before {
-    @include minus-icon
-  }
-
-  #menu .ExpanderControl:hover:before {
-    @include plus-icon
-  }
 }
