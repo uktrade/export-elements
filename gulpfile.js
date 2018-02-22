@@ -41,7 +41,7 @@ gulp.task('test', () => {
 });
 
 // Clean task ----------------------------
-// Deletes the /public directory
+// Deletes the /export_elements/static/export_elements directory
 // ---------------------------------------
 
 gulp.task('clean', () => {
@@ -50,7 +50,8 @@ gulp.task('clean', () => {
 
 // GovUK styles build task ---------------
 // Compiles CSS from Sass
-// Output both a minified and non-minified version into /public/stylesheets/
+// Output both a minified and non-minified version into
+// /export_elements/static/export_elements/stylesheets/
 // ---------------------------------------
 
 gulp.task('styles:govuk', () => {
@@ -78,6 +79,17 @@ gulp.task('styles:components', () => {
     .pipe(gulp.dest('export_elements/static/export_elements/stylesheets'));
 });
 
+// No JS component styling
+
+gulp.task('styles:components-no-js', () => {
+  return gulp.src('export_elements/sass/components/elements-components-no-js.scss')
+    .pipe(sass().on('error', sass.logError))
+    .pipe(gulp.dest('export_elements/static/export_elements/stylesheets'))
+    .pipe(rename({ suffix: '.min' }))
+    .pipe(cssnano())
+    .pipe(gulp.dest('export_elements/static/export_elements/stylesheets'));
+});
+
 // Documentation style overrides
 
 gulp.task('styles:docs', () => {
@@ -91,16 +103,16 @@ gulp.task('styles:docs', () => {
 
 // Compile all styles
 
-gulp.task('styles', ['styles:govuk', 'styles:components', 'styles:docs']);
+gulp.task('styles', [
+  'styles:govuk',
+  'styles:components',
+  'styles:components-no-js',
+  'styles:docs'
+]);
 
 // Images build task ---------------------
-// Copies images to /public/images
+// Copies images to /export_elements/static/export_elements/images
 // ---------------------------------------
-
-// gulp.task('images', () => {
-//   return gulp.src('node_modules/govuk-elements/assets/images/**/*')
-//     .pipe(gulp.dest('public/images'));
-// });
 
 gulp.task('images', () => {
   return gulp.src([
@@ -111,7 +123,8 @@ gulp.task('images', () => {
 });
 
 // Scripts build task ---------------------
-// Copies JavaScript to /public/javascripts
+// Copies JavaScript to
+// /export_elements/static/export_elements/javascripts
 // ---------------------------------------
 gulp.task('scripts', () => {
   return gulp.src('node_modules/govuk-elements/assets/javascripts/**/*.js')
@@ -119,7 +132,8 @@ gulp.task('scripts', () => {
 });
 
 // Build task ----------------------------
-// Runs tasks that copy assets to the public directory.
+// Runs tasks that copy assets to the
+// /export_elements/static/export_elements directory.
 // ---------------------------------------
 
 gulp.task('build', cb => {

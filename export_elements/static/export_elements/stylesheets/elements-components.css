@@ -7,11 +7,13 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
 
-#header a,
+#header-bar a,
+#header-menu a,
 #footer a {
   color: #d8d8d8; }
 
-#header a:focus,
+#header-bar a:focus,
+#header-menu a:focus,
 #footer a:focus {
   outline: 3px solid #ffbf47; }
 
