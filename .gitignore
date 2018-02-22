@@ -3,5 +3,7 @@ export_elements/static/export_elements
 !export_elements/static/export_elements/stylesheets/govuk-elements-styles.css
 !export_elements/static/export_elements/stylesheets/elements-components.css
 !export_elements/static/export_elements/stylesheets/elements-components.min.css
+!export_elements/static/export_elements/stylesheets/elements-components-no-js.css
+!export_elements/static/export_elements/stylesheets/elements-components-no-js.min.css
 node_modules
 public
