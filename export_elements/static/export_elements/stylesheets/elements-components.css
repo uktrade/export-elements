@@ -141,7 +141,8 @@
 #header-dit-logo img {
   max-width: 158px;
   width: 100%;
-  margin: 20px 0 15px; }
+  margin: 20px 0 15px;
+  position: absolute; }
 
 #header-menu a {
   color: #ffffff;
@@ -387,7 +388,7 @@
     width: 104px;
     height: 50px;
     text-align: left;
-    background-color: transparent;
+    background-color: #1e1348;
     border: 2px solid #ffffff;
     border-radius: 0;
     color: #ffffff;
