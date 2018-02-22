@@ -117,6 +117,7 @@ gulp.task('styles', [
 gulp.task('images', () => {
   return gulp.src([
     'node_modules/govuk-elements/assets/images/**/*',
+    'node_modules/govuk_frontend_toolkit/images/**/*',
     'demo/static/images/**/*'
   ])
     .pipe(gulp.dest('export_elements/static/export_elements/images'));
