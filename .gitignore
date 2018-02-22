@@ -1,9 +1,9 @@
-export_elements/static/export_elements
-!export_elements/static/export_elements/stylesheets/govuk-elements-styles.min.css
-!export_elements/static/export_elements/stylesheets/govuk-elements-styles.css
-!export_elements/static/export_elements/stylesheets/elements-components.css
-!export_elements/static/export_elements/stylesheets/elements-components.min.css
-!export_elements/static/export_elements/stylesheets/elements-components-no-js.css
-!export_elements/static/export_elements/stylesheets/elements-components-no-js.min.css
 node_modules
 public
+
+export_elements/static/export_elements/images/crests
+export_elements/static/export_elements/images/examples
+export_elements/static/export_elements/javascripts
+export_elements/static/export_elements/stylesheets/vendor
+export_elements/static/export_elements/stylesheets/demo*
+export_elements/static/export_elements/stylesheets/*-ie*
