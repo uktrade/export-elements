@@ -138,11 +138,13 @@
       top: 0;
       z-index: 1; }
 
-#header-dit-logo img {
-  max-width: 158px;
-  width: 100%;
-  margin: 20px 0 15px;
-  position: absolute; }
+#header-dit-logo {
+  height: auto;
+  position: absolute;
+  margin: 20px 0 15px; }
+  #header-dit-logo img {
+    max-width: 158px;
+    width: 100%; }
 
 #header-menu a {
   color: #ffffff;
@@ -173,13 +175,9 @@
   #header-menu a:hover:before {
     background: #00549f; } }
 
-#header-menu {
-  margin-top: -54px;
-  height: 54px;
-  position: relative; }
-
 #menu {
   float: right;
+  margin-top: -54px;
   background-color: #1e1348; }
   #menu .links-list a {
     color: #ffffff;
@@ -398,7 +396,7 @@
     position: absolute;
     transition: none;
     right: 0;
-    top: -10px; }
+    top: 45px; }
     #menu-activator:focus {
       outline: #ffbf47 solid 3px; }
     #menu-activator span {
