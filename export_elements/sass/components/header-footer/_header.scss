@@ -87,11 +87,15 @@
   }
 }
 
-#header-dit-logo img {
-  max-width: 158px;
-  width: 100%;
-  margin: 20px 0 15px;
+#header-dit-logo {
+  height: auto;
   position: absolute;
+  margin: 20px 0 15px;
+
+  img {
+    max-width: 158px;
+    width: 100%;
+  }
 }
 
 #header-menu {
