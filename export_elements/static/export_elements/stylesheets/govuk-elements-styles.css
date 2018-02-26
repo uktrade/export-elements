@@ -1738,6 +1738,8 @@ input[type=number] {
 
 .phase-banner {
   border: 0; }
+  .phase-banner span {
+    color: #999999; }
 
 .govuk-box-highlight {
   margin: 1em 0;
