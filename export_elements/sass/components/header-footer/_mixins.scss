@@ -28,6 +28,7 @@
 
 @mixin plus-icon {
   @include font-med-normal
+  color: $white;
   content: '+';
   font-size: 35px;
   height: 30px;
@@ -40,6 +41,7 @@
 
 @mixin minus-icon {
   @include font-med-normal
+  color: $white;
   background-color: transparent;
   content: '_';
   font-size: 40px;

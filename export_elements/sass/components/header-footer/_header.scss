@@ -45,17 +45,8 @@
       font-weight: bold;
       margin-left: 5px;
 
-      &:after {
+      &:first-child:after {
         content: '|';
-      }
-
-      &:last-child {
-        content: '';
-        margin-right: 5px;
-
-        &:after {
-          content: '';
-        }
       }
     }
   }

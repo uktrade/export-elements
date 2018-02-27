@@ -147,18 +147,23 @@
       }
     }
 
+    a.links-list-heading {
+      border-top: $mid-grey solid 1px;
+      border-bottom: 0;
+    }
+
     a.links-list-heading:focus {
       outline: none;
     }
 
-    li {
+    ul li {
       display: block;
       margin: 0;
       padding: 0;
-    }
 
-    ul li:first-child a:hover:before {
-      content: '';
+      #header-custom-page-link {
+        border: 0;
+      }
     }
 
     .description {
@@ -169,6 +174,14 @@
       min-height: auto;
       position: static;
       padding-bottom: 0;
+
+      &:last-child {
+        padding-bottom: 20px;
+
+        a {
+          border: 0;
+        }
+      }
 
       p {
         display: none;
