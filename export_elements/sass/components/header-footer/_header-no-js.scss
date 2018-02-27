@@ -2,9 +2,10 @@
 // Header No JS Styling
 
 @import '../../sass/partials/spacings';
+@import '../../sass/partials/colours';
 
 #header-beta-bar {
-  background: white;
+  background: $white;
 }
 
 #menu {
@@ -21,7 +22,7 @@
   padding-bottom: $spacing-4;
   margin-top: 0;
   height: auto;
-  background: white;
+  background: $white;
 
   ul li {
     padding-right: $spacing-4;
@@ -50,24 +51,27 @@
     &:nth-child(1) a.navigation,
     &:nth-child(2) a.navigation {
       text-decoration: underline;
-      color: #006ccc;
+      color: $active-blue;
       font-size: 19px;
       font-weight: 400;
     }
 
     &:nth-child(1) a.navigation:active,
     &:nth-child(2) a.navigation:active {
-      background-color: #ffbf47;
+      background-color: $focus-yellow;
     }
+
     &:nth-child(1) a.navigation:visited,
     &:nth-child(2) a.navigation:visited {
-      color: #4c2c92;
+      color: $purple;
     }
+
     &:nth-child(1) a.navigation:hover,
     &:nth-child(2) a.navigation:hover {
       background: none;
-      color: #2b8cc4;
+      color: $light-blue;
     }
+
     &:nth-child(5) p {
       display: none;
     }
@@ -90,21 +94,21 @@
 
     a {
       text-decoration: underline;
-      color: #006ccc;
+      color: $active-blue;
       min-height: 0;
       margin: 3px 3px 3px 0;
 
       &:visited {
-        color: #4c2c92;
+        color: $purple;
       }
 
       &:active {
-        background-color: #ffbf47;
+        background-color: $focus-yellow;
       }
 
       &:hover {
         background: none;
-        color: #2b8cc4;
+        color: $light-blue;
       }
     }
 
@@ -123,7 +127,7 @@
   }
 
   .navigation.links-list-heading {
-    color: black;
+    color: $black;
     margin-bottom: $spacing-4;
     font-size: 24px;
     font-weight: 700;
@@ -215,24 +219,27 @@
       &:nth-child(1) a.navigation,
       &:nth-child(2) a.navigation {
         text-decoration: underline;
-        color: #006ccc;
+        color: $active-blue;
         font-size: 19px;
         font-weight: 400;
       }
 
       &:nth-child(1) a.navigation:active,
       &:nth-child(2) a.navigation:active {
-        background-color: #ffbf47;
+        background-color: $focus-yellow;
       }
+
       &:nth-child(1) a.navigation:visited,
       &:nth-child(2) a.navigation:visited {
-        color: #4c2c92;
+        color: $purple;
       }
+
       &:nth-child(1) a.navigation:hover,
       &:nth-child(2) a.navigation:hover {
         background: none;
-        color: #2b8cc4;
+        color: $light-blue;
       }
+
       &:nth-child(5) p {
         display: none;
       }
