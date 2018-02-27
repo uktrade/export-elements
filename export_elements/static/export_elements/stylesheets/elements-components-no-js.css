@@ -123,7 +123,7 @@
     #header-menu ul li:nth-child(2) a.navigation {
       text-decoration: underline;
       color: #006ccc;
-      font-size: 19px;
+      font-size: 15px;
       font-weight: 400; }
     #header-menu ul li:nth-child(1) a.navigation:active,
     #header-menu ul li:nth-child(2) a.navigation:active {
@@ -140,7 +140,4 @@
     #header-menu .links-list-item a {
       font-size: 15px; }
     #header-menu .navigation.links-list-heading {
-      font-size: 19px; }
-    #header-menu ul li:nth-child(1) a.navigation,
-    #header-menu ul li:nth-child(2) a.navigation {
-      font-size: 15px; } }
+      font-size: 19px; } }
