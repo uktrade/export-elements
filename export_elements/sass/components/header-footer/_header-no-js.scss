@@ -8,6 +8,10 @@
   background: $white;
 }
 
+#header-bar {
+  background: $great-blue;
+}
+
 #menu {
   height: auto;
   margin-top: $spacing-3;
@@ -161,22 +165,15 @@
 
         a {
           text-decoration: none;
+        }
 
-          &:hover {
-            text-decoration: underline;
-          }
+        a:hover {
+          text-decoration: underline;
         }
       }
     }
   }
 
-  #header-dit-logo {
-    margin-top: 35px;
-
-    img {
-      max-width: 126px;
-    }
-  }
 
   #header-menu {
     margin-top: -50px;
@@ -255,4 +252,24 @@
     }
   }
 
+}
+
+@media screen and (max-width: 470px) {
+  #header-dit-logo {
+    margin-top: 35px;
+
+    img {
+      max-width: 126px;
+    }
+  }
+}
+
+@media screen and (max-width: 360px) {
+  #header-bar .account-links li {
+    margin-left: 0;
+
+    &:nth-child(3) {
+      float: right;
+    }
+  }
 }
