@@ -200,7 +200,6 @@
     }
 
     ul li {
-
       &:nth-child(1) {
         width: auto;
       }
@@ -220,7 +219,7 @@
       &:nth-child(2) a.navigation {
         text-decoration: underline;
         color: $active-blue;
-        font-size: 19px;
+        font-size: 15px;
         font-weight: 400;
       }
 
@@ -253,13 +252,6 @@
 
     .navigation.links-list-heading {
       font-size: 19px;
-    }
-
-    ul li {
-      &:nth-child(1) a.navigation,
-      &:nth-child(2) a.navigation {
-        font-size: 15px;
-      }
     }
   }
 
