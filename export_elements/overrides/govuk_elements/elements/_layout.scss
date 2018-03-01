@@ -12,6 +12,13 @@
 
 // Additional great.gov.uk styles
 
+// Reset body
+body {
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
 .container {
   max-width: $design-max-width;
   margin: 0 auto;
