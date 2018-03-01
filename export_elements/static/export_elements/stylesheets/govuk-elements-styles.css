@@ -195,6 +195,11 @@ legend {
   max-width: 100%;
   display: table; }
 
+body {
+  border: none;
+  margin: 0;
+  padding: 0; }
+
 #content {
   padding-bottom: 30px;
   outline: none; }
