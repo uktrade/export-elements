@@ -5,3 +5,6 @@ export_elements/static/export_elements
 !export_elements/static/export_elements/stylesheets/elements-components.min.css
 node_modules
 public
+build
+dist
+*.egg-info/
