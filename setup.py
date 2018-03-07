@@ -23,7 +23,6 @@ setup(
     author='Department for International Trade',
     description='Wrapper around govuk elements.',
     packages=['export_elements'],
-    package_data={'export_elements': ['*']},
     long_description=open('README.md').read(),
     include_package_data=True,
     classifiers=[
