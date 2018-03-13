@@ -8,7 +8,7 @@
     border: 2px solid $colour;
   } @else {
     background-color: $colour;
-    border: none;
+    border: 0;
   }
 
   // Size and shape
@@ -49,9 +49,10 @@
 
   // Disabled button styles
   &.disabled,
-  &[disabled="disabled"],
+  &[disabled='disabled'],
   &[disabled] {
     @include opacity(0.5);
+
     &:hover {
       cursor: default;
       background-color: $colour;
@@ -120,7 +121,7 @@
   // making the click target bigger than the button
   // (and fill the space made when the button moves)
   &:before {
-    content: "";
+    content: '';
     height: 110%;
     width: 100%;
     display: block;
@@ -144,9 +145,9 @@
 
   // Fixes a bug where IE puts a black border around certain elements
   @include ie-lte(8) {
-    &[type="submit"],
-    &[type="reset"],
-    &[type="button"] {
+    &[type='submit'],
+    &[type='reset'],
+    &[type='button'] {
       filter: chroma(color = $black);
     }
 
