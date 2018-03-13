@@ -1,11 +1,20 @@
 machine:
   node:
     version: 8.1.0
+  python:
+    version: 3.5.2
 
 dependencies:
   override:
     - npm install
+    - pip install -r requirements_test.txt
 
 test:
   override:
-    - npm test
+    - make test
+
+deployment:
+  build_package:
+    branch: master
+    commands:
+      - make publish
