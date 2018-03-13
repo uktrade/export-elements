@@ -718,7 +718,7 @@ a:active {
 
 .button {
   background-color: #006ccc;
-  border: none;
+  border: 0;
   position: relative;
   display: -moz-inline-stack;
   display: inline-block;
@@ -750,14 +750,14 @@ a:active {
     -webkit-box-shadow: 0 0 0 #006ccc;
     -moz-box-shadow: 0 0 0 #006ccc;
     box-shadow: 0 0 0 #006ccc; }
-  .button.disabled, .button[disabled="disabled"], .button[disabled] {
+  .button.disabled, .button[disabled='disabled'], .button[disabled] {
     zoom: 1;
     filter: alpha(opacity=50);
     opacity: 0.5; }
-    .button.disabled:hover, .button[disabled="disabled"]:hover, .button[disabled]:hover {
+    .button.disabled:hover, .button[disabled='disabled']:hover, .button[disabled]:hover {
       cursor: default;
       background-color: #006ccc; }
-    .button.disabled:active, .button[disabled="disabled"]:active, .button[disabled]:active {
+    .button.disabled:active, .button[disabled='disabled']:active, .button[disabled]:active {
       top: 0;
       -webkit-box-shadow: 0 2px 0 #004480;
       -moz-box-shadow: 0 2px 0 #004480;
@@ -765,7 +765,7 @@ a:active {
   .button:link, .button:link:focus, .button:hover, .button:focus, .button:visited {
     color: #ffffff; }
   .button:before {
-    content: "";
+    content: '';
     height: 110%;
     width: 100%;
     display: block;
@@ -818,7 +818,7 @@ a:active {
 
 .button {
   background-color: #006ccc;
-  border: none;
+  border: 0;
   position: relative;
   display: -moz-inline-stack;
   display: inline-block;
@@ -846,14 +846,14 @@ a:active {
     -webkit-box-shadow: 0 0 0 #006ccc;
     -moz-box-shadow: 0 0 0 #006ccc;
     box-shadow: 0 0 0 #006ccc; }
-  .button.disabled, .button[disabled="disabled"], .button[disabled] {
+  .button.disabled, .button[disabled='disabled'], .button[disabled] {
     zoom: 1;
     filter: alpha(opacity=50);
     opacity: 0.5; }
-    .button.disabled:hover, .button[disabled="disabled"]:hover, .button[disabled]:hover {
+    .button.disabled:hover, .button[disabled='disabled']:hover, .button[disabled]:hover {
       cursor: default;
       background-color: #006ccc; }
-    .button.disabled:active, .button[disabled="disabled"]:active, .button[disabled]:active {
+    .button.disabled:active, .button[disabled='disabled']:active, .button[disabled]:active {
       top: 0;
       -webkit-box-shadow: 0 2px 0 #004480;
       -moz-box-shadow: 0 2px 0 #004480;
@@ -861,7 +861,7 @@ a:active {
   .button:link, .button:link:focus, .button:hover, .button:focus, .button:visited {
     color: #ffffff; }
   .button:before {
-    content: "";
+    content: '';
     height: 110%;
     width: 100%;
     display: block;
@@ -903,14 +903,14 @@ a:active {
     -webkit-box-shadow: 0 0 0 #006ccc;
     -moz-box-shadow: 0 0 0 #006ccc;
     box-shadow: 0 0 0 #006ccc; }
-  .button-ghost-blue.disabled, .button-ghost-blue[disabled="disabled"], .button-ghost-blue[disabled] {
+  .button-ghost-blue.disabled, .button-ghost-blue[disabled='disabled'], .button-ghost-blue[disabled] {
     zoom: 1;
     filter: alpha(opacity=50);
     opacity: 0.5; }
-    .button-ghost-blue.disabled:hover, .button-ghost-blue[disabled="disabled"]:hover, .button-ghost-blue[disabled]:hover {
+    .button-ghost-blue.disabled:hover, .button-ghost-blue[disabled='disabled']:hover, .button-ghost-blue[disabled]:hover {
       cursor: default;
       background-color: #006ccc; }
-    .button-ghost-blue.disabled:active, .button-ghost-blue[disabled="disabled"]:active, .button-ghost-blue[disabled]:active {
+    .button-ghost-blue.disabled:active, .button-ghost-blue[disabled='disabled']:active, .button-ghost-blue[disabled]:active {
       top: 0;
       -webkit-box-shadow: 0 2px 0 #004480;
       -moz-box-shadow: 0 2px 0 #004480;
@@ -920,7 +920,7 @@ a:active {
   .button-ghost-blue:link:focus, .button-ghost-blue:hover, .button-ghost-blue:focus {
     color: #ffffff; }
   .button-ghost-blue:before {
-    content: "";
+    content: '';
     height: 110%;
     width: 100%;
     display: block;
@@ -962,14 +962,14 @@ a:active {
     -webkit-box-shadow: 0 0 0 #ffffff;
     -moz-box-shadow: 0 0 0 #ffffff;
     box-shadow: 0 0 0 #ffffff; }
-  .button-ghost-white.disabled, .button-ghost-white[disabled="disabled"], .button-ghost-white[disabled] {
+  .button-ghost-white.disabled, .button-ghost-white[disabled='disabled'], .button-ghost-white[disabled] {
     zoom: 1;
     filter: alpha(opacity=50);
     opacity: 0.5; }
-    .button-ghost-white.disabled:hover, .button-ghost-white[disabled="disabled"]:hover, .button-ghost-white[disabled]:hover {
+    .button-ghost-white.disabled:hover, .button-ghost-white[disabled='disabled']:hover, .button-ghost-white[disabled]:hover {
       cursor: default;
       background-color: #ffffff; }
-    .button-ghost-white.disabled:active, .button-ghost-white[disabled="disabled"]:active, .button-ghost-white[disabled]:active {
+    .button-ghost-white.disabled:active, .button-ghost-white[disabled='disabled']:active, .button-ghost-white[disabled]:active {
       top: 0;
       -webkit-box-shadow: 0 2px 0 #d9d9d9;
       -moz-box-shadow: 0 2px 0 #d9d9d9;
@@ -979,7 +979,7 @@ a:active {
   .button-ghost-white:link:focus, .button-ghost-white:hover, .button-ghost-white:focus {
     color: #000000; }
   .button-ghost-white:before {
-    content: "";
+    content: '';
     height: 110%;
     width: 100%;
     display: block;
