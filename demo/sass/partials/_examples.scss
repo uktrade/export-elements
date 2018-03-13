@@ -12,10 +12,20 @@
   }
 }
 
+.example-button .background-dark .swatch-wrapper ul li {
+  color: $white;
+}
+
 :not(pre) > code[class*="language-"], pre[class*="language-"] {
   background: $stone-20;
 }
 
 pre[class*="language-"] {
   border: 1px solid $stone-90;
+}
+
+// only used to demo transparent buttons
+.background-dark {
+  background-color: $great-blue;
+  padding: 15px;
 }

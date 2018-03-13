@@ -1,0 +1,13 @@
+@import '../../../node_modules/govuk_frontend_toolkit/stylesheets/grid_layout';
+
+// Only used for aligning swatches on buttons page
+
+.column-sixth,
+.column-one-sixth {
+  @include grid-column(1 / 6);
+}
+
+#content {
+  max-width: 960px;
+  margin: 0 auto;
+}
