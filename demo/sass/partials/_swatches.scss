@@ -54,3 +54,7 @@
 .swatch-stone-30 { background: $stone-30 }
 .swatch-stone-20 { background: $stone-20 }
 .swatch-stone-10 { background: $stone-10 }
+
+// Button hover
+
+.swatch-button-hover    { background: darken($active-blue, 15%) }
