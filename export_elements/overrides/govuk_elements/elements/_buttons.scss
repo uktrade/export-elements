@@ -1,0 +1,16 @@
+@import '!elements/buttons';
+@import '../../govuk_frontend_toolkit/design-patterns/buttons';
+
+// Transparent/ghost buttons
+
+.button {
+  @include button($button-colour, false);
+}
+
+.button-ghost-blue {
+  @include button($button-colour, true);
+}
+
+.button-ghost-white {
+  @include button($white, true);
+}

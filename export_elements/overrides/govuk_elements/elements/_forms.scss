@@ -31,11 +31,3 @@ select.form-control {
   -webkit-appearance:none;
   -moz-appearance:none;
 }
-
-.multiple-choice [type=radio] + label::after {
-  color: $mid-blue;
-}
-
-.multiple-choice [type=checkbox] + label::after {
-  color: $mid-blue;
-}

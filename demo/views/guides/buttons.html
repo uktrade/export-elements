@@ -20,7 +20,7 @@
     <div class="column-two-thirds">
       <ul class="list list-contents">
         <li><a href="#button-text">Button text</a></li>
-        <li><a href="#button-start-now">Start now button</a></li>
+        <li><a href="#button-types">Button types</a></li>
         <li><a href="#button-alignment">Button alignment</a></li>
         <li><a href="#button-disabled">Disabled buttons</a></li>
         <li><a href="#creating-buttons">Creating buttons</a></li>
@@ -45,19 +45,51 @@
 </code>
 </pre>
 
-  <h3 class="heading-medium" id="button-start-now">Start now button</h3>
+  <h3 class="heading-medium" id="button-types">Button types</h3>
   <p class="text">
-    Launch your service with a Start now button.
+    Solid colour button.
   </p>
 
 <div class="example">
-  {% include "snippets/buttons_button_start_now.html" %}
+  {% include "great_snippets/buttons_button_solid.html" %}
 </div>
 
 <pre>
 <code class="language-markup">
   {% filter escape %}
-    {% include "snippets/buttons_button_start_now.html" %}
+    {% include "great_snippets/buttons_button_solid.html" %}
+  {% endfilter %}
+</code>
+</pre>
+
+  <p class="text">
+    Blue ghost button.
+  </p>
+
+<div class="example">
+  {% include "great_snippets/buttons_button_ghost_blue.html" %}
+</div>
+
+<pre>
+<code class="language-markup">
+  {% filter escape %}
+    {% include "great_snippets/buttons_button_ghost_blue.html" %}
+  {% endfilter %}
+</code>
+</pre>
+
+  <p class="text">
+    White ghost button.
+  </p>
+
+<div class="example">
+  {% include "great_snippets/buttons_button_ghost_white.html" %}
+</div>
+
+<pre>
+<code class="language-markup">
+  {% filter escape %}
+    {% include "great_snippets/buttons_button_ghost_white.html" %}
   {% endfilter %}
 </code>
 </pre>
@@ -104,34 +136,90 @@
 
   <h3 class="heading-medium" id="creating-buttons">Creating buttons</h3>
   <p class="text">
-    Use the GOV.UK Sass button mixin &ndash; find this in the GOV.UK frontend toolkit <a href="https://github.com/alphagov/govuk_frontend_toolkit/blob/master/stylesheets/design-patterns/_buttons.scss" rel="external">buttons.scss</a> file.
+    Use the Export Elements Sass button mixin &ndash; find this in <a href="https://github.com/uktrade/export-elements/tree/master/export_elements/overrides/govuk_frontend_toolkit/design-patterns/_buttons.scss" rel="external">buttons.scss</a>.
   </p>
 
   <div class="example example-button">
     <div class="grid-row">
-      <div class="column-one-third">
+      <div class="column-half">
 
         <button class="button">Save and continue</button>
 
       </div>
-      <div class="column-one-third">
+      <div class="column-one-sixth">
 
         <div class="swatch-wrapper">
-          <h4 class="heading-small">Button</h4>
           <div class="swatch swatch-button-colour"></div>
           <ul>
-            <li><b>#00823B</b></li>
+            <li><b>Button</b></li>
+            <li><b>#006ccc</b></li>
+            <li>$button-colour / $active-blue</li>
+          </ul>
+        </div>
+
+      </div>
+      <div class="column-one-sixth">
+
+        <div class="swatch-wrapper">
+          <div class="swatch swatch-button-hover"></div>
+          <ul>
+            <li><b>Hover</b></li>
+            <li><b>#005fb3</b></li>
+            <li>darken($button-colour, 15%)</li>
+          </ul>
+        </div>
+
+      </div>
+      <div class="column-one-sixth">
+
+        <div class="swatch-wrapper">
+          <div class="swatch swatch-yellow"></div>
+          <ul>
+            <li><b>Focus</b></li>
+            <li><b>#FFBF47</b></li>
+            <li>$focus-colour / $focus-yellow</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="grid-row">
+      <div class="column-half">
+
+        <button class="button-ghost-blue">Save and continue</button>
+
+      </div>
+      <div class="column-one-sixth">
+
+        <div class="swatch-wrapper">
+          <div class="swatch swatch-button-colour"></div>
+          <ul>
+            <li><b>Button</b></li>
+            <li><b>#006ccc</b></li>
             <li>$button-colour</li>
           </ul>
         </div>
 
       </div>
-      <div class="column-one-third">
+      <div class="column-one-sixth">
 
         <div class="swatch-wrapper">
-          <h4 class="heading-small">Focus</h4>
+          <div class="swatch swatch-button-hover"></div>
+          <ul>
+            <li><b>Hover</b></li>
+            <li><b>#005fb3</b></li>
+            <li>darken($button-colour, 15%)</li>
+          </ul>
+        </div>
+
+      </div>
+      <div class="column-one-sixth">
+
+        <div class="swatch-wrapper">
           <div class="swatch swatch-yellow"></div>
           <ul>
+            <li><b>Focus</b></li>
             <li><b>#FFBF47</b></li>
             <li>$focus-colour</li>
           </ul>
@@ -140,13 +228,53 @@
       </div>
 
     </div>
-  </div>
 
-  <p>
-    <a href="https://designpatterns.hackpad.com/Navigation-buttons-continue-next-previous-zoP1sKiW3y4" rel="external">
-      Discuss navigation buttons on the design patterns Hackpad
-    </a>
-  </p>
+    <div class="grid-row background-dark">
+      <div class="column-half">
+
+        <button class="button-ghost-white">Save and continue</button>
+
+      </div>
+      <div class="column-one-sixth">
+
+        <div class="swatch-wrapper">
+          <div class="swatch swatch-button-colour"></div>
+          <ul>
+            <li><b>Button</b></li>
+            <li><b>#006ccc</b></li>
+            <li>$button-colour</li>
+          </ul>
+        </div>
+
+      </div>
+      <div class="column-one-sixth">
+
+        <div class="swatch-wrapper">
+          <div class="swatch swatch-white"></div>
+          <ul>
+            <li><b>Hover</b></li>
+            <li><b>#ffffff</b></li>
+            <li>$white</li>
+          </ul>
+        </div>
+
+      </div>
+      <div class="column-one-sixth">
+
+        <div class="swatch-wrapper">
+          <div class="swatch swatch-yellow"></div>
+          <ul>
+            <li><b>Focus</b></li>
+            <li><b>#FFBF47</b></li>
+            <li>$focus-colour</li>
+          </ul>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
 
 </main><!-- / #content -->
 {% endblock %}
