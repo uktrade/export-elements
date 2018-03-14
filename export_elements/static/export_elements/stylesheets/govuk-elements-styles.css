@@ -1541,6 +1541,12 @@ select:focus::-ms-value {
   color: #ffffff;
   background-color: #006ccc; }
 
+ul.checkbox-multiple li .multiple-choice {
+  margin-bottom: 10px; }
+
+ul.checkbox-multiple {
+  margin-top: 10px; }
+
 input[type='file'] {
   background: #f2eee8;
   border: 1px solid #dfd5c5;
