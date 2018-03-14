@@ -1,6 +1,16 @@
 @import '!elements/forms';
 @import '../../sass/partials/colours';
 
+// Django renders the multiple choice checkbox widgets in lists
+// This is to make sure they have adequate spacing
+ul.checkbox-multiple li .multiple-choice {
+  margin-bottom: 10px;
+}
+
+ul.checkbox-multiple {
+  margin-top: 10px;
+}
+
 // File upload
 
 input[type='file'] {
