@@ -120,13 +120,8 @@
       float: left;
       font-weight: bold;
       margin-left: 5px; }
-      #header .account-links li:after {
+      #header .account-links li:first-child:after {
         content: '|'; }
-      #header .account-links li:last-child {
-        content: '';
-        margin-right: 5px; }
-        #header .account-links li:last-child:after {
-          content: ''; }
   #header .navigation {
     font-weight: 700;
     color: #ffffff;
@@ -318,20 +313,27 @@
       padding: 30px; }
       #menu a:hover {
         background-color: transparent; }
+    #menu a.links-list-heading {
+      border-top: #999999 solid 1px;
+      border-bottom: 0; }
     #menu a.links-list-heading:focus {
       outline: none; }
-    #menu li {
+    #menu ul li {
       display: block;
       margin: 0;
       padding: 0; }
-    #menu ul li:first-child a:hover:before {
-      content: ''; }
+      #menu ul li #header-custom-page-link {
+        border: 0; }
     #menu .description {
       display: none; }
     #menu .links-list-item {
       min-height: auto;
       position: static;
       padding-bottom: 0; }
+      #menu .links-list-item:last-child {
+        padding-bottom: 20px; }
+        #menu .links-list-item:last-child a {
+          border: 0; }
       #menu .links-list-item p {
         display: none; }
     #menu .navigation {
@@ -369,6 +371,7 @@
       font-family: 'Roboto', arial, helvetica, sans-serif;
       font-size: 15px;
       font-weight: 400;
+      color: #ffffff;
       content: '+';
       font-size: 35px;
       height: 30px;
@@ -381,6 +384,7 @@
       font-family: 'Roboto', arial, helvetica, sans-serif;
       font-size: 15px;
       font-weight: 400;
+      color: #ffffff;
       background-color: transparent;
       content: '_';
       font-size: 40px;

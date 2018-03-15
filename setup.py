@@ -2,10 +2,8 @@
 Export Directory API client
 """
 import ast
-import pip.download
-from pip.req import parse_requirements
 import re
-from setuptools import setup, find_packages
+from setuptools import setup
 
 
 def get_version():
@@ -17,13 +15,6 @@ def get_version():
         ))
 
 
-def get_requirements():
-    return [str(r.req) for r in list(parse_requirements(
-        'requirements.txt',
-        session=pip.download.PipSession()
-    ))]
-
-
 setup(
     name='export_elements',
     version=get_version(),
@@ -31,8 +22,16 @@ setup(
     license='MIT',
     author='Department for International Trade',
     description='Wrapper around govuk elements.',
-    packages=find_packages(),
+    packages=['export_elements'],
     long_description=open('README.md').read(),
     include_package_data=True,
-    install_requires=get_requirements()
+    classifiers=[
+        'Development Status :: 5 - Production/Stable',
+        'Environment :: Web Environment',
+        'Intended Audience :: Developers',
+        'License :: OSI Approved :: MIT License',
+        'Natural Language :: English',
+        'Operating System :: OS Independent',
+        'Topic :: Software Development :: Libraries :: Python Modules',
+    ]
 )

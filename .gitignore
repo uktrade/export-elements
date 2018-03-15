@@ -1,5 +1,8 @@
 node_modules
 public
+build
+dist
+*.egg-info/
 
 export_elements/static/export_elements/images/crests
 export_elements/static/export_elements/images/examples

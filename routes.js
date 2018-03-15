@@ -128,7 +128,7 @@ module.exports = {
     // Errors and validation
     app.get('/errors', function (req, res) {
       var pageName = 'Errors and validation';
-      res.render('guides/errors', { 'page_name': pageName });
+      res.render('guides/errors_validation', { 'page_name': pageName });
     });
 
     // Example page: Form validation
