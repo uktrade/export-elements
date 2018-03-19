@@ -683,6 +683,15 @@ hr {
       margin-top: 0.26316em;
       margin-bottom: 1.05263em; } }
 
+.heading-xlarge {
+  margin-bottom: 0.9375em; }
+
+.heading-large {
+  margin-bottom: 0.83333em; }
+
+.heading-medium {
+  margin-bottom: 0.625em; }
+
 .heading-hero-domestic {
   font-family: "Roboto", arial, helvetica, verdana;
   font-weight: 700;
