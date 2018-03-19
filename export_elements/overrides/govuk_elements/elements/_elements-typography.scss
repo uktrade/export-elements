@@ -17,6 +17,19 @@
   }
 }
 
+// Update spacings to match our designs
+.heading-xlarge {
+  margin-bottom: em(45, 48);
+}
+
+.heading-large {
+  margin-bottom: em(30, 36);
+}
+
+.heading-medium {
+  margin-bottom: em(15, 24);
+}
+
 // Additional great.gov.uk styles
 
 .heading-hero-domestic {
