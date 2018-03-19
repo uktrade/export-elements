@@ -1550,10 +1550,10 @@ select:focus::-ms-value {
   color: #ffffff;
   background-color: #006ccc; }
 
-ul.checkbox-multiple li .multiple-choice {
+ul.select-multiple li .multiple-choice {
   margin-bottom: 10px; }
 
-ul.checkbox-multiple {
+ul.select-multiple {
   margin-top: 10px; }
 
 input[type='file'] {

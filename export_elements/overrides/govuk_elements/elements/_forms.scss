@@ -3,11 +3,11 @@
 
 // Django renders the multiple choice checkbox widgets in lists
 // This is to make sure they have adequate spacing
-ul.checkbox-multiple li .multiple-choice {
+ul.select-multiple li .multiple-choice {
   margin-bottom: 10px;
 }
 
-ul.checkbox-multiple {
+ul.select-multiple {
   margin-top: 10px;
 }
 
