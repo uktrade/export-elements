@@ -176,6 +176,14 @@ gulp.task('develop', cb => {
               'server', cb);
 });
 
+// Production task --------------------------
+// Runs copy-assets task.
+// ---------------------------------------
+gulp.task('production', cb => {
+  runsequence('build',
+              'server', cb);
+});
+
 // Default task --------------------------
 // Lists out available tasks.
 // ---------------------------------------

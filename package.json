@@ -14,7 +14,7 @@
   },
   "dependencies": {
     "@csstools/sass-import-resolve": "^1.0.0",
-    "govuk-elements": "git@github.com:alphagov/govuk_elements#master",
+    "govuk-elements": "https://github.com/alphagov/govuk_elements.git#master",
     "govuk-elements-sass": "3.1.2",
     "gulp": "^3.9.1",
     "gulp-print": "^2.0.1",

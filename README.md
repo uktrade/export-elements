@@ -22,7 +22,7 @@ pip install export-elements
     $ npm install
     $ 
 
-## Testing
+## Test
 
     $ make test # python tests
     $ gulp test # javascript tests

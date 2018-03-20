@@ -15,6 +15,10 @@ test: flake8; ./node_modules/.bin/gulp test
 compile_test_requirements:
 	python3 -m piptools compile requirements_test.in
 
+heroku_deploy_dev:
+	docker build -t registry.heroku.com/export-elements-dev/web .
+	docker push registry.heroku.com/export-elements-dev/web
+
 publish:
 	rm -rf build dist; \
 	python setup.py bdist_wheel; \
