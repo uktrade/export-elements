@@ -12,14 +12,26 @@
 ## Installation
 
 ```shell
-pip install -e git+https://git@github.com/uktrade/export-elements.git@v1.0.0#egg=export-elements
+pip install export-elements
 ```
 
 ## Development
 
     $ git clone https://github.com/uktrade/export-elements
     $ cd export-elements
-    $ make
+    $ npm install
+    $ 
+
+## Test
+
+    $ make test # python tests
+    $ gulp test # javascript tests
+
+## Demo
+
+Run the following command then visit http://localhost:3000
+
+    $ gulp develop
 
 ## Publish to PyPI
 
