@@ -3,6 +3,9 @@ public
 build
 dist
 *.egg-info/
+npm-debug.log
+.DS_Store
+/*.env
 
 export_elements/static/export_elements/images/crests
 export_elements/static/export_elements/images/examples
