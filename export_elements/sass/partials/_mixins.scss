@@ -16,6 +16,7 @@
 
 @mixin focus {
   outline: $focus-yellow solid 3px;
+  outline-offset: 0;
 }
 
 @mixin separator($colour) {
@@ -35,15 +36,14 @@
 }
 
 // BUTTONS
-@mixin button($colour-1, $colour-2) {
-  background-color: $colour-1;
-  border-color: $colour-1;
-  color: $white;
-
-  &:hover {
-    background-color: $colour-2;
-    border-color: $colour-2;
-    color: $white;
+@mixin button($colour: $button-colour) {
+  @extend .button;
+  @include font-large-bold;
+  padding: 10px 45px;
+  // Bottom edge effect
+  @include box-shadow(none);
+  @include ie-lte(8) {
+    border-bottom: 0;
   }
 }
 
@@ -60,21 +60,51 @@
   }
 }
 
-@mixin button-ghost($colour-1, $colour-2) {
-  background-color: $colour-2;
-  border-color: $colour-1;
-  color: $colour-1;
+@mixin button-ghost($colour: $button-colour) {
+  @extend .button;
+  background-color: transparent;
+  border: 2px solid $colour;
+  color: $colour;
 
+  &:hover,
   &:focus {
-    border-color: $colour-2;
+    background-color: $colour;
   }
 
-  &:hover {
-    background-color: $colour-1;
-    border-color: $colour-1;
-    color: $colour-2;
+  &:link,
+  &:visited {
+    color: $colour;
+  }
+
+  @if ($colour == $white) {
+
+    &:link:focus,
+    &:hover,
+    &:focus {
+      color: $black;
+      background-color: $white;
+    }
+
+    &:active {
+      color: $black;
+      background-color: $white;
+    }
+
+  } @else {
+
+    &:link:focus,
+    &:hover,
+    &:focus {
+      color: $white;
+    }
+
+    &:active {
+      color: $white;
+      background-color: $colour;
+    }
   }
 }
+
 
 // CHEVRONS
 @mixin down-chevron-1($colour) {

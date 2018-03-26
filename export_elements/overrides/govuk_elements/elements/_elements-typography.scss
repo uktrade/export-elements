@@ -48,15 +48,3 @@
     margin-bottom: em(60, 48);
   }
 }
-
-a {
-  -webkit-tap-highlight-color: $tap-highlight; }
-
-a:focus {
-  outline: 3px solid $focus-colour;
-  background: none;
-}
-
-a:active {
-  background-color: $focus-colour;
-}

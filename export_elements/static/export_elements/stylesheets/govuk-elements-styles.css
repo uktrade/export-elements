@@ -189,10 +189,102 @@ legend {
   max-width: 100%;
   display: table; }
 
-body {
-  border: 0;
+html,
+body,
+button,
+input,
+table,
+td,
+th {
+  font-family: "Roboto", arial, helvetica, verdana; }
+
+html,
+body,
+div,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+article,
+aside,
+footer,
+header,
+hgroup,
+nav,
+section {
   margin: 0;
+  padding: 0;
+  vertical-align: baseline; }
+
+main {
+  display: block; }
+
+html {
+  font-size: 62.5%;
+  overflow-y: scroll;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -ms-overflow-style: scrollbar;
+  background-color: #ffffff; }
+
+body {
+  font-size: 160%;
+  margin: 0;
+  background: #ffffff;
+  color: #0b0c0c;
+  line-height: 1.5;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+ol,
+ul,
+nav ol,
+nav ul {
+  list-style: inherit; }
+
+fieldset {
+  border: none;
   padding: 0; }
+
+b,
+strong {
+  font-weight: 600; }
+
+img {
+  border: 0; }
+
+abbr[title] {
+  cursor: help; }
+
+a:link {
+  color: #006ccc; }
+
+a:visited {
+  color: #4c2c92; }
+
+a:hover {
+  color: #2b8cc4; }
+
+a:active {
+  color: #2b8cc4; }
+
+a {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0.3); }
+
+a:focus {
+  background-color: #ffbf47;
+  outline: 3px solid #ffbf47; }
+
+input:focus,
+textarea:focus,
+select:focus,
+button:focus {
+  outline: 3px solid #ffbf47;
+  outline-offset: 0; }
 
 #content {
   padding-bottom: 30px;
@@ -714,16 +806,6 @@ hr {
     .heading-hero-domestic {
       margin-top: 0.625em;
       margin-bottom: 1.25em; } }
-
-a {
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0.3); }
-
-a:focus {
-  outline: 3px solid #ffbf47;
-  background: none; }
-
-a:active {
-  background-color: #ffbf47; }
 
 .button {
   background-color: #006ccc;

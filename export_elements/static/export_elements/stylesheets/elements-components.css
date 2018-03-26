@@ -412,7 +412,8 @@
     right: 0;
     top: 45px; }
     #menu-activator:focus {
-      outline: #ffbf47 solid 3px; }
+      outline: #ffbf47 solid 3px;
+      outline-offset: 0; }
     #menu-activator span {
       position: absolute;
       right: 15px;
