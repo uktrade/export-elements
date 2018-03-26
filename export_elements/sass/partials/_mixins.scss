@@ -36,7 +36,8 @@
 }
 
 // BUTTONS
-@mixin button($colour: $button-colour) {
+// prefixed with great- so they don't clash with govuk mixins
+@mixin great-button($colour: $button-colour) {
   @extend .button;
   @include font-large-bold;
   padding: 10px 45px;
@@ -47,7 +48,7 @@
   }
 }
 
-@mixin button-disabled($colour-1, $colour-2) {
+@mixin great-button-disabled($colour-1, $colour-2) {
   background-color: $colour-1;
   border-color: $colour-1;
   color: $colour-2;
@@ -60,7 +61,7 @@
   }
 }
 
-@mixin button-ghost($colour: $button-colour) {
+@mixin great-button-ghost($colour: $button-colour) {
   @extend .button;
   background-color: transparent;
   border: 2px solid $colour;
