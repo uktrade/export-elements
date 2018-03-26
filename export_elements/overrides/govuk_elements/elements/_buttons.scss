@@ -1,16 +1,18 @@
 @import '!elements/buttons';
 @import '../../govuk_frontend_toolkit/design-patterns/buttons';
-
-// Transparent/ghost buttons
+@import '../../../sass/partials/mixins';
 
 .button {
-  @include button($button-colour, false);
+  @include great-button;
 }
 
+// Transparent/ghost buttons
 .button-ghost-blue {
-  @include button($button-colour, true);
+  @extend .button;
+  @include great-button-ghost;
 }
 
 .button-ghost-white {
-  @include button($white, true);
+  @extend .button;
+  @include great-button-ghost($white);
 }
