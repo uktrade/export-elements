@@ -183,6 +183,7 @@
 #menu {
   float: right;
   margin-top: -54px;
+  line-height: initial;
   background-color: #1e1348; }
   #menu .links-list a {
     color: #ffffff;
