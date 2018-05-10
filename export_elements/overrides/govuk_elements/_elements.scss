@@ -6,10 +6,6 @@
 // Generic (normalize/reset.css)
 @import 'elements/reset';
 
-// Base (unclassed HTML elements)
-// govuk template includes some necessary styling such as links and form elements so include it here
-@import 'elements/govuk-template-base';
-
 // Objects (unstyled design patterns)
 @import 'elements/layout';                        // Main content container. Grid layout - rows and column widths
 

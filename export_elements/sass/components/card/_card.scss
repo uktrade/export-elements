@@ -1,0 +1,73 @@
+
+.card {
+  border: $light-grey solid 1px;
+  margin-bottom: $spacing-3;
+  min-height: 450px;
+  position: relative;
+
+  a {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    display: block;
+    color: $grey;
+    text-decoration: none;
+
+    &:hover {
+      .title {
+        color: $light-blue;
+      }
+    }
+
+    &:focus {
+      outline: 3px solid $focus-yellow;
+      outline-offset: -1px;
+    }
+
+    &:active {
+      background: $focus-yellow;
+
+      .card-inner {
+        background: $focus-yellow;
+      }
+
+      .title {
+        color: $mid-blue;
+      }
+    }
+  }
+
+  img {
+    margin: 0;
+    width: 100%;
+  }
+
+  .card-inner {
+    background: $white;
+    padding: 30px;
+
+    .title {
+      @include font-xlarge-bold;
+      color: $active-blue;
+      margin: 0 0 1em;
+      text-decoration: underline;
+    }
+
+    p.description {
+      margin: 0;
+    }
+  }
+}
+
+@media (max-width: 640px) {
+  .card {
+    min-height: auto;
+    height: auto;
+
+    a {
+      position: static;
+    }
+  }
+}

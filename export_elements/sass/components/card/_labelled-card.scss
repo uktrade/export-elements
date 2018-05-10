@@ -1,0 +1,24 @@
+
+.labelled-card {
+  @extend .card;
+  border: 0;
+  display: flex;
+  flex-direction: column;
+
+  a {
+    position: static;
+    flex-grow: 1;
+    border: $light-grey solid 1px;
+  }
+
+  .card-header, .card-header h3 {
+    display: inline-block;
+  }
+
+  .card-header h3 {
+    @include font-large-bold;
+    color: $white;
+    background-color: $active-blue;
+    padding: 10px $spacing-3;
+  }
+}

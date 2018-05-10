@@ -1,0 +1,26 @@
+
+@import '../partials/typography';
+
+.heading-hero-domestic {
+  span {
+    @include brand-48();
+    display: inline-block;
+    color: $white;
+    background: $great-red;
+    text-transform: uppercase;
+    padding: 8px 15px 5px 15px;
+    margin: 0 0 5px -15px;
+  }
+}
+
+.heading-hero-generic {
+  @include brand-48();
+  color: $white;
+  text-transform: uppercase;
+}
+
+.heading-hero-generic-compact {
+  @include brand-36();
+  color: $white;
+  text-transform: uppercase;
+}

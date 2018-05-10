@@ -1,0 +1,61 @@
+
+@import '../partials/spacings';
+
+// Hero banner
+
+.hero {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: $spacing-2 0 0 0;
+  color: $white;
+}
+
+.hero-generic {
+  background-color: rgba(0,82,157,0.8);
+
+  .container {
+    min-height: 300px;
+    position: relative;
+  }
+
+  .hero-title {
+    background-color: rgba(0,82,157,0.8);
+    border-bottom: $great-red solid 7px;
+    bottom: 0;
+    left: 0;
+    padding: 30px;
+    position: absolute;
+    max-width: 30%;
+  }
+
+  .hero-title-compact {
+    @extend .hero-title;
+    padding: 25px;
+  }
+}
+
+.hero-domestic {
+  h1, h2, h3 {
+    margin-bottom: $spacing-1;
+  }
+
+  img {
+    float: right;
+    height: 90px;
+    margin-bottom: $spacing-3;
+  }
+}
+
+@media (min-width: 641px) {
+  .heading-hero-generic {
+    line-height: 1.46;
+  }
+}
+
+@media (max-width: 640px) {
+  .heading-hero-generic {
+    font-size: 32px;
+    line-height: 1;
+  }
+}

@@ -567,3 +567,155 @@ section.error-reporting {
   font-size: 16px;
   text-align: left;
   color: #999999; }
+
+.card, .labelled-card {
+  border: #d8d8d8 solid 1px;
+  margin-bottom: 30px;
+  min-height: 450px;
+  position: relative; }
+  .card a, .labelled-card a {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    display: block;
+    color: #333333;
+    text-decoration: none; }
+    .card a:hover .title, .labelled-card a:hover .title {
+      color: #2b8cc4; }
+    .card a:focus, .labelled-card a:focus {
+      outline: 3px solid #ffbf47;
+      outline-offset: -1px; }
+    .card a:active, .labelled-card a:active {
+      background: #ffbf47; }
+      .card a:active .card-inner, .labelled-card a:active .card-inner {
+        background: #ffbf47; }
+      .card a:active .title, .labelled-card a:active .title {
+        color: #00549f; }
+  .card img, .labelled-card img {
+    margin: 0;
+    width: 100%; }
+  .card .card-inner, .labelled-card .card-inner {
+    background: #ffffff;
+    padding: 30px; }
+    .card .card-inner .title, .labelled-card .card-inner .title {
+      font-family: 'Roboto', arial, helvetica, sans-serif;
+      font-size: 24px;
+      font-weight: 700;
+      color: #006ccc;
+      margin: 0 0 1em;
+      text-decoration: underline; }
+    .card .card-inner p.description, .labelled-card .card-inner p.description {
+      margin: 0; }
+
+@media (max-width: 640px) {
+  .card, .labelled-card {
+    min-height: auto;
+    height: auto; }
+    .card a, .labelled-card a {
+      position: static; } }
+
+.labelled-card {
+  border: 0;
+  display: flex;
+  flex-direction: column; }
+  .labelled-card a {
+    position: static;
+    flex-grow: 1;
+    border: #d8d8d8 solid 1px; }
+  .labelled-card .card-header, .labelled-card .card-header h3 {
+    display: inline-block; }
+  .labelled-card .card-header h3 {
+    font-family: 'Roboto', arial, helvetica, sans-serif;
+    font-size: 19px;
+    font-weight: 700;
+    color: #ffffff;
+    background-color: #006ccc;
+    padding: 10px 30px; }
+
+.heading-hero-domestic span {
+  font-family: "nta", Arial, sans-serif;
+  font-weight: 700;
+  text-transform: none;
+  font-size: 32px;
+  line-height: 1.09375;
+  font-family: "Overpass", "Roboto", arial, helvetica, verdana;
+  display: inline-block;
+  color: #ffffff;
+  background: #e41f13;
+  text-transform: uppercase;
+  padding: 8px 15px 5px 15px;
+  margin: 0 0 5px -15px; }
+  @media (min-width: 641px) {
+    .heading-hero-domestic span {
+      font-size: 48px;
+      line-height: 1.04167; } }
+
+.heading-hero-generic {
+  font-family: "nta", Arial, sans-serif;
+  font-weight: 700;
+  text-transform: none;
+  font-size: 32px;
+  line-height: 1.09375;
+  font-family: "Overpass", "Roboto", arial, helvetica, verdana;
+  color: #ffffff;
+  text-transform: uppercase; }
+  @media (min-width: 641px) {
+    .heading-hero-generic {
+      font-size: 48px;
+      line-height: 1.04167; } }
+
+.heading-hero-generic-compact {
+  font-family: "nta", Arial, sans-serif;
+  font-weight: 700;
+  text-transform: none;
+  font-size: 24px;
+  line-height: 1.04167;
+  font-family: "Overpass", "Roboto", arial, helvetica, verdana;
+  color: #ffffff;
+  text-transform: uppercase; }
+  @media (min-width: 641px) {
+    .heading-hero-generic-compact {
+      font-size: 36px;
+      line-height: 1.11111; } }
+
+.hero {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 45px 0 0 0;
+  color: #ffffff; }
+
+.hero-generic {
+  background-color: rgba(0, 82, 157, 0.8); }
+  .hero-generic .container {
+    min-height: 300px;
+    position: relative; }
+  .hero-generic .hero-title, .hero-generic .hero-title-compact {
+    background-color: rgba(0, 82, 157, 0.8);
+    border-bottom: #e41f13 solid 7px;
+    bottom: 0;
+    left: 0;
+    padding: 30px;
+    position: absolute;
+    max-width: 30%; }
+  .hero-generic .hero-title-compact {
+    padding: 25px; }
+
+.hero-domestic h1, .hero-domestic h2, .hero-domestic h3 {
+  margin-bottom: 60px; }
+
+.hero-domestic img {
+  float: right;
+  height: 90px;
+  margin-bottom: 30px; }
+
+@media (min-width: 641px) {
+  .heading-hero-generic {
+    line-height: 1.46; } }
+
+@media (max-width: 640px) {
+  .heading-hero-generic {
+    font-size: 32px;
+    line-height: 1; } }
