@@ -1,14 +1,25 @@
 
-.labelled-card {
+a.labelled-card {
   @extend .card;
   border: 0;
+  position: static;
   display: flex;
   flex-direction: column;
+  text-decoration: none;
+  color: $grey;
 
-  a {
-    position: static;
-    flex-grow: 1;
-    border: $light-grey solid 1px;
+  &:focus {
+    outline: none;
+    .card-header h3, .card-inner {
+      @include focus;
+    }
+  }
+
+  &:focus:active, &:active {
+    .card-inner {
+      background-color: $focus-yellow;
+      border-color: $focus-yellow;
+    }
   }
 
   .card-header, .card-header h3 {
@@ -20,5 +31,10 @@
     color: $white;
     background-color: $active-blue;
     padding: 10px $spacing-3;
+  }
+
+  .card-inner {
+    border: $light-grey solid 1px;
+    flex-grow: 1;
   }
 }
