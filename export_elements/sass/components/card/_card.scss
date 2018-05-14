@@ -15,10 +15,8 @@
     color: $grey;
     text-decoration: none;
 
-    &:hover {
-      .title {
-        color: $light-blue;
-      }
+    &:hover .title {
+      color: $light-blue;
     }
 
     &:focus {

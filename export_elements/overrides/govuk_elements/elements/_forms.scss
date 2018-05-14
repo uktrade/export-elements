@@ -27,8 +27,8 @@ select.form-control {
     linear-gradient(135deg, $black 50%, transparent 50%),
     linear-gradient(to right, $white, $white);
   background-position:
-    calc(100% - 23px) calc(1em + 0px),
-    calc(100% - 13px) calc(1em + 0px);
+    calc(100% - 23px) calc(1em),
+    calc(100% - 13px) calc(1em);
   background-size: 10px 10px;
   background-repeat: no-repeat;
 
@@ -38,6 +38,6 @@ select.form-control {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  -webkit-appearance:none;
-  -moz-appearance:none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
 }

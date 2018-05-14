@@ -1,6 +1,6 @@
 
 a.labelled-card {
-  @extend .card;
+  @extend %card;
   border: 0;
   position: static;
   display: flex;
@@ -10,19 +10,23 @@ a.labelled-card {
 
   &:focus {
     outline: none;
-    .card-header h3, .card-inner {
+
+    .card-header h3,
+    .card-inner {
       @include focus;
     }
   }
 
-  &:focus:active, &:active {
+  &:focus:active,
+  &:active {
     .card-inner {
       background-color: $focus-yellow;
       border-color: $focus-yellow;
     }
   }
 
-  .card-header, .card-header h3 {
+  .card-header,
+  .card-header h3 {
     display: inline-block;
   }
 

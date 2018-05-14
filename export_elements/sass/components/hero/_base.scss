@@ -7,12 +7,12 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  padding: $spacing-2 0 0 0;
+  padding-top: $spacing-2;
   color: $white;
 }
 
 .hero-generic {
-  background-color: rgba(0,82,157,0.8);
+  background-color: $hero-blue;
 
   .container {
     min-height: 300px;
@@ -20,7 +20,7 @@
   }
 
   .hero-title {
-    background-color: rgba(0,82,157,0.8);
+    background-color: $hero-blue;
     border-bottom: $great-red solid 7px;
     bottom: 0;
     left: 0;
@@ -30,13 +30,15 @@
   }
 
   .hero-title-compact {
-    @extend .hero-title;
+    @extend %hero-title;
     padding: 25px;
   }
 }
 
 .hero-domestic {
-  h1, h2, h3 {
+  h1,
+  h2,
+  h3 {
     margin-bottom: $spacing-1;
   }
 
