@@ -6,6 +6,18 @@ $quote-font: 'Georgia', serif;
 
 // Great-specific typography mixins
 
+@mixin font-xlarge-normal {
+  font-family: 'Roboto', arial, helvetica, sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+}
+
+@mixin font-xlarge-bold {
+  font-family: 'Roboto', arial, helvetica, sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+}
+
 @mixin font-large-normal {
   font-family: 'Roboto', arial, helvetica, sans-serif;
   font-size: 19px;
@@ -42,7 +54,15 @@ $quote-font: 'Georgia', serif;
   font-weight: 700;
 }
 
-@mixin brand-48($line-height: (50 / 48), $line-height-640: (35 / 32), $tabular-numbers: false, $font-weight: 400) {
+@mixin brand-36($line-height: (40 / 36), $line-height-640: (25 / 24), $tabular-numbers: false, $font-weight: 700) {
+  $font-size: 36px;
+  $font-size-640: 24px;
+  $font-size-print: 18pt;
+  @include _core-font-generator($font-size, $font-size-640, $font-size-print, $line-height, $line-height-640, $tabular-numbers, $font-weight);
+  font-family: $brand-font;
+}
+
+@mixin brand-48($line-height: (50 / 48), $line-height-640: (35 / 32), $tabular-numbers: false, $font-weight: 700) {
   $font-size: 48px;
   $font-size-640: 32px;
   $font-size-print: 18pt;
@@ -57,8 +77,4 @@ $quote-font: 'Georgia', serif;
   @include _core-font-generator($font-size, $font-size-640, $font-size-print, $line-height, $line-height-640, $tabular-numbers, $font-weight);
   font-family: $quote-font;
   font-style: italic;
-}
-
-@mixin bold-brand-48($line-height: (50 / 48), $line-height-640: (35 / 32), $tabular-numbers: false) {
-  @include brand-48($line-height, $line-height-640, $tabular-numbers: $tabular-numbers, $font-weight: 700);
 }
