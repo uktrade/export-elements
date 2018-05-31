@@ -1,6 +1,6 @@
 
 a.labelled-card {
-  @extend %card;
+  @extend .card;
   border: 0;
   position: static;
   display: flex;
@@ -11,9 +11,14 @@ a.labelled-card {
   &:focus {
     outline: none;
 
+    img,
     .card-header h3,
     .card-inner {
       @include focus;
+    }
+
+    .card-inner {
+      border-color: $white;
     }
   }
 
