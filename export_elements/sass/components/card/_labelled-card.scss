@@ -47,3 +47,10 @@ a.labelled-card {
     flex-grow: 1;
   }
 }
+
+// labelled card with just an image and no description
+
+a.labelled-image-card {
+  @extend .labelled-card;
+  min-height: auto;
+}
