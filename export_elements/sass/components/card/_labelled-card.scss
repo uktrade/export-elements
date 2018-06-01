@@ -8,6 +8,10 @@ a.labelled-card {
   text-decoration: none;
   color: $grey;
 
+  .card-inner {
+    background: $white;
+  }
+
   &:focus {
     outline: none;
 
