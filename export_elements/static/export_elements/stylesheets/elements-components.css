@@ -623,7 +623,9 @@ a.labelled-card, a.labelled-image-card {
   text-decoration: none;
   color: #333333; }
   a.labelled-card .card-inner, a.labelled-image-card .card-inner {
-    background: #ffffff; }
+    background: #ffffff;
+    border: #d8d8d8 solid 1px;
+    flex-grow: 1; }
   a.labelled-card:focus, a.labelled-image-card:focus {
     outline: none; }
     a.labelled-card:focus img, a.labelled-image-card:focus img,
@@ -646,9 +648,6 @@ a.labelled-card, a.labelled-image-card {
     color: #ffffff;
     background-color: #006ccc;
     padding: 10px 30px; }
-  a.labelled-card .card-inner, a.labelled-image-card .card-inner {
-    border: #d8d8d8 solid 1px;
-    flex-grow: 1; }
 
 a.labelled-image-card {
   min-height: auto; }
