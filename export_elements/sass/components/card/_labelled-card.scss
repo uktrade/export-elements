@@ -8,6 +8,12 @@ a.labelled-card {
   text-decoration: none;
   color: $grey;
 
+  .card-inner {
+    background: $white;
+    border: $light-grey solid 1px;
+    flex-grow: 1;
+  }
+
   &:focus {
     outline: none;
 
@@ -40,11 +46,6 @@ a.labelled-card {
     color: $white;
     background-color: $active-blue;
     padding: 10px $spacing-3;
-  }
-
-  .card-inner {
-    border: $light-grey solid 1px;
-    flex-grow: 1;
   }
 }
 
