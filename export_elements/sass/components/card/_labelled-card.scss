@@ -53,5 +53,19 @@ a.labelled-card {
 
 a.labelled-image-card {
   @extend .labelled-card;
-  min-height: auto;
+  position: relative;
+  min-height: 250px;
+
+  img {
+    height: calc(100% - 45px);
+    object-fit: cover;
+    position: absolute;
+    top: 45px;
+  }
+
+  .card-header {
+    position: relative;
+    z-index: 1;
+  }
+
 }
