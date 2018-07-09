@@ -650,7 +650,16 @@ a.labelled-card, a.labelled-image-card {
     padding: 10px 30px; }
 
 a.labelled-image-card {
-  min-height: auto; }
+  position: relative;
+  min-height: 250px; }
+  a.labelled-image-card img {
+    height: calc(100% - 45px);
+    object-fit: cover;
+    position: absolute;
+    top: 45px; }
+  a.labelled-image-card .card-header {
+    position: relative;
+    z-index: 1; }
 
 .heading-hero-domestic span {
   font-family: "nta", Arial, sans-serif;
