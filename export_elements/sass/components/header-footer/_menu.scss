@@ -12,7 +12,7 @@
   background-color: $great-blue;
 
   .links-list {
-    padding-left: 60px;
+    padding-left: 30px;
 
     a {
       color: $white;
@@ -23,7 +23,7 @@
   .links-list-item {
     position: relative;
     padding: 0;
-    min-height: 140px;
+    min-height: 166px;
     background-color: $mid-blue;
 
     a {
@@ -31,7 +31,7 @@
       padding: 30px;
       padding-top: 30px;
       padding-right: 30px;
-      padding-bottom: 60px;
+      padding-bottom: 90px;
       font-size: 19px;
       font-weight: 400;
       min-height: 80px;
@@ -39,7 +39,8 @@
     }
 
     p {
-      margin-top: -88px;
+      position: absolute;
+      top: 85px;
       padding-right: 60px;
     }
   }

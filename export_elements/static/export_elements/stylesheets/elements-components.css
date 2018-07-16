@@ -185,26 +185,27 @@
   line-height: initial;
   background-color: #1e1348; }
   #menu .links-list {
-    padding-left: 60px; }
+    padding-left: 30px; }
     #menu .links-list a {
       color: #ffffff;
       text-decoration: none; }
   #menu .links-list-item {
     position: relative;
     padding: 0;
-    min-height: 140px;
+    min-height: 166px;
     background-color: #00549f; }
     #menu .links-list-item a {
       left: -30px;
       padding: 30px;
       padding-top: 30px;
       padding-right: 30px;
-      padding-bottom: 60px;
+      padding-bottom: 90px;
       font-size: 19px;
       font-weight: 400;
       min-height: 80px; }
     #menu .links-list-item p {
-      margin-top: -88px;
+      position: absolute;
+      top: 85px;
       padding-right: 60px; }
   #menu-activator {
     display: none; }
@@ -770,3 +771,12 @@ a.labelled-image-card {
   .heading-hero-generic {
     font-size: 32px;
     line-height: 1; } }
+
+html, body, div, span, object, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, cite, dfn, em, img, q, small, strong, sub, sup, b, u, i, dl, dt, dd, ol, ul, li, fieldset, form, label, input, legend, table, caption, th, td, article, aside, figure, figcaption, footer, header, nav, section, textarea, video {
+  border: 0;
+  box-sizing: border-box;
+  font: inherit;
+  font-size: 100%;
+  margin: 0;
+  padding: 0;
+  vertical-align: baseline; }
