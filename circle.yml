@@ -18,6 +18,7 @@ deployment:
     branch: master
     commands:
       - make publish
+      - chmod +x ./docker/install_heroku_cli.sh
       - ./docker/install_heroku_cli.sh
       - docker login --email=$HEROKU_EMAIL --username=$HEROKU_EMAIL --password=$HEROKU_API_KEY registry.heroku.com
       - make heroku_deploy_dev
