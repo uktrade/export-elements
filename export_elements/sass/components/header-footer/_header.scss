@@ -117,15 +117,6 @@
     padding: 15px;
     padding-bottom: 21px;
 
-    &:hover {
-      background: $mid-blue;
-    }
-
-    &:hover:before {
-      @include great-red-trim
-      width: 100%;
-      position: absolute;
-    }
   }
 
   li {
@@ -134,6 +125,16 @@
 
   .container {
     overflow: visible;
+  }
+}
+
+@media screen and (min-width: 767px) {
+  #header-menu {
+    a.navigation:hover:before {
+      @include great-red-trim
+      width: 100%;
+      position: absolute;
+    }
   }
 }
 

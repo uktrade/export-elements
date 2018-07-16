@@ -1534,14 +1534,14 @@ select.form-control {
   color: #00549f; }
 
 .multiple-choice [type=radio] + label::before {
-  border: 2px solid #999999; }
+  border: 2px solid #767676; }
 
 .multiple-choice [type=checkbox] + label::after {
   color: #00549f; }
 
 .multiple-choice [type=checkbox] + label::before {
   border-radius: 3px;
-  border: 2px solid #999999; }
+  border: 2px solid #767676; }
 
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
@@ -1772,7 +1772,7 @@ input[type=number] {
 .phase-banner {
   border: 0; }
   .phase-banner span {
-    color: #999999; }
+    color: #767676; }
 
 .govuk-box-highlight {
   margin: 1em 0;
