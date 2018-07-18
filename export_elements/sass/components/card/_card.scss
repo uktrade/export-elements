@@ -5,7 +5,7 @@
   min-height: 450px;
   position: relative;
 
-  a {
+  .card-link {
     position: absolute;
     background: $white;
     top: 0;
@@ -16,8 +16,10 @@
     color: $grey;
     text-decoration: none;
 
-    &:hover .title {
-      color: $light-blue;
+    &:hover .card-inner {
+      h3, h4, h5, h6 {
+        color: $light-blue;
+      }
     }
 
     &:focus {
@@ -32,8 +34,15 @@
         background: $focus-yellow;
       }
 
-      .title {
+      h3, h4, h5, h6 {
         color: $mid-blue;
+      }
+    }
+
+    .card-inner {
+      h3, h4, h5, h6 {
+        color: $active-blue;
+        text-decoration: underline;
       }
     }
   }
@@ -46,11 +55,9 @@
   .card-inner {
     padding: 30px;
 
-    .title {
+    h3, h4, h5, h6 {
       @include font-xlarge-bold;
-      color: $active-blue;
       margin: 0 0 1em;
-      text-decoration: underline;
     }
 
     p.description {
@@ -64,7 +71,7 @@
     min-height: auto;
     height: auto;
 
-    a {
+    .card-link {
       position: static;
     }
   }
