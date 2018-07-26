@@ -27,21 +27,25 @@
     background-color: $mid-blue;
 
     a {
+      font-size: 19px;
       left: -30px;
       padding: 30px;
       padding-top: 30px;
       padding-right: 30px;
-      padding-bottom: 90px;
-      font-size: 19px;
-      font-weight: 400;
+      padding-bottom: 30px;
       min-height: 166px;
+      font-weight: 400;
+
+      span {
+        min-height: 3em;
+        display: inline-block;
+      }
+
+      p {
+        font-size: 15px;
+      }
     }
 
-    p {
-      position: absolute;
-      top: 85px;
-      padding-right: 60px;
-    }
   }
 
   &-activator {

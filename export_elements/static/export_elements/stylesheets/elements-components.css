@@ -195,18 +195,19 @@
     min-height: 166px;
     background-color: #00549f; }
     #menu .links-list-item a {
+      font-size: 19px;
       left: -30px;
       padding: 30px;
       padding-top: 30px;
       padding-right: 30px;
-      padding-bottom: 90px;
-      font-size: 19px;
-      font-weight: 400;
-      min-height: 166px; }
-    #menu .links-list-item p {
-      position: absolute;
-      top: 85px;
-      padding-right: 60px; }
+      padding-bottom: 30px;
+      min-height: 166px;
+      font-weight: 400; }
+      #menu .links-list-item a span {
+        min-height: 3em;
+        display: inline-block; }
+      #menu .links-list-item a p {
+        font-size: 15px; }
   #menu-activator {
     display: none; }
   #menu .Expander {
