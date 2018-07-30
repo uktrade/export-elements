@@ -28,6 +28,10 @@
   height: auto;
   background: $white;
 
+  .container {
+    overflow: auto;
+  }
+
   ul li {
     padding-right: $spacing-4;
     box-sizing: border-box;

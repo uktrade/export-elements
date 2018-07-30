@@ -125,22 +125,6 @@
     font-weight: 700;
     color: #ffffff;
     text-decoration: none; }
-  #header #skip-link {
-    background-color: #1e1348;
-    color: #ffffff;
-    display: inline-block;
-    padding: 15px;
-    overflow: hidden;
-    position: absolute;
-    text-indent: -1000px;
-    z-index: -1; }
-    #header #skip-link:focus {
-      background-color: #ffbf47;
-      color: #132965;
-      left: 0;
-      text-indent: 0;
-      top: 0;
-      z-index: 1; }
 
 #header-dit-logo {
   height: auto;
@@ -294,7 +278,8 @@
 @media screen and (max-width: 767px) {
   #header-menu {
     height: auto;
-    padding-bottom: 54px; }
+    padding-bottom: 54px;
+    position: relative; }
   #menu.collapsed {
     height: 0;
     overflow: hidden;
@@ -428,7 +413,7 @@
     position: absolute;
     transition: none;
     right: 0;
-    top: 45px; }
+    top: -5px; }
     #menu-activator:focus {
       outline: #ffbf47 solid 3px;
       outline-offset: 0; }
@@ -775,6 +760,108 @@ a.labelled-image-card {
   .heading-hero-generic {
     font-size: 32px;
     line-height: 1; } }
+
+.cookie-notice {
+  font-family: 'Roboto', arial, helvetica, sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  margin: 20px 0; }
+  .cookie-notice a:focus, .cookie-notice button:focus {
+    outline: #ffbf47 solid 3px;
+    outline-offset: 0; }
+  .cookie-notice p {
+    width: calc(100% - 50px);
+    float: left; }
+  .cookie-notice .container {
+    overflow: hidden;
+    padding: 3px 0; }
+  .cookie-notice .cookie-close {
+    float: right;
+    display: block;
+    padding: 0;
+    margin: 0 3px 0 0;
+    width: 25px;
+    height: 25px;
+    -webkit-appearance: none;
+    border: 0;
+    position: relative;
+    cursor: pointer; }
+    .cookie-notice .cookie-close:before {
+      box-sizing: initial;
+      -ms-transform: rotate(45deg);
+      /* IE 9 */
+      -webkit-transform: rotate(45deg);
+      transform: rotate(45deg);
+      content: '';
+      border-style: solid;
+      display: inline-block;
+      height: 5px;
+      width: 5px;
+      position: relative;
+      vertical-align: top;
+      top: 1px;
+      border-color: #00549f;
+      border-width: 0 2px 2px 0;
+      margin: 2px 0 0 10px;
+      border-color: #00549f;
+      border-width: 2px 0 0 2px;
+      top: 5px;
+      margin: 0;
+      width: 15px;
+      height: 15px;
+      position: absolute;
+      left: 4px;
+      top: 14px; }
+    .cookie-notice .cookie-close:after {
+      box-sizing: initial;
+      -ms-transform: rotate(45deg);
+      /* IE 9 */
+      -webkit-transform: rotate(45deg);
+      transform: rotate(45deg);
+      content: '';
+      border-style: solid;
+      display: inline-block;
+      height: 5px;
+      width: 5px;
+      position: relative;
+      vertical-align: top;
+      top: 1px;
+      border-color: #00549f;
+      border-width: 0 2px 2px 0;
+      margin: 2px 0 0 10px;
+      border-color: #00549f;
+      border-width: 0 2px 2px 0;
+      top: 1px;
+      margin: 0;
+      width: 15px;
+      height: 15px;
+      position: absolute;
+      left: 4px;
+      top: -7px; }
+    .cookie-notice .cookie-close:hover:before, .cookie-notice .cookie-close:hover:after {
+      border-color: #2b8cc4; }
+
+#skip-link {
+  font-family: 'Roboto', arial, helvetica, sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  background-color: transparent;
+  color: #ffffff;
+  display: inline-block;
+  padding: 15px;
+  overflow: hidden;
+  position: absolute;
+  text-indent: -1000px;
+  z-index: -1; }
+  #skip-link:focus {
+    outline: #ffbf47 solid 3px;
+    outline-offset: 0;
+    background-color: #ffbf47;
+    color: #132965;
+    left: 0;
+    text-indent: 0;
+    top: 0;
+    z-index: 1; }
 
 html, body, div, span, object, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, cite, dfn, em, img, q, small, strong, sub, sup, b, u, i, dl, dt, dd, ol, ul, li, fieldset, form, label, input, legend, table, caption, th, td, article, aside, figure, figcaption, footer, header, nav, section, textarea, video {
   border: 0;

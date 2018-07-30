@@ -17,6 +17,8 @@
   margin-top: 0;
   height: auto;
   background: #ffffff; }
+  #header-menu .container {
+    overflow: auto; }
   #header-menu ul li {
     padding-right: 15px;
     box-sizing: border-box;
