@@ -1,0 +1,63 @@
+@import '../../partials/typography';
+@import '../../partials/mixins';
+@import '../../partials/colours';
+
+.cookie-notice {
+  @include font-med-normal;
+  margin: 20px 0;
+
+  a:focus, button:focus {
+    @include focus;
+  }
+
+  p {
+    width: calc(100% - 50px);
+    float: left;
+  }
+
+  .container {
+    overflow: hidden;
+    padding: 3px 0; // avoid cutting off focus outline
+  }
+
+  .cookie-close {
+    float: right;
+    display: block;
+    padding: 0;
+    margin: 0 3px 0 0;
+    width: 25px;
+    height: 25px;
+    -webkit-appearance: none;
+    border: 0;
+    position: relative;
+    cursor: pointer;
+
+    &:before {
+      @include up-chevron-1($mid-blue);
+      margin: 0;
+      width: 15px;
+      height: 15px;
+      position: absolute;
+      left: 4px;
+      top: 14px;
+    }
+
+    &:after {
+      @include down-chevron-1($mid-blue);
+      margin: 0;
+      width: 15px;
+      height: 15px;
+      position: absolute;
+      left: 4px;
+      top: -7px;
+    }
+
+    &:hover {
+      &:before,
+      &:after {
+        border-color: $light-blue;
+      }
+    }
+
+  }
+}

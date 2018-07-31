@@ -127,6 +127,7 @@
   #header-menu {
     height: auto;
     padding-bottom: 54px;
+    position: relative;
   }
 
   #menu.collapsed {
@@ -294,7 +295,7 @@
     position: absolute;
     transition: none;
     right: 0;
-    top: 45px;
+    top: -5px;
 
     &:focus {
       @include focus
