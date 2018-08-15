@@ -1,16 +1,17 @@
 'use strict'
 
-const paths = require('govuk-elements/config/paths.json')
-const gulp = require('gulp')
-const gutil = require('gulp-util')
-const cssnano = require('gulp-cssnano')
-const del = require('del')
-const mocha = require('gulp-mocha')
-const nodemon = require('gulp-nodemon')
-const rename = require('gulp-rename')
-const runsequence = require('run-sequence')
-const sass = require('gulp-sass')
+const paths = require('govuk-elements/config/paths.json');
+const gulp = require('gulp');
+const gutil = require('gulp-util');
+const cssnano = require('gulp-cssnano');
+const del = require('del');
+const mocha = require('gulp-mocha');
+const nodemon = require('gulp-nodemon');
+const rename = require('gulp-rename');
+const runsequence = require('run-sequence');
+const sass = require('gulp-sass');
 const sassLint = require('gulp-sass-lint');
+const autoprefixer = require('gulp-autoprefixer');
 
 // Sass lint -----------------------------
 
@@ -54,7 +55,7 @@ gulp.task('clean', () => {
 // /export_elements/static/export_elements/stylesheets/
 // ---------------------------------------
 
-gulp.task('styles:govuk', () => {
+gulp.task('styles:govuk', function() {
   return gulp.src('node_modules/govuk-elements/assets/sass/**/*.scss')
     .pipe(sass({
       includePaths: [
@@ -62,6 +63,10 @@ gulp.task('styles:govuk', () => {
       ],
       importer: require('./sass-importer.js')
     }).on('error', sass.logError))
+    .pipe(autoprefixer({
+      browsers: ['last 2 versions'],
+      cascade: false
+    }))
     .pipe(gulp.dest('export_elements/static/export_elements/stylesheets'))
     .pipe(rename({ suffix: '.min' }))
     .pipe(cssnano())
@@ -73,6 +78,10 @@ gulp.task('styles:govuk', () => {
 gulp.task('styles:components', () => {
   return gulp.src('export_elements/sass/components/elements-components.scss')
     .pipe(sass().on('error', sass.logError))
+    .pipe(autoprefixer({
+      browsers: ['last 2 versions'],
+      cascade: false
+    }))
     .pipe(gulp.dest('export_elements/static/export_elements/stylesheets'))
     .pipe(rename({ suffix: '.min' }))
     .pipe(cssnano())
@@ -84,6 +93,10 @@ gulp.task('styles:components', () => {
 gulp.task('styles:components-no-js', () => {
   return gulp.src('export_elements/sass/components/elements-components-no-js.scss')
     .pipe(sass().on('error', sass.logError))
+    .pipe(autoprefixer({
+      browsers: ['last 2 versions'],
+      cascade: false
+    }))
     .pipe(gulp.dest('export_elements/static/export_elements/stylesheets'))
     .pipe(rename({ suffix: '.min' }))
     .pipe(cssnano())
@@ -95,6 +108,10 @@ gulp.task('styles:components-no-js', () => {
 gulp.task('styles:docs', () => {
   return gulp.src('demo/sass/**/*.scss')
     .pipe(sass().on('error', sass.logError))
+    .pipe(autoprefixer({
+      browsers: ['last 2 versions'],
+      cascade: false
+    }))
     .pipe(gulp.dest('export_elements/static/export_elements/stylesheets'))
     .pipe(rename({ suffix: '.min' }))
     .pipe(cssnano())

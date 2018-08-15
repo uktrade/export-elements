@@ -784,6 +784,8 @@ a.labelled-image-card {
     width: 20px;
     height: 20px;
     -webkit-appearance: none;
+    -moz-appearance: none;
+    background-color: transparent;
     border: 0;
     position: relative;
     cursor: pointer; }

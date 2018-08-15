@@ -16,12 +16,13 @@
     "@csstools/sass-import-resolve": "^1.0.0",
     "govuk-elements": "https://github.com/alphagov/govuk_elements.git#master",
     "govuk-elements-sass": "3.1.2",
-    "gulp": "^3.9.1",
     "gulp-print": "^2.0.1",
     "gulp-sass": "^3.1.0",
     "gulp-sourcemaps": "^2.6.1"
   },
   "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^5.0.0",
     "gulp-sass-lint": "^1.3.4"
   }
 }
