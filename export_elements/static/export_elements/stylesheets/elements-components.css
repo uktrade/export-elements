@@ -26,7 +26,6 @@
     width: calc(100% / 5);
     padding: 0 15px;
     -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
     box-sizing: border-box; }
   #header .column-sixth,
   #footer .column-sixth {
@@ -34,7 +33,6 @@
     width: calc(100% / 6);
     padding: 0 15px;
     -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
     box-sizing: border-box; }
   #header .container,
   #footer .container {
@@ -199,18 +197,22 @@
     left: 0;
     opacity: 1;
     position: absolute;
+    -webkit-transition: opacity 0.3s;
     transition: opacity 0.3s;
     width: 100%;
     z-index: 1; }
   #menu .Expander.collapsed {
     opacity: 0;
+    -webkit-transition: none;
     transition: none;
     z-index: -1; }
   #menu .ExpanderControl {
     cursor: pointer;
+    -webkit-transition: none;
     transition: none; }
   #menu .ExpanderControl.active {
     position: relative;
+    -webkit-transition: background-color 0.3s;
     transition: background-color 0.3s; }
     #menu .ExpanderControl.active:after {
       border-color: #d8d8d8; }
@@ -218,8 +220,8 @@
     background-color: #00549f;
     outline: none; }
   #menu .links-list-heading:after {
+    -webkit-box-sizing: initial;
     box-sizing: initial;
-    -ms-transform: rotate(45deg);
     /* IE 9 */
     -webkit-transform: rotate(45deg);
     transform: rotate(45deg);
@@ -235,8 +237,8 @@
     border-width: 0 2px 2px 0;
     margin: 2px 0 0 10px; }
   #menu .links-list-heading.active:after {
+    -webkit-box-sizing: initial;
     box-sizing: initial;
-    -ms-transform: rotate(225deg);
     /* IE 9 */
     -webkit-transform: rotate(225deg);
     transform: rotate(225deg);
@@ -283,6 +285,7 @@
   #menu.collapsed {
     height: 0;
     overflow: hidden;
+    -webkit-transition: none;
     transition: none; }
   #menu {
     background-color: #00549f;
@@ -292,6 +295,7 @@
     position: relative;
     top: 58px;
     margin-top: -58px;
+    -webkit-transition: none;
     transition: none;
     z-index: 1; }
     #menu a {
@@ -411,6 +415,7 @@
     padding: 5px 10px;
     margin-right: 15px;
     position: absolute;
+    -webkit-transition: none;
     transition: none;
     right: 0;
     top: -5px; }
@@ -435,6 +440,7 @@
       margin-top: -5px; }
   #menu-activator.active {
     background-color: #00549f;
+    -webkit-transition: background-color 0.1s;
     transition: background-color 0.1s; } }
 
 #footer li {
@@ -451,6 +457,7 @@
 #footer .link-group {
   width: 25%;
   float: left;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box; }
 
 #footer .links-list-heading {
@@ -573,7 +580,7 @@ section.error-reporting {
 .card, a.labelled-card, a.labelled-image-card {
   border: #d8d8d8 solid 1px;
   margin-bottom: 30px;
-  min-height: 450px;
+  height: 450px;
   position: relative; }
   .card .card-link, a.labelled-card .card-link, a.labelled-image-card .card-link {
     position: absolute;
@@ -599,9 +606,13 @@ section.error-reporting {
     .card .card-link .card-inner h3, a.labelled-card .card-link .card-inner h3, a.labelled-image-card .card-link .card-inner h3, .card .card-link .card-inner h4, a.labelled-card .card-link .card-inner h4, a.labelled-image-card .card-link .card-inner h4, .card .card-link .card-inner h5, a.labelled-card .card-link .card-inner h5, a.labelled-image-card .card-link .card-inner h5, .card .card-link .card-inner h6, a.labelled-card .card-link .card-inner h6, a.labelled-image-card .card-link .card-inner h6 {
       color: #006ccc;
       text-decoration: underline; }
-  .card img, a.labelled-card img, a.labelled-image-card img {
+  .card .card-image, a.labelled-card .card-image, a.labelled-image-card .card-image {
     margin: 0;
-    width: 100%; }
+    width: 100%;
+    height: 200px;
+    background-size: cover;
+    background-position: right;
+    background-repeat: no-repeat; }
   .card .card-inner, a.labelled-card .card-inner, a.labelled-image-card .card-inner {
     padding: 30px; }
     .card .card-inner h3, a.labelled-card .card-inner h3, a.labelled-image-card .card-inner h3, .card .card-inner h4, a.labelled-card .card-inner h4, a.labelled-image-card .card-inner h4, .card .card-inner h5, a.labelled-card .card-inner h5, a.labelled-image-card .card-inner h5, .card .card-inner h6, a.labelled-card .card-inner h6, a.labelled-image-card .card-inner h6 {
@@ -622,17 +633,24 @@ section.error-reporting {
 a.labelled-card, a.labelled-image-card {
   border: 0;
   position: static;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
   text-decoration: none;
   color: #333333; }
   a.labelled-card .card-inner, a.labelled-image-card .card-inner {
     background: #ffffff;
     border: #d8d8d8 solid 1px;
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
     flex-grow: 1; }
   a.labelled-card:focus, a.labelled-image-card:focus {
     outline: none; }
-    a.labelled-card:focus img, a.labelled-image-card:focus img,
+    a.labelled-card:focus .card-image, a.labelled-image-card:focus .card-image,
     a.labelled-card:focus .card-header h3, a.labelled-image-card:focus .card-header h3,
     a.labelled-card:focus .card-inner, a.labelled-image-card:focus .card-inner {
       outline: #ffbf47 solid 3px;
@@ -655,15 +673,19 @@ a.labelled-card, a.labelled-image-card {
 
 a.labelled-image-card {
   position: relative;
-  min-height: 250px; }
-  a.labelled-image-card img {
+  height: 250px; }
+  a.labelled-image-card .card-image {
     height: calc(100% - 45px);
-    object-fit: cover;
     position: absolute;
+    width: 100%;
     top: 45px; }
   a.labelled-image-card .card-header {
     position: relative;
     z-index: 1; }
+
+@media (max-width: 640px) {
+  a.labelled-image-card .card-image {
+    position: static; } }
 
 .heading-hero-domestic span {
   font-family: "nta", Arial, sans-serif;
@@ -790,8 +812,8 @@ a.labelled-image-card {
     position: relative;
     cursor: pointer; }
     .cookie-notice .cookie-close:before {
+      -webkit-box-sizing: initial;
       box-sizing: initial;
-      -ms-transform: rotate(45deg);
       /* IE 9 */
       -webkit-transform: rotate(45deg);
       transform: rotate(45deg);
@@ -816,8 +838,8 @@ a.labelled-image-card {
       left: 4px;
       top: 10px; }
     .cookie-notice .cookie-close:after {
+      -webkit-box-sizing: initial;
       box-sizing: initial;
-      -ms-transform: rotate(45deg);
       /* IE 9 */
       -webkit-transform: rotate(45deg);
       transform: rotate(45deg);
