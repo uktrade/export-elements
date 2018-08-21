@@ -9,6 +9,7 @@
 
     &::before {
       border: 2px solid $mid-grey;
+      background-color: $white;
     }
   }
 
@@ -20,6 +21,7 @@
     &::before {
       border-radius: 3px;
       border: 2px solid $mid-grey;
+      background-color: $white;
     }
   }
 }
