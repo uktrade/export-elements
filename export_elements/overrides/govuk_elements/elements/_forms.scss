@@ -41,3 +41,8 @@ select.form-control {
   -webkit-appearance: none;
   -moz-appearance: none;
 }
+
+// Hide dropdown arrow in IE11
+select.form-control::-ms-expand {
+  display: none;
+}

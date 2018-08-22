@@ -17,7 +17,7 @@ a.labelled-card {
   &:focus {
     outline: none;
 
-    img,
+    .card-image,
     .card-header h3,
     .card-inner {
       @include focus;
@@ -54,12 +54,12 @@ a.labelled-card {
 a.labelled-image-card {
   @extend .labelled-card;
   position: relative;
-  min-height: 250px;
+  height: 250px;
 
-  img {
+  .card-image {
     height: calc(100% - 45px);
-    object-fit: cover;
     position: absolute;
+    width: 100%;
     top: 45px;
   }
 
@@ -67,5 +67,10 @@ a.labelled-image-card {
     position: relative;
     z-index: 1;
   }
+}
 
+@media (max-width: 640px) {
+  a.labelled-image-card .card-image {
+    position: static;
+  }
 }
