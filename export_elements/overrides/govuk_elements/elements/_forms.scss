@@ -1,5 +1,6 @@
 @import '!elements/forms';
 @import '../../sass/partials/colours';
+@import '../../sass/partials/mixins';
 
 // Django renders the multiple choice checkbox widgets in lists
 // This is to make sure they have adequate spacing
@@ -9,6 +10,16 @@ ul.select-multiple li .multiple-choice {
 
 ul.select-multiple {
   margin-top: 10px;
+}
+
+select:focus,
+input:focus,
+a:focus {
+  @include focus;
+}
+
+a:focus:active {
+  background-color: $focus-yellow;
 }
 
 // File upload

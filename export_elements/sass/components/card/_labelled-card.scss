@@ -7,11 +7,17 @@ a.labelled-card {
   flex-direction: column;
   text-decoration: none;
   color: $grey;
+  background-color: transparent;
 
   .card-inner {
     background: $white;
-    border: $light-grey solid 1px;
+    border: $stone-50 solid 2px;
     flex-grow: 1;
+    margin-top: -2px;
+  }
+
+  .card-inner.with-image {
+    border-top: 0;
   }
 
   &:focus {
@@ -28,12 +34,20 @@ a.labelled-card {
     }
   }
 
+  &:active {
+    background-color: transparent;
+  }
+
   &:focus:active,
   &:active {
     .card-inner {
       background-color: $focus-yellow;
       border-color: $focus-yellow;
     }
+  }
+
+  .card-header {
+    z-index: 0;
   }
 
   .card-header,
@@ -54,7 +68,6 @@ a.labelled-card {
 a.labelled-image-card {
   @extend .labelled-card;
   position: relative;
-  height: 250px;
 
   .card-image {
     height: calc(100% - 45px);

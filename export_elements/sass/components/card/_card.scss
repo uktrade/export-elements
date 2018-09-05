@@ -1,17 +1,22 @@
 
+.card.only-title {
+  height: auto;
+}
+
+.card,
+.labelled-card {
+  height: 100%;
+  min-height: 200px;
+}
+
 .card {
-  border: $light-grey solid 1px;
+  border: $stone-50 solid 2px;
   margin-bottom: $spacing-3;
-  height: 450px;
-  position: relative;
+  width: 100%;
+  background: $white;
 
   .card-link {
-    position: absolute;
-    background: $white;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 0;
+    height: 100%;
     display: block;
     color: $grey;
     text-decoration: none;
@@ -47,6 +52,11 @@
     }
   }
 
+  .card-icon {
+    height: 55px;
+    margin-bottom: $spacing-4;
+  }
+
   .card-image {
     margin: 0;
     width: 100%;
@@ -54,6 +64,7 @@
     background-size: cover;
     background-position: right;
     background-repeat: no-repeat;
+    background-color: $white;
   }
 
   .card-inner {
@@ -67,6 +78,14 @@
     p.description {
       margin: 0;
     }
+
+    .card-meta {
+      margin-bottom: 0.5em;
+
+      .subheading {
+        margin: 0;
+      }
+    }
   }
 }
 
@@ -74,6 +93,10 @@
   .card {
     min-height: auto;
     height: auto;
+
+    .card-icon {
+      height: 35px;
+    }
 
     .card-link {
       position: static;

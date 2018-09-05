@@ -27,16 +27,18 @@
     left: 0;
     padding: 30px;
     position: absolute;
-    max-width: 30%;
+    width: auto;
   }
 
   .hero-title-compact {
     @extend .hero-title;
     padding: 25px;
+    max-width: 30%;
   }
 
   .hero-description {
     margin-bottom: 0;
+    font-family: $brand-font;
   }
 }
 

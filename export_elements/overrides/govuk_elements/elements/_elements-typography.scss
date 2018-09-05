@@ -29,3 +29,10 @@
 .heading-medium {
   margin-bottom: em(15, 24);
 }
+
+.subheading {
+  @extend .font-xsmall;
+  color: $mid-grey;
+  line-height: 1.5;
+  margin: 0;
+}

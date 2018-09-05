@@ -108,6 +108,26 @@
 
 
 // CHEVRONS
+
+@mixin chevron($rotate, $colour) {
+  box-sizing: initial;
+  -ms-transform: rotate($rotate);
+  /* IE 9 */
+  -webkit-transform: rotate($rotate);
+  transform: rotate($rotate);
+  content: '';
+  border-style: solid;
+  display: inline-block;
+  height: 5px;
+  width: 5px;
+  position: relative;
+  vertical-align: top;
+  top: 1px;
+  border-color: $colour;
+  border-width: 0 2px 2px 0;
+  margin: 2px 0 0 10px;
+}
+
 @mixin down-chevron-1($colour) {
   @include chevron(45deg, $colour);
   border-color: $colour;
