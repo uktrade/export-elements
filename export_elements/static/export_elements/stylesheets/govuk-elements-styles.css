@@ -2053,7 +2053,8 @@ input[type=number] {
 .breadcrumbs {
   padding: 1.5em 0; }
   .breadcrumbs li {
-    padding-left: 0; }
+    padding-left: 0;
+    background-image: none; }
   .breadcrumbs li:after {
     -webkit-box-sizing: initial;
     box-sizing: initial;
