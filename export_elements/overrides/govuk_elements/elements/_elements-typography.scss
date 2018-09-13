@@ -6,6 +6,10 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:400,700');
 @import url('https://fonts.googleapis.com/css?family=Overpass:700');
 
+body {
+  font-family: 'Roboto', 'Helvetica Neue', helvetica, arial, sans-serif;
+}
+
 .quote {
   @include quote-24
   margin-top: em(5, 16);
