@@ -1028,6 +1028,9 @@ hr {
   display: block;
   line-height: 1; }
 
+body {
+  font-family: 'Roboto', 'Helvetica Neue', helvetica, arial, sans-serif; }
+
 .quote {
   font-family: "Roboto", arial, helvetica, verdana;
   font-weight: 400;
