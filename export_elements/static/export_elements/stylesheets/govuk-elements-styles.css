@@ -1060,7 +1060,7 @@ body {
   margin-bottom: 0.625em; }
 
 .subheading {
-  color: #767676;
+  color: #999999;
   line-height: 1.5;
   margin: 0; }
 
@@ -1583,6 +1583,7 @@ details {
   box-sizing: border-box;
   clear: both;
   border-left-style: solid;
+  border-left-width: 4px;
   border-color: #006ccc;
   padding: 0.78947em;
   margin-bottom: 0.78947em; }
@@ -1816,6 +1817,10 @@ select.form-control {
 select.form-control::-ms-expand {
   display: none; }
 
+.form-label,
+.form-hint {
+  padding-bottom: .25em; }
+
 .multiple-choice {
   display: block;
   float: none;
@@ -1927,7 +1932,7 @@ select.form-control::-ms-expand {
   color: #00549f; }
 
 .multiple-choice [type=radio] + label::before {
-  border: 2px solid #767676;
+  border: 2px solid #999999;
   background-color: #ffffff; }
 
 .multiple-choice [type=checkbox] + label::after {
@@ -1935,7 +1940,7 @@ select.form-control::-ms-expand {
 
 .multiple-choice [type=checkbox] + label::before {
   border-radius: 3px;
-  border: 2px solid #767676;
+  border: 2px solid #999999;
   background-color: #ffffff; }
 
 input::-webkit-outer-spin-button,
@@ -2194,7 +2199,7 @@ input[type=number] {
 .phase-banner {
   border: 0; }
   .phase-banner span {
-    color: #767676; }
+    color: #999999; }
 
 .govuk-box-highlight {
   margin: 1em 0;
