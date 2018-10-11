@@ -5,6 +5,7 @@
   @extend %contain-floats;
   clear: both;
   border-left-style: solid;
+  border-left-width: 4px;
   border-color: $border-colour;
 
   padding: em(15, 19);
