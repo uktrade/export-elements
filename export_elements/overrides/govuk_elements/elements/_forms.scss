@@ -57,3 +57,8 @@ select.form-control {
 select.form-control::-ms-expand {
   display: none;
 }
+
+.form-label,
+.form-hint {
+  padding-bottom: .25em;
+}
