@@ -1196,6 +1196,9 @@ ul.tag-list li {
 .padding-15 {
   padding: 15px; }
 
+.uppercase {
+  text-transform: uppercase; }
+
 .information-banner p {
   margin: 0; }
 
