@@ -16,8 +16,10 @@ compile_test_requirements:
 	python3 -m piptools compile requirements_test.in
 
 heroku_deploy_dev:
-	docker build -t registry.heroku.com/export-elements-dev/web .
-	docker push registry.heroku.com/export-elements-dev/web
+	./docker/install_heroku_cli.sh
+	docker login --username=$$HEROKU_EMAIL --password=$$HEROKU_TOKEN registry.heroku.com
+	~/bin/heroku-cli/bin/heroku container:push web --app export-elements-dev
+	~/bin/heroku-cli/bin/heroku container:release web --app export-elements-dev
 
 publish:
 	rm -rf build dist; \
