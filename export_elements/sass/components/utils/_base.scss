@@ -1,105 +1,160 @@
 
 // UTILITY CLASSES
-// ============
+// ================
 
 @import '../../partials/colours';
 
 // Backgrounds
 
-.background-stone-10 { background-color: $stone-10 }
-.background-stone-20 { background-color: $stone-20 }
-.background-stone-30 { background-color: $stone-30 }
-.background-stone-40 { background-color: $stone-40 }
-.background-stone-50 { background-color: $stone-50 }
-.background-stone-60 { background-color: $stone-60 }
-.background-stone-70 { background-color: $stone-70 }
-.background-stone-80 { background-color: $stone-80 }
-.background-stone-90 { background-color: $stone-90 }
-.background-stone    { background-color: $stone }
+$colours:
+  ($black, black),
+  ($grey, grey),
+  ($mid-grey, mid-grey),
+  ($light-grey, light-grey),
+  ($offwhite, offwhite),
+  ($white, white),
+  ($purple, purple),
+  ($great-blue, great-blue),
+  ($dark-navy, dark-navy),
+  ($mid-blue, mid-blue),
+  ($active-blue, active-blue),
+  ($light-blue, light-blue),
+  ($aqua, aqua),
+  ($teal, teal),
+  ($flag-red, flag-red),
+  ($great-red, great-red),
+  ($focus-yellow, focus-yellow),
+  ($stone-10, stone-10),
+  ($stone-20, stone-20),
+  ($stone-30, stone-30),
+  ($stone-40, stone-40),
+  ($stone-50, stone-50),
+  ($stone-60, stone-60),
+  ($stone-70, stone-70),
+  ($stone-80, stone-80),
+  ($stone-90, stone-90),
+  ($stone, stone);
 
-.background-black      { background-color: $black }
-.background-grey       { background-color: $grey }
-.background-mid-grey   { background-color: $mid-grey }
-.background-light-grey { background-color: $light-grey }
-.background-offwhite   { background-color: $offwhite }
-.background-white      { background-color: $white }
-
-.background-purple       { background-color: $purple }
-.background-great-blue   { background-color: $great-blue }
-.background-dark-navy    { background-color: $dark-navy }
-.background-mid-blue     { background-color: $mid-blue }
-.background-active-blue  { background-color: $active-blue }
-.background-light-blue   { background-color: $light-blue }
-.background-aqua         { background-color: $aqua }
-.background-teal         { background-color: $teal }
-.background-flag-red     { background-color: $flag-red }
-.background-great-red    { background-color: $great-red }
-.background-focus-yellow { background-color: $focus-yellow }
+@each $colour, $name in $colours {
+  .background-#{$name} {
+    background-color: $colour;
+  }
+}
 
 // Text colour
 
-.black-text      { color: $black }
-.grey-text       { color: $grey }
-.mid-grey-text   { color: $mid-grey }
-.light-grey-text { color: $light-grey }
-.offwhite-text   { color: $offwhite }
-.white-text      { color: $white }
-
-.purple-text       { color: $purple }
-.great-blue-text   { color: $great-blue }
-.dark-navy-text    { color: $dark-navy }
-.mid-blue-text     { color: $mid-blue }
-.active-blue-text  { color: $active-blue }
-.light-blue-text   { color: $light-blue }
-.aqua-text         { color: $aqua }
-.teal-text         { color: $teal }
-.flag-red-text     { color: $flag-red }
-.great-red-text    { color: $great-red }
-.focus-yellow-text { color: $focus-yellow }
+@each $colour, $name in $colours {
+  .#{$name}-text {
+    color: $colour;
+  }
+}
 
 // Borders
-
-.border-stone-10 { border-color: $stone-10 }
-.border-stone-20 { border-color: $stone-20 }
-.border-stone-30 { border-color: $stone-30 }
-.border-stone-40 { border-color: $stone-40 }
-.border-stone-50 { border-color: $stone-50 }
-.border-stone-60 { border-color: $stone-60 }
-.border-stone-70 { border-color: $stone-70 }
-.border-stone-80 { border-color: $stone-80 }
-.border-stone-90 { border-color: $stone-90 }
-.border-stone    { border-color: $stone }
-
-.border-black      { border-color: $black }
-.border-grey       { border-color: $grey }
-.border-mid-grey   { border-color: $mid-grey }
-.border-light-grey { border-color: $light-grey }
-.border-offwhite   { border-color: $offwhite }
-.border-white      { border-color: $white }
-
-.border-purple       { border-color: $purple }
-.border-great-blue   { border-color: $great-blue }
-.border-dark-navy    { border-color: $dark-navy }
-.border-mid-blue     { border-color: $mid-blue }
-.border-active-blue  { border-color: $active-blue }
-.border-light-blue   { border-color: $light-blue }
-.border-aqua         { border-color: $aqua }
-.border-teal         { border-color: $teal }
-.border-flag-red     { border-color: $flag-red }
-.border-great-red    { border-color: $great-red }
-.border-focus-yellow { border-color: $focus-yellow }
+@each $colour, $name in $colours {
+  .border-#{$name} {
+    border-color: $colour;
+  }
+}
 
 .border-thick  { border-style: solid; border-width: 6px }
 .border-medium { border-style: solid; border-width: 4px }
 .border-thin   { border-style: solid; border-width: 2px }
 
-// Padding
+// Padding/margin
 
-.padding-60 { padding: 60px }
-.padding-45 { padding: 45px }
-.padding-30 { padding: 30px }
-.padding-15 { padding: 15px }
+$spacings: 0 15 30 45 60 90;
+
+@each $spacing in $spacings {
+  .padding-#{$spacing} {
+    padding: #{$spacing}px;
+  }
+}
+
+@each $spacing in $spacings {
+  .padding-top-#{$spacing} {
+    padding-top: #{$spacing}px;
+  }
+}
+
+@each $spacing in $spacings {
+  .padding-bottom-#{$spacing} {
+    padding-bottom: #{$spacing}px;
+  }
+}
+
+@each $spacing in $spacings {
+  .padding-vertical-#{$spacing} {
+    padding-top: #{$spacing}px;
+    padding-bottom: #{$spacing}px;
+  }
+}
+
+@each $spacing in $spacings {
+  .margin-#{$spacing} {
+    margin: #{$spacing}px;
+  }
+}
+
+@each $spacing in $spacings {
+  .margin-top-#{$spacing} {
+    margin-top: #{$spacing}px;
+  }
+}
+
+@each $spacing in $spacings {
+  .margin-bottom-#{$spacing} {
+    margin-bottom: #{$spacing}px;
+  }
+}
+
+@each $spacing in $spacings {
+  .margin-vertical-#{$spacing} {
+    margin-top: #{$spacing}px;
+    margin-bottom: #{$spacing}px;
+  }
+}
 
 // Text
 
 .uppercase { text-transform: uppercase }
+
+// Layout
+
+section.blue-underline > .container {
+  border-bottom: 6px solid $active-blue;
+}
+
+.wrap-tight > *:first-child {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+.wrap-tight > *:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.float-right {
+  float: right;
+}
+
+.float-left {
+  float: left;
+}
+
+.block {
+  display: block;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+.inline {
+  display: inline;
+}
+
+.centered {
+  margin: 0 auto;
+  float: none;
+}
