@@ -108,6 +108,11 @@
     margin: 0; }
     #header li:before {
       background: none; }
+  #header .column-eigth {
+    width: calc(100% / 8);
+    float: left;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box; }
   #header .account-links {
     float: right;
     padding: 7px 0; }
@@ -161,6 +166,10 @@
   #header-menu a:hover:before {
     background: #00549f; } }
 
+@media (max-width: 767px) {
+  #header .column-eigth {
+    width: 100%; } }
+
 #menu {
   float: right;
   margin-top: -54px;
@@ -177,16 +186,13 @@
     min-height: 166px;
     background-color: #00549f; }
     #menu .links-list-item a {
-      font-size: 19px;
-      left: -30px;
-      padding: 30px;
-      padding-top: 30px;
-      padding-right: 30px;
-      padding-bottom: 30px;
+      font-size: 17px;
+      left: -20px;
+      padding: 30px 15px;
       min-height: 166px;
       font-weight: 400; }
       #menu .links-list-item a span {
-        min-height: 3em;
+        min-height: 2em;
         display: inline-block; }
       #menu .links-list-item a p {
         font-size: 15px; }
@@ -274,7 +280,7 @@
     height: 110px;
     position: absolute;
     width: 0;
-    margin-left: -31px;
+    margin-left: -21px;
     margin-top: 30px; } }
 
 @media screen and (max-width: 767px) {
@@ -550,6 +556,12 @@
   #footer-copyright .container span {
     display: block;
     float: none; } }
+
+@media (min-width: 767px) {
+  #footer .link-group li {
+    padding-right: 15px; }
+  #footer .footer-logos {
+    width: 50%; } }
 
 @media screen and (max-width: 540px) {
   #footer-dit-logo {
