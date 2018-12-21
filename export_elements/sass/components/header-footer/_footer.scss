@@ -146,6 +146,18 @@
   }
 }
 
+@media (min-width: 767px) {
+  #footer {
+    .link-group li {
+      padding-right: 15px;
+    }
+
+    .footer-logos {
+      width: 50%;
+    }
+  }
+}
+
 @media screen and (max-width: 540px) {
   #footer-dit-logo {
     height: auto;
