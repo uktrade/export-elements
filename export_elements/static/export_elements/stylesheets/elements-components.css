@@ -595,8 +595,7 @@ section.error-reporting {
 .card, a.labelled-card, a.labelled-image-card,
 .labelled-card,
 a.labelled-image-card {
-  height: 100%;
-  min-height: 200px; }
+  height: 100%; }
 
 .card, a.labelled-card, a.labelled-image-card {
   border: #efeae2 solid 2px;
