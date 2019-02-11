@@ -317,7 +317,7 @@ legend {
       margin: 0 20px; } }
 
 section {
-  overflow: auto;
+  overflow: visible;
   padding-bottom: 3em; }
 
 .column-full {
