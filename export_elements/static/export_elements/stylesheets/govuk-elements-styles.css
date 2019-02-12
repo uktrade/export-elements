@@ -1202,6 +1202,15 @@ body {
     color: #000000;
     background-color: #ffffff; }
 
+.button-large {
+  text-align: center;
+  width: 300px;
+  padding: 15px 0; }
+
+@media (max-width: 640px) {
+  .button-large {
+    width: 100%; } }
+
 .icon {
   display: inline-block;
   background-position: 0 0;
