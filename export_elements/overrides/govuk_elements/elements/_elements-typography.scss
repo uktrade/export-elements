@@ -4,7 +4,7 @@
 @import '../../sass/partials/colours';
 
 @import url('https://fonts.googleapis.com/css?family=Roboto:400,700');
-@import url('https://fonts.googleapis.com/css?family=Overpass:700');
+@import url('https://fonts.googleapis.com/css?family=Overpass:600,700');
 
 body {
   font-family: 'Roboto', 'Helvetica Neue', helvetica, arial, sans-serif;
@@ -32,6 +32,13 @@ body {
 
 .heading-medium {
   margin-bottom: em(15, 24);
+}
+
+.heading-xlarge,
+.heading-large,
+.heading-medium,
+.heading-small {
+  font-family: $brand-font;
 }
 
 .subheading {

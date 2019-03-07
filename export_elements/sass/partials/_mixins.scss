@@ -4,6 +4,14 @@
 
 @import 'colours';
 
+@mixin float-clear {
+  &:after {
+    display: block;
+    content: '';
+    clear: both;
+  }
+}
+
 @mixin great-red-trim {
   background-color: $great-red;
   content: '';
@@ -35,34 +43,67 @@
   transform: rotate(#{$deg + 'deg'});
 }
 
+@mixin button-reset {
+  border: 0;
+  margin: 0;
+  width: auto;
+  overflow: visible;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+  font: inherit;
+  line-height: normal;
+  -webkit-font-smoothing: inherit;
+  -moz-osx-font-smoothing: inherit;
+  -webkit-appearance: none;
+}
+
 // BUTTONS
 // prefixed with great- so they don't clash with govuk mixins
-@mixin great-button($colour: $button-colour) {
-  @extend .button;
-  @include font-large-bold;
-  padding: 10px 45px;
+@mixin great-button($colour: $active-blue) {
+  @include button-reset;
+  font-size: 19px;
+  white-space: nowrap;
+  display: inline-block;
+  font-weight: 700;
+  font-family: $brand-font;
+  background-color: $colour;
+  color: $white;
+  padding: 10px 30px;
+  text-decoration: none;
+  line-height: 30px;
   // Bottom edge effect
   @include box-shadow(none);
   @include ie-lte(8) {
     border-bottom: 0;
   }
-}
 
-@mixin great-button-disabled($colour-1, $colour-2) {
-  background-color: $colour-1;
-  border-color: $colour-1;
-  color: $colour-2;
-  cursor: default;
+  &:focus:active,
+  &:active {
+    color: $black;
+    background-color: $focus-yellow;
+  }
+
+  &:focus {
+    @include focus;
+  }
 
   &:hover {
-    background-color: $colour-1;
-    border-color: $colour-1;
-    color: $colour-2;
+    background-color: darken($colour, 5);
+  }
+
+  &:after {
+    line-height: 50px;
+  }
+
+  @media (max-width: 640px) {
+    width: 100%;
+    margin-bottom: 15px;
   }
 }
 
 @mixin great-button-ghost($colour: $button-colour) {
-  @extend .button;
+  @include great-button;
   background-color: transparent;
   border: 2px solid $colour;
   color: $colour;
@@ -72,37 +113,36 @@
     background-color: $colour;
   }
 
-  &:link,
-  &:visited {
-    color: $colour;
+  &:focus {
+    @include focus;
+  }
+
+  &:focus:active,
+  &:active {
+    color: $black;
+    background-color: $focus-yellow;
+    border-color: $focus-yellow;
   }
 
   @if ($colour == $white) {
 
-    &:link:focus,
-    &:hover,
-    &:focus {
-      color: $black;
-      background-color: $white;
-    }
-
-    &:active {
+    &:focus,
+    &:hover {
       color: $black;
       background-color: $white;
     }
 
   } @else {
 
-    &:link:focus,
-    &:hover,
-    &:focus {
+    &:focus,
+    &:hover {
       color: $white;
     }
 
-    &:active {
-      color: $white;
-      background-color: $colour;
+    &:focus:active {
+      color: $black;
     }
+
   }
 }
 
@@ -163,4 +203,27 @@
   border-color: $colour;
   border-width: 2px 0 0 2px;
   top: 5px;
+}
+
+@mixin container() {
+  position: relative;
+
+  &:after {
+    max-width: 1200px;
+    display: block;
+    content: '';
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+
+    @media(max-width: 1260px) {
+      margin: 0 30px;
+    }
+
+    @media(max-width: 420px) {
+      margin: 0 20px;
+    }
+  }
 }
