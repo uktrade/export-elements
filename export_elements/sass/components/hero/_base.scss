@@ -18,27 +18,41 @@
   .container {
     min-height: 300px;
     position: relative;
+    overflow: visible;
   }
 
   .hero-title {
     background-color: $hero-blue;
-    border-bottom: $great-red solid 7px;
-    bottom: 0;
+    border-bottom: $flag-red solid 6px;
+    bottom: -6px;
     left: 0;
     padding: 30px;
     position: absolute;
     width: auto;
+
+    h1 > span {
+      display: block;
+      line-height: 1.25;
+    }
   }
 
   .hero-title-compact {
     @extend .hero-title;
     padding: 25px;
     max-width: 30%;
+
+    .hero-subheading {
+      @include brand-19();
+    }
   }
 
   .hero-description {
     margin-bottom: 0;
     font-family: $brand-font;
+  }
+
+  .hero-subheading {
+    @include brand-24();
   }
 }
 
