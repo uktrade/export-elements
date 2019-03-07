@@ -1,5 +1,6 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css?family=Roboto:400,700");
-@import url("https://fonts.googleapis.com/css?family=Overpass:700");
+@import url("https://fonts.googleapis.com/css?family=Overpass:600,700");
 .grid-row:after, #content:after, .notice:after, .panel:after, .panel-vertical-wide:after, .panel-vertical-narrow:after, fieldset:after, .form-section:after,
 .form-group:after, .form-group-error:after, .breadcrumbs ol:after {
   content: "";
@@ -287,7 +288,8 @@ legend {
 .grid-row > * {
   padding: 0 15px; }
 
-.card-grid {
+.card-grid,
+.flex-grid {
   margin: 0 -15px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -295,7 +297,8 @@ legend {
   -ms-flex-wrap: wrap;
   flex-wrap: wrap; }
 
-.card-grid > * {
+.card-grid > *,
+.flex-grid > * {
   padding: 0 15px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -318,7 +321,35 @@ legend {
 
 section {
   overflow: visible;
-  padding-bottom: 3em; }
+  padding-bottom: 30px; }
+  section > .container {
+    overflow: hidden; }
+
+.width-sixth {
+  width: calc(100%/6); }
+
+.width-quarter {
+  width: 25%; }
+
+.width-half {
+  width: 50%; }
+
+.width-third {
+  width: calc(100%/3); }
+
+.width-two-thirds {
+  width: calc(100%/3 * 2); }
+
+.width-full {
+  width: 100%; }
+
+@media (max-width: 640px) {
+  .width-sixth,
+  .width-quarter,
+  .width-third,
+  .width-two-thirds,
+  .width-half {
+    width: 100%; } }
 
 .column-full {
   padding: 0 15px;
@@ -1059,105 +1090,16 @@ body {
 .heading-medium {
   margin-bottom: 0.625em; }
 
+.heading-xlarge,
+.heading-large,
+.heading-medium,
+.heading-small {
+  font-family: "Overpass", "Roboto", arial, helvetica, verdana; }
+
 .subheading {
-  color: #999999;
+  color: #666666;
   line-height: 1.5;
   margin: 0; }
-
-.button, .button-ghost-blue, .button-ghost-white {
-  background-color: #006ccc;
-  position: relative;
-  display: -moz-inline-stack;
-  display: inline-block;
-  padding: .526315em .789473em .263157em;
-  border: none;
-  border-radius: 0;
-  outline: 1px solid transparent;
-  outline-offset: -1px;
-  -webkit-appearance: none;
-  -webkit-box-shadow: 0 2px 0 #004480;
-  box-shadow: 0 2px 0 #004480;
-  font-size: 1em;
-  line-height: 1.25;
-  text-decoration: none;
-  -webkit-font-smoothing: antialiased;
-  cursor: pointer;
-  color: #ffffff;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  vertical-align: top; }
-  .button:visited, .button-ghost-blue:visited, .button-ghost-white:visited {
-    background-color: #006ccc; }
-  .button:hover, .button-ghost-blue:hover, .button-ghost-white:hover, .button:focus, .button-ghost-blue:focus, .button-ghost-white:focus {
-    background-color: #005fb3; }
-  .button:active, .button-ghost-blue:active, .button-ghost-white:active {
-    top: 2px;
-    -webkit-box-shadow: 0 0 0 #006ccc;
-    box-shadow: 0 0 0 #006ccc; }
-  .disabled.button, .disabled.button-ghost-blue, .disabled.button-ghost-white, [disabled="disabled"].button, [disabled="disabled"].button-ghost-blue, [disabled="disabled"].button-ghost-white, [disabled].button, [disabled].button-ghost-blue, [disabled].button-ghost-white {
-    zoom: 1;
-    filter: alpha(opacity=50);
-    opacity: 0.5; }
-    .disabled.button:hover, .disabled.button-ghost-blue:hover, .disabled.button-ghost-white:hover, [disabled="disabled"].button:hover, [disabled="disabled"].button-ghost-blue:hover, [disabled="disabled"].button-ghost-white:hover, [disabled].button:hover, [disabled].button-ghost-blue:hover, [disabled].button-ghost-white:hover {
-      cursor: default;
-      background-color: #006ccc; }
-    .disabled.button:active, .disabled.button-ghost-blue:active, .disabled.button-ghost-white:active, [disabled="disabled"].button:active, [disabled="disabled"].button-ghost-blue:active, [disabled="disabled"].button-ghost-white:active, [disabled].button:active, [disabled].button-ghost-blue:active, [disabled].button-ghost-white:active {
-      top: 0;
-      -webkit-box-shadow: 0 2px 0 #004480;
-      box-shadow: 0 2px 0 #004480; }
-  .button:link, .button-ghost-blue:link, .button-ghost-white:link, .button:link:focus, .button-ghost-blue:link:focus, .button-ghost-white:link:focus, .button:hover, .button-ghost-blue:hover, .button-ghost-white:hover, .button:focus, .button-ghost-blue:focus, .button-ghost-white:focus, .button:visited, .button-ghost-blue:visited, .button-ghost-white:visited {
-    color: #ffffff; }
-  .button:before, .button-ghost-blue:before, .button-ghost-white:before {
-    content: "";
-    height: 110%;
-    width: 100%;
-    display: block;
-    background: transparent;
-    position: absolute;
-    top: 0;
-    left: 0; }
-  .button:active:before, .button-ghost-blue:active:before, .button-ghost-white:active:before {
-    top: -10%;
-    height: 120%; }
-  @media (max-width: 640px) {
-    .button, .button-ghost-blue, .button-ghost-white {
-      width: 100%;
-      text-align: center; } }
-
-.button::-moz-focus-inner, .button-ghost-blue::-moz-focus-inner, .button-ghost-white::-moz-focus-inner {
-  border: 0;
-  padding: 0; }
-
-.button:focus, .button-ghost-blue:focus, .button-ghost-white:focus {
-  outline: 3px solid #ffbf47; }
-
-[disabled="disabled"].button, [disabled="disabled"].button-ghost-blue, [disabled="disabled"].button-ghost-white {
-  background: #006ccc; }
-
-[disabled="disabled"].button:focus, [disabled="disabled"].button-ghost-blue:focus, [disabled="disabled"].button-ghost-white:focus {
-  outline: none; }
-
-.button-start,
-.button-get-started {
-  font-family: "Roboto", arial, helvetica, verdana;
-  font-weight: 700;
-  text-transform: none;
-  font-size: 18px;
-  line-height: 1.2;
-  background-image: url("/static/export_elements/images/icon-pointer.png");
-  background-repeat: no-repeat;
-  background-position: 100% 50%;
-  padding: 0.36842em 2.15789em 0.21053em 0.84211em; }
-  @media (min-width: 641px) {
-    .button-start,
-    .button-get-started {
-      font-size: 24px;
-      line-height: 1.25; } }
-  @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
-    .button-start,
-    .button-get-started {
-      background-image: url("/static/export_elements/images/icon-pointer-2x.png");
-      background-size: 30px 19px; } }
 
 .grid-row:after, #content:after, .notice:after, .panel:after, .panel-vertical-wide:after, .panel-vertical-narrow:after, fieldset:after, .form-section:after,
 .form-group:after, .form-group-error:after, .breadcrumbs ol:after {
@@ -1165,51 +1107,187 @@ body {
   display: block;
   clear: both; }
 
-.button, .button-ghost-blue, .button-ghost-white {
-  font-family: 'Roboto', arial, helvetica, sans-serif;
+.button {
+  border: 0;
+  margin: 0;
+  width: auto;
+  overflow: visible;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+  font: inherit;
+  line-height: normal;
+  -webkit-font-smoothing: inherit;
+  -moz-osx-font-smoothing: inherit;
+  -webkit-appearance: none;
   font-size: 19px;
+  white-space: nowrap;
+  display: inline-block;
   font-weight: 700;
-  padding: 10px 45px;
+  font-family: "Overpass", "Roboto", arial, helvetica, verdana;
+  background-color: #006ccc;
+  color: #ffffff;
+  padding: 10px 30px;
+  text-decoration: none;
+  line-height: 30px;
   -webkit-box-shadow: none;
   box-shadow: none; }
+  .button:focus:active, .button:active {
+    color: #000000;
+    background-color: #ffbf47; }
+  .button:focus {
+    outline: #ffbf47 solid 3px;
+    outline-offset: 0; }
+  .button:hover {
+    background-color: #005fb3; }
+  .button:after {
+    line-height: 50px; }
+  @media (max-width: 640px) {
+    .button {
+      width: 100%;
+      margin-bottom: 15px; } }
 
 .button-ghost-blue {
+  border: 0;
+  margin: 0;
+  width: auto;
+  overflow: visible;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+  font: inherit;
+  line-height: normal;
+  -webkit-font-smoothing: inherit;
+  -moz-osx-font-smoothing: inherit;
+  -webkit-appearance: none;
+  font-size: 19px;
+  white-space: nowrap;
+  display: inline-block;
+  font-weight: 700;
+  font-family: "Overpass", "Roboto", arial, helvetica, verdana;
+  background-color: #006ccc;
+  color: #ffffff;
+  padding: 10px 30px;
+  text-decoration: none;
+  line-height: 30px;
+  -webkit-box-shadow: none;
+  box-shadow: none;
   background-color: transparent;
   border: 2px solid #006ccc;
   color: #006ccc; }
+  .button-ghost-blue:focus:active, .button-ghost-blue:active {
+    color: #000000;
+    background-color: #ffbf47; }
+  .button-ghost-blue:focus {
+    outline: #ffbf47 solid 3px;
+    outline-offset: 0; }
+  .button-ghost-blue:hover {
+    background-color: #005fb3; }
+  .button-ghost-blue:after {
+    line-height: 50px; }
+  @media (max-width: 640px) {
+    .button-ghost-blue {
+      width: 100%;
+      margin-bottom: 15px; } }
   .button-ghost-blue:hover, .button-ghost-blue:focus {
     background-color: #006ccc; }
-  .button-ghost-blue:link, .button-ghost-blue:visited {
-    color: #006ccc; }
-  .button-ghost-blue:link:focus, .button-ghost-blue:hover, .button-ghost-blue:focus {
+  .button-ghost-blue:focus {
+    outline: #ffbf47 solid 3px;
+    outline-offset: 0; }
+  .button-ghost-blue:focus:active, .button-ghost-blue:active {
+    color: #000000;
+    background-color: #ffbf47;
+    border-color: #ffbf47; }
+  .button-ghost-blue:focus, .button-ghost-blue:hover {
     color: #ffffff; }
-  .button-ghost-blue:active {
-    color: #ffffff;
-    background-color: #006ccc; }
+  .button-ghost-blue:focus:active {
+    color: #000000; }
 
 .button-ghost-white {
+  border: 0;
+  margin: 0;
+  width: auto;
+  overflow: visible;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+  font: inherit;
+  line-height: normal;
+  -webkit-font-smoothing: inherit;
+  -moz-osx-font-smoothing: inherit;
+  -webkit-appearance: none;
+  font-size: 19px;
+  white-space: nowrap;
+  display: inline-block;
+  font-weight: 700;
+  font-family: "Overpass", "Roboto", arial, helvetica, verdana;
+  background-color: #006ccc;
+  color: #ffffff;
+  padding: 10px 30px;
+  text-decoration: none;
+  line-height: 30px;
+  -webkit-box-shadow: none;
+  box-shadow: none;
   background-color: transparent;
   border: 2px solid #ffffff;
   color: #ffffff; }
+  .button-ghost-white:focus:active, .button-ghost-white:active {
+    color: #000000;
+    background-color: #ffbf47; }
+  .button-ghost-white:focus {
+    outline: #ffbf47 solid 3px;
+    outline-offset: 0; }
+  .button-ghost-white:hover {
+    background-color: #005fb3; }
+  .button-ghost-white:after {
+    line-height: 50px; }
+  @media (max-width: 640px) {
+    .button-ghost-white {
+      width: 100%;
+      margin-bottom: 15px; } }
   .button-ghost-white:hover, .button-ghost-white:focus {
     background-color: #ffffff; }
-  .button-ghost-white:link, .button-ghost-white:visited {
-    color: #ffffff; }
-  .button-ghost-white:link:focus, .button-ghost-white:hover, .button-ghost-white:focus {
+  .button-ghost-white:focus {
+    outline: #ffbf47 solid 3px;
+    outline-offset: 0; }
+  .button-ghost-white:focus:active, .button-ghost-white:active {
     color: #000000;
-    background-color: #ffffff; }
-  .button-ghost-white:active {
+    background-color: #ffbf47;
+    border-color: #ffbf47; }
+  .button-ghost-white:focus, .button-ghost-white:hover {
     color: #000000;
     background-color: #ffffff; }
 
 .button-large {
   text-align: center;
-  width: 300px;
-  padding: 15px 0; }
+  min-width: 300px;
+  font-size: 24px;
+  padding: 15px 30px; }
+  .button-large:after {
+    height: 60px;
+    line-height: 60px; }
 
 @media (max-width: 640px) {
   .button-large {
     width: 100%; } }
+
+.button-arrow-small, .button-arrow-large {
+  text-align: inherit;
+  padding-right: 70px;
+  position: relative;
+  font-family: "Overpass", "Roboto", arial, helvetica, verdana; }
+  .button-arrow-small:after, .button-arrow-large:after {
+    display: block;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 55px; }
+
+.button-arrow-small:after {
+  content: '➞'; }
+
+.button-arrow-large:after {
+  content: '➔'; }
 
 .icon {
   display: inline-block;
@@ -1941,7 +2019,7 @@ select.form-control::-ms-expand {
   color: #00549f; }
 
 .multiple-choice [type=radio] + label::before {
-  border: 2px solid #999999;
+  border: 2px solid #666666;
   background-color: #ffffff; }
 
 .multiple-choice [type=checkbox] + label::after {
@@ -1949,7 +2027,7 @@ select.form-control::-ms-expand {
 
 .multiple-choice [type=checkbox] + label::before {
   border-radius: 3px;
-  border: 2px solid #999999;
+  border: 2px solid #666666;
   background-color: #ffffff; }
 
 input::-webkit-outer-spin-button,
@@ -2208,7 +2286,7 @@ input[type=number] {
 .phase-banner {
   border: 0; }
   .phase-banner span {
-    color: #999999; }
+    color: #666666; }
 
 .govuk-box-highlight {
   margin: 1em 0;
