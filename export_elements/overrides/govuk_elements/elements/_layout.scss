@@ -1,5 +1,6 @@
 @import '!elements/layout';
 @import '../../sass/partials/spacings';
+@import '../../sass/partials/mixins';
 
 // Remove max-width and margins from #content
 // as we use .container for this instead
@@ -17,13 +18,15 @@
 }
 
 // Like .grid-row but columns expand vertically to align their heights
-.card-grid {
+.card-grid,
+.flex-grid {
   margin: 0 -15px;
   display: flex;
   flex-wrap: wrap;
 }
 
-.card-grid > * {
+.card-grid > *,
+.flex-grid > * {
   padding: 0 15px;
   display: flex;
   flex-direction: column;
@@ -45,7 +48,48 @@
 
 section {
   overflow: visible;
-  padding-bottom: 3em;
+  padding-bottom: 30px;
+
+  & > .container {
+    overflow: hidden;
+  }
+}
+
+// Included as a shortcut to using a grid-row and columns
+// when only one column is needed
+
+.width-sixth {
+  width: calc(100%/6);
+}
+
+.width-quarter {
+  width: 25%;
+}
+
+.width-half {
+  width: 50%;
+}
+
+.width-third {
+  width: calc(100%/3);
+}
+
+.width-two-thirds {
+  width: calc(100%/3 * 2);
+}
+
+.width-full {
+  width: 100%;
+}
+
+@media (max-width: 640px) {
+  .width-sixth,
+  .width-quarter,
+  .width-third,
+  .width-two-thirds,
+  .width-half {
+    width: 100%;
+  }
 }
 
 .column-full {
