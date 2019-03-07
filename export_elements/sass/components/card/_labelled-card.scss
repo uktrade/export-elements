@@ -11,7 +11,6 @@ a.labelled-card {
 
   .card-inner {
     background: $white;
-    border: $stone-50 solid 2px;
     flex-grow: 1;
     margin-top: -2px;
   }
@@ -27,6 +26,7 @@ a.labelled-card {
     .card-header h3,
     .card-inner {
       @include focus;
+      outline-offset: -3px;
     }
 
     .card-inner {
@@ -42,7 +42,6 @@ a.labelled-card {
   &:active {
     .card-inner {
       background-color: $focus-yellow;
-      border-color: $focus-yellow;
     }
   }
 
