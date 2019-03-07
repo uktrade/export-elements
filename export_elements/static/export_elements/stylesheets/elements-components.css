@@ -2795,7 +2795,7 @@ ul.tag-list li {
         margin: 0 20px; } }
   .with-flag:after {
     bottom: -20px;
-    background-image: url("/static/images/uj-motif.png");
+    background-image: url("/static/export_elements/images/uj-motif.png");
     background-size: 155px;
     background-repeat: no-repeat;
     height: 30px;
